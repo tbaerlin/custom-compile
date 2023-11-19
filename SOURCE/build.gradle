@@ -18,8 +18,9 @@ sourceSets {
             srcDirs = [
                 'src/main/java',
                 'other-sources/amqp/src/main/java',
-                'other-sources/comet/src/main/java',
                 'other-sources/common/src/main/java',
+
+                /*'other-sources/comet/src/main/java',
                 'other-sources/dmxml-docu-portal/src/main/java',
                 'other-sources/domain/src/main/java',
                 'other-sources/feed/src/main/java',
@@ -32,6 +33,7 @@ sourceSets {
                 'other-sources/mmgwt/src/main/java',
                 'other-sources/news/src/main/java',
                 'other-sources/ratios/src/main/java',
+                 */
             ]
             println("SOURCE DIRS: " + srcDirs)
         }
