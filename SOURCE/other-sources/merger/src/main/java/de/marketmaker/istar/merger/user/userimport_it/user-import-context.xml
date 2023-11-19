@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+    <bean id="cacheMgr" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <!--<property name="configLocation" value="${istar.home}/conf/ehcache.xml"/>-->
+        <property name="configLocation" value="classpath:/de/marketmaker/istar/merger/user/userimport_it/ehcache.xml"/>
+    </bean>
+    <bean id="istarUserDataSource" class="org.apache.commons.dbcp2.BasicDataSource"
+          destroy-method="close">
+        <property name="driverClassName" value="${db.driver}"/>
+        <property name="url" value="${istar.db.url}"/>
+        <property name="username" value="${db.user}"/>
+        <property name="password" value="${db.password}"/>
+    </bean>
+    <bean id="userDataReader" class="de.marketmaker.istar.merger.user.userimport_it.UserDataReader">
+        <property name="userProvider" ref="userProvider"/>
+        <property name="instrumentProvider" ref="easytradeInstrumentProvider"/>
+        <property name="istarCompanyId" value="7"/>
+        <property name="userFile" value="${userFile}"/>
+        <property name="watchlistFile" value="${watchlistFile}"/>
+        <property name="portfolioFile" value="${portfolioFile}"/>
+    </bean>
+    <!-- ########################## ISTAR ######################################################### -->
+    <bean id="companyProvider" class="de.marketmaker.istar.merger.user.CompanyProviderImpl">
+        <property name="companyCache">
+            <bean id="companyCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+                <property name="cacheManager" ref="cacheMgr"/>
+                <property name="cacheName" value="istar.merger.companies"/>
+            </bean>
+        </property>
+        <property name="companyDao">
+            <bean class="de.marketmaker.istar.merger.user.CompanyDaoDb">
+                <property name="dataSource" ref="istarUserDataSource"/>
+            </bean>
+        </property>
+    </bean>
+    <bean id="userProvider" class="de.marketmaker.istar.merger.user.UserProviderImpl">
+        <property name="userCache">
+            <bean id="userCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+                <property name="cacheManager" ref="cacheMgr"/>
+                <property name="cacheName" value="istar.merger.users"/>
+            </bean>
+        </property>
+        <property name="userDao">
+            <bean class="de.marketmaker.istar.merger.user.UserDaoDb">
+                <property name="dataSource" ref="istarUserDataSource"/>
+            </bean>
+        </property>
+        <property name="companyProvider" ref="companyProvider"/>
+        <property name="allowRemovePositionWithOrders" value="true"/>
+        <property name="instrumentProvider" ref="instrumentProvider"/>
+    </bean>
+    <!-- ################# INSTRUMENT ##################################################### -->
+    <bean id="instrumentProvider"
+          class="de.marketmaker.istar.merger.provider.InstrumentProviderImpl">
+        <property name="instrumentServer" ref="instrumentServer"/>
+        <property name="instrumentCache">
+            <bean class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+                <property name="cacheManager" ref="cacheMgr"/>
+                <property name="cacheName" value="istar.merger.iid2instrument"/>
+            </bean>
+        </property>
+        <property name="symbolCache">
+            <bean class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+                <property name="cacheManager" ref="cacheMgr"/>
+                <property name="cacheName" value="istar.merger.symbol2iid"/>
+            </bean>
+        </property>
+    </bean>
+    <bean id="easytradeInstrumentProvider"
+          class="de.marketmaker.istar.merger.web.easytrade.block.EasytradeInstrumentProvider">
+        <property name="instrumentProvider" ref="instrumentProvider"/>
+    </bean>
+    <!-- ################# AMQP ##################################################### -->
+    <bean class="de.marketmaker.itools.amqprpc.connections.AmqpRpcAddressImpl" id="amqpRpcAddress">
+        <property name="settings.requestQueueMessageTTL" value="10000"/>
+        <property name="exchange" value="istar.rpc"/>
+    </bean>
+    <bean class="com.rabbitmq.client.ConnectionFactory" id="rabbitConnectionFactory">
+        <property name="host" value="${amqpBroker.host}"/>
+        <property name="username" value="${amqpBroker.username}"/>
+        <property name="password" value="${amqpBroker.password}"/>
+        <property name="port" value="${amqpBroker.port}"/>
+        <property name="virtualHost" value="${amqpBroker.virtualHost}"/>
+        <property name="requestedHeartbeat" value="${amqpBroker.requestedHeartbeat}"/>
+    </bean>
+    <bean abstract="true" class="de.marketmaker.itools.amqprpc.AmqpProxyFactoryBean" id="server">
+        <property name="connectionManager" ref="amqpConnectionManager"/>
+        <property name="rpcTimeout" value="10000"/>
+        <property name="slowInvocationThreshold" value="2000"/>
+        <property name="supervisor" ref="amqpRpcSupervisor"/>
+    </bean>
+    <bean id="instrumentServer" parent="server">
+        <property name="serviceInterface" value="de.marketmaker.istar.instrument.InstrumentServer"/>
+        <property name="address">
+            <bean parent="amqpRpcAddress">
+                <property name="requestQueue" value="istar.instrument"/>
+            </bean>
+        </property>
+    </bean>
+    <bean id="profileProvider" parent="server">
+        <property name="serviceInterface"
+                  value="de.marketmaker.istar.domainimpl.profile.ProfileProvider"/>
+        <property name="address">
+            <bean parent="amqpRpcAddress">
+                <property name="requestQueue" value="istar.merger.profile"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="de.marketmaker.itools.amqprpc.connections.AmqpRpcConnectionManager"
+          id="amqpConnectionManager">
+        <property name="connectionFactory" ref="rabbitConnectionFactory"/>
+    </bean>
+    <bean class="de.marketmaker.itools.amqprpc.supervising.PeriodicSupervisor"
+          id="amqpRpcSupervisor">
+        <property name="checkInterval" value="60"/>
+    </bean>
+
+</beans>

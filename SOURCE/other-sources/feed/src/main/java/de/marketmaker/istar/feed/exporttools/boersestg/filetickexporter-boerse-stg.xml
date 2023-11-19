@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+    <bean id="exporter" class="de.marketmaker.istar.feed.exporttools.boersestg.FileTickExporterBoerseStg">
+           <property name="tickDir" value="/home/meadm/produktion/var/data/chicago"/>
+           <property name="outDir" value="/home/meadm/produktion/var/data/boersestg/output/"/>
+           <property name="symbolsFile" value="/home/meadm/produktion/var/data/boersestg/input/symbols.txt"/>
+       </bean>
+</beans>

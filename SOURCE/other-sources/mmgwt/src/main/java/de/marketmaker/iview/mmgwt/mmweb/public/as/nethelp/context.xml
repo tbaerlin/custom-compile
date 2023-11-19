@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- saved from url=(0016)http://localhost -->
+<context>
+  <item url="WordDocuments/aktivittanlagevorschlag1.htm">
+    <id>1020</id>
+  </item>
+  <item url="WordDocuments/aktivittberatung1.htm">
+    <id>1022</id>
+  </item>
+  <item url="WordDocuments/aktivittberatungsfreiesgeschft1.htm">
+    <id>1023</id>
+  </item>
+  <item url="WordDocuments/aktivittinternervermerk1.htm">
+    <id>1021</id>
+  </item>
+  <item url="WordDocuments/aktivittwphgdatenerfassung1.htm">
+    <id>1019</id>
+  </item>
+  <item url="WordDocuments/aktivittanlegen.htm">
+    <id>786</id>
+  </item>
+  <item url="WordDocuments/aktivittffnen.htm">
+    <id>787</id>
+  </item>
+  <item url="WordDocuments/aktivitten1.htm">
+    <id>768</id>
+  </item>
+  <item url="WordDocuments/aktivitten.htm">
+    <id>755</id>
+  </item>
+  <item url="WordDocuments/aktivittengesamtbersicht.htm">
+    <id>865</id>
+  </item>
+  <item url="WordDocuments/aktivittenverwenden.htm">
+    <id>784</id>
+  </item>
+  <item url="WordDocuments/aktivittenframeworkundworkflows.htm">
+    <id>783</id>
+  </item>
+  <item url="WordDocuments/aktivittenstatus.htm">
+    <id>864</id>
+  </item>
+  <item url="WordDocuments/aktivittsauswertungsbereich.htm">
+    <id>791</id>
+  </item>
+  <item url="WordDocuments/aktivittsnavigationsbereich.htm">
+    <id>790</id>
+  </item>
+  <item url="WordDocuments/aktivittssteckbrief.htm">
+    <id>789</id>
+  </item>
+  <item url="WordDocuments/aktivittsbersicht.htm">
+    <id>785</id>
+  </item>
+  <item url="WordDocuments/alerts.htm">
+    <id>921</id>
+  </item>
+  <item url="WordDocuments/alertsgesamtbersicht.htm">
+    <id>866</id>
+  </item>
+  <item url="WordDocuments/allgemein.htm">
+    <id>914</id>
+  </item>
+  <item url="WordDocuments/allgemeineraufbau.htm">
+    <id>794</id>
+  </item>
+  <item url="WordDocuments/ansichtimbereichkunden.htm">
+    <id>891</id>
+  </item>
+  <item url="WordDocuments/ansichtimbereichmrkte.htm">
+    <id>907</id>
+  </item>
+  <item url="WordDocuments/arbeitsoberflcheundbereichsmeninkundensitzungen.htm">
+    <id>924</id>
+  </item>
+  <item url="WordDocuments/arbeitsumgebung.htm">
+    <id>423</id>
+  </item>
+  <item url="WordDocuments/arbitrage.htm">
+    <id>802</id>
+  </item>
+  <item url="WordDocuments/auswertungen1.htm">
+    <id>770</id>
+  </item>
+  <item url="WordDocuments/auswertungen.htm">
+    <id>459</id>
+  </item>
+  <item url="WordDocuments/auswertungenimhintergrund.htm">
+    <id>449</id>
+  </item>
+  <item url="WordDocuments/auswertungenundkundensitzungen.htm">
+    <id>925</id>
+  </item>
+  <item url="WordDocuments/auswertungsbereich.htm">
+    <id>427</id>
+  </item>
+  <item url="WordDocuments/auswirkungenaufdieobjektfensterderverschiedenendepotobjekte.htm">
+    <id>927</id>
+  </item>
+  <item url="WordDocuments/benutzerdefiniertefelder.htm">
+    <id>457</id>
+  </item>
+  <item url="WordDocuments/benutzerdefiniertefelder3.htm">
+    <id>899</id>
+  </item>
+  <item url="WordDocuments/benutzerdefiniertefelder4.htm">
+    <id>904</id>
+  </item>
+  <item url="WordDocuments/beratungsprozess.htm">
+    <id>782</id>
+  </item>
+  <item url="WordDocuments/bereichhilfe.htm">
+    <id>505</id>
+  </item>
+  <item url="WordDocuments/bereichkunden.htm">
+    <id>441</id>
+  </item>
+  <item url="WordDocuments/bereichmrkte.htm">
+    <id>484</id>
+  </item>
+  <item url="WordDocuments/bereichnachrichten.htm">
+    <id>493</id>
+  </item>
+  <item url="WordDocuments/bereichsuchergebnis.htm">
+    <id>498</id>
+  </item>
+  <item url="WordDocuments/bereichtools.htm">
+    <id>497</id>
+  </item>
+  <item url="WordDocuments/bereichverwaltung.htm">
+    <id>999</id>
+  </item>
+  <item url="WordDocuments/bereichsmen.htm">
+    <id>425</id>
+  </item>
+  <item url="WordDocuments/chart.htm">
+    <id>806</id>
+  </item>
+  <item url="WordDocuments/charts.htm">
+    <id>466</id>
+  </item>
+  <item url="WordDocuments/dashboard.htm">
+    <id>893</id>
+  </item>
+  <item url="WordDocuments/dashboards.htm">
+    <id>852</id>
+  </item>
+  <item url="WordDocuments/dashboardsundkundensitzungen.htm">
+    <id>860</id>
+  </item>
+  <item url="WordDocuments/depotsteckbrief.htm">
+    <id>478</id>
+  </item>
+  <item url="WordDocuments/derivate.htm">
+    <id>908</id>
+  </item>
+  <item url="WordDocuments/devisenrechner.htm">
+    <id>811</id>
+  </item>
+  <item url="WordDocuments/dokumente.htm">
+    <id>892</id>
+  </item>
+  <item url="WordDocuments/dokumentearchivieren.htm">
+    <id>918</id>
+  </item>
+  <item url="WordDocuments/dokumentenarchiv.htm">
+    <id>917</id>
+  </item>
+  <item url="WordDocuments/dokumentenarchivundkundensitzungen.htm">
+    <id>926</id>
+  </item>
+  <item url="WordDocuments/dokumentenlisteanzeigen.htm">
+    <id>920</id>
+  </item>
+  <item url="WordDocuments/eigeneinteressenten.htm">
+    <id>905</id>
+  </item>
+  <item url="WordDocuments/einstellungen.htm">
+    <id>500</id>
+  </item>
+  <item url="WordDocuments/explorer.htm">
+    <id>444</id>
+  </item>
+  <item url="WordDocuments/explorerausundeinblenden.htm">
+    <id>446</id>
+  </item>
+  <item url="WordDocuments/fallbeispiele.htm">
+    <id>793</id>
+  </item>
+  <item url="WordDocuments/flexchartanalyser.htm">
+    <id>913</id>
+  </item>
+  <item url="WordDocuments/fokusliste.htm">
+    <id>906</id>
+  </item>
+  <item url="WordDocuments/gebhrenprotradefrmusterportfolio.htm">
+    <id>915</id>
+  </item>
+  <item url="WordDocuments/globaledashboards.htm">
+    <id>853</id>
+  </item>
+  <item url="WordDocuments/globaledashboardsbearbeiten.htm">
+    <id>857</id>
+  </item>
+  <item url="WordDocuments/globaledashboardskopieren.htm">
+    <id>858</id>
+  </item>
+  <item url="WordDocuments/globaledashboardslschen.htm">
+    <id>859</id>
+  </item>
+  <item url="WordDocuments/grafikenintabellen.htm">
+    <id>465</id>
+  </item>
+  <item url="WordDocuments/gruppenauswertungen.htm">
+    <id>448</id>
+  </item>
+  <item url="WordDocuments/header.htm">
+    <id>424</id>
+  </item>
+  <item url="WordDocuments/info1.htm">
+    <id>1000</id>
+  </item>
+  <item url="WordDocuments/inhaberundportfoliodashboardsbearbeiten.htm">
+    <id>861</id>
+  </item>
+  <item url="WordDocuments/inhaberdashboards.htm">
+    <id>854</id>
+  </item>
+  <item url="WordDocuments/inhabersteckbrief.htm">
+    <id>452</id>
+  </item>
+  <item url="WordDocuments/interessentanlegen.htm">
+    <id>758</id>
+  </item>
+  <item url="WordDocuments/interessenten.htm">
+    <id>757</id>
+  </item>
+  <item url="WordDocuments/interessentensteckbrief.htm">
+    <id>896</id>
+  </item>
+  <item url="WordDocuments/interessentenlisten.htm">
+    <id>895</id>
+  </item>
+  <item url="WordDocuments/kennzahlen.htm">
+    <id>804</id>
+  </item>
+  <item url="WordDocuments/kontakt.htm">
+    <id>454</id>
+  </item>
+  <item url="WordDocuments/kontakt4.htm">
+    <id>903</id>
+  </item>
+  <item url="WordDocuments/kontakt3.htm">
+    <id>898</id>
+  </item>
+  <item url="WordDocuments/kontextlisten.htm">
+    <id>439</id>
+  </item>
+  <item url="WordDocuments/kontosteckbrief.htm">
+    <id>475</id>
+  </item>
+  <item url="WordDocuments/kundenportfolioundinteressentenlistenimnavigator.htm">
+    <id>753</id>
+  </item>
+  <item url="WordDocuments/kundensitzungen.htm">
+    <id>922</id>
+  </item>
+  <item url="WordDocuments/kundensitzungenbeenden.htm">
+    <id>928</id>
+  </item>
+  <item url="WordDocuments/kundensitzungenstarten.htm">
+    <id>923</id>
+  </item>
+  <item url="WordDocuments/kundenstruktur.htm">
+    <id>867</id>
+  </item>
+  <item url="WordDocuments/kundenwidgetaktivitten.htm">
+    <id>871</id>
+  </item>
+  <item url="WordDocuments/kundenwidgetalerts.htm">
+    <id>872</id>
+  </item>
+  <item url="WordDocuments/kundenwidgetcashflowbersicht.htm">
+    <id>873</id>
+  </item>
+  <item url="WordDocuments/kundenwidgetkontodepotbersicht.htm">
+    <id>874</id>
+  </item>
+  <item url="WordDocuments/kundenwidgetperformancerisikoklasse1.htm">
+    <id>940</id>
+  </item>
+  <item url="WordDocuments/kundenwidgetperformanceverlauf.htm">
+    <id>876</id>
+  </item>
+  <item url="WordDocuments/kundenwidgetrisikoverlauf.htm">
+    <id>877</id>
+  </item>
+  <item url="WordDocuments/kundenwidgetvermgensstruktur.htm">
+    <id>878</id>
+  </item>
+  <item url="WordDocuments/kundenwidgetwertvernderung.htm">
+    <id>879</id>
+  </item>
+  <item url="WordDocuments/lexikon.htm">
+    <id>506</id>
+  </item>
+  <item url="WordDocuments/listederarchiviertendokumenteanzeigen.htm">
+    <id>919</id>
+  </item>
+  <item url="WordDocuments/listederverfgbarenwidgets.htm">
+    <id>863</id>
+  </item>
+  <item url="WordDocuments/livesuche.htm">
+    <id>434</id>
+  </item>
+  <item url="WordDocuments/marktbersichtenimnavigator.htm">
+    <id>486</id>
+  </item>
+  <item url="WordDocuments/marktdatenlaufband.htm">
+    <id>429</id>
+  </item>
+  <item url="WordDocuments/marktdatenwidgetarbitrage.htm">
+    <id>880</id>
+  </item>
+  <item url="WordDocuments/marktdatenwidgetchart.htm">
+    <id>881</id>
+  </item>
+  <item url="WordDocuments/marktdatenwidgetcompactquote.htm">
+    <id>882</id>
+  </item>
+  <item url="WordDocuments/marktdatenwidgetkursliste.htm">
+    <id>883</id>
+  </item>
+  <item url="WordDocuments/marktdatenwidgetmarktbersicht.htm">
+    <id>884</id>
+  </item>
+  <item url="WordDocuments/marktdatenwidgetmusterportfolio.htm">
+    <id>885</id>
+  </item>
+  <item url="WordDocuments/marktdatenwidgetnachrichten.htm">
+    <id>886</id>
+  </item>
+  <item url="WordDocuments/marktdatenwidgettermine.htm">
+    <id>887</id>
+  </item>
+  <item url="WordDocuments/marktdatenwidgettopsflops.htm">
+    <id>888</id>
+  </item>
+  <item url="WordDocuments/marktdatenwidgetvwdseite.htm">
+    <id>889</id>
+  </item>
+  <item url="WordDocuments/marktdatenwidgetwatchlist.htm">
+    <id>890</id>
+  </item>
+  <item url="WordDocuments/musterportfolio1.htm">
+    <id>909</id>
+  </item>
+  <item url="WordDocuments/nachrichten.htm">
+    <id>805</id>
+  </item>
+  <item url="WordDocuments/nachrichtensuche.htm">
+    <id>495</id>
+  </item>
+  <item url="WordDocuments/nachrichtenbersicht.htm">
+    <id>494</id>
+  </item>
+  <item url="WordDocuments/navigator.htm">
+    <id>426</id>
+  </item>
+  <item url="WordDocuments/navigator1.htm">
+    <id>451</id>
+  </item>
+  <item url="WordDocuments/navigatorimobjektfensterwertpapier1.htm">
+    <id>800</id>
+  </item>
+  <item url="WordDocuments/navigatortoolbarbeigeffnetemobjektfenster.htm">
+    <id>437</id>
+  </item>
+  <item url="WordDocuments/neueinteressenten.htm">
+    <id>868</id>
+  </item>
+  <item url="WordDocuments/neuenthreadffnen.htm">
+    <id>431</id>
+  </item>
+  <item url="WordDocuments/neuesglobalesdashboardanlegen.htm">
+    <id>856</id>
+  </item>
+  <item url="WordDocuments/objektansichtenimbereichkunden.htm">
+    <id>447</id>
+  </item>
+  <item url="WordDocuments/objektansichtenimbereichmrkte.htm">
+    <id>487</id>
+  </item>
+  <item url="WordDocuments/objektesuchen.htm">
+    <id>433</id>
+  </item>
+  <item url="WordDocuments/objektfenster.htm">
+    <id>436</id>
+  </item>
+  <item url="WordDocuments/objektfensteraktivitt1.htm">
+    <id>1018</id>
+  </item>
+  <item url="WordDocuments/objektfensterdepot1.htm">
+    <id>1013</id>
+  </item>
+  <item url="WordDocuments/objektfensterinhaber1.htm">
+    <id>1008</id>
+  </item>
+  <item url="WordDocuments/objektfensterinteressent1.htm">
+    <id>1016</id>
+  </item>
+  <item url="WordDocuments/objektfensterkonto1.htm">
+    <id>1011</id>
+  </item>
+  <item url="WordDocuments/objektfensterperson1.htm">
+    <id>1017</id>
+  </item>
+  <item url="WordDocuments/objektfensterportfolio1.htm">
+    <id>1009</id>
+  </item>
+  <item url="WordDocuments/objektfensterwertpapier1.htm">
+    <id>1024</id>
+  </item>
+  <item url="WordDocuments/objektfensterwertpapierwertpapiersteckbrief1.htm">
+    <id>1015</id>
+  </item>
+  <item url="WordDocuments/onlinehilfe.htm">
+    <id>916</id>
+  </item>
+  <item url="WordDocuments/onlinehilfezurvwdadvisorysolution.htm">
+    <id>521</id>
+  </item>
+  <item url="WordDocuments/ordering.htm">
+    <id>469</id>
+  </item>
+  <item url="WordDocuments/osrechner.htm">
+    <id>911</id>
+  </item>
+  <item url="WordDocuments/passwortndern.htm">
+    <id>504</id>
+  </item>
+  <item url="WordDocuments/personensteckbrief.htm">
+    <id>901</id>
+  </item>
+  <item url="WordDocuments/pflichtfelder.htm">
+    <id>792</id>
+  </item>
+  <item url="WordDocuments/portfoliodashboards.htm">
+    <id>855</id>
+  </item>
+  <item url="WordDocuments/portfoliosteckbrief.htm">
+    <id>472</id>
+  </item>
+  <item url="WordDocuments/renditerechner.htm">
+    <id>912</id>
+  </item>
+  <item url="WordDocuments/reporting.htm">
+    <id>455</id>
+  </item>
+  <item url="WordDocuments/reporting1.htm">
+    <id>764</id>
+  </item>
+  <item url="WordDocuments/reports.htm">
+    <id>467</id>
+  </item>
+  <item url="WordDocuments/reportsarchivieren.htm">
+    <id>894</id>
+  </item>
+  <item url="WordDocuments/reportseinstellenparameterderauswertungen.htm">
+    <id>468</id>
+  </item>
+  <item url="WordDocuments/stammdaten3.htm">
+    <id>897</id>
+  </item>
+  <item url="WordDocuments/stammdaten.htm">
+    <id>453</id>
+  </item>
+  <item url="WordDocuments/stammdaten4.htm">
+    <id>902</id>
+  </item>
+  <item url="WordDocuments/stammdatenpm.htm">
+    <id>801</id>
+  </item>
+  <item url="WordDocuments/stammdatenbearbeiten.htm">
+    <id>767</id>
+  </item>
+  <item url="WordDocuments/standardaktivittenhandbuch.htm">
+    <id>1001</id>
+  </item>
+  <item url="WordDocuments/statusleiste.htm">
+    <id>428</id>
+  </item>
+  <item url="WordDocuments/steckbriefimnavigatorbeigeffnetemobjektfenster.htm">
+    <id>440</id>
+  </item>
+  <item url="WordDocuments/steckbriefwertpapier.htm">
+    <id>491</id>
+  </item>
+  <item url="WordDocuments/steuerangaben.htm">
+    <id>456</id>
+  </item>
+  <item url="WordDocuments/steuerangaben1.htm">
+    <id>765</id>
+  </item>
+  <item url="WordDocuments/suche.htm">
+    <id>432</id>
+  </item>
+  <item url="WordDocuments/suchergebnis.htm">
+    <id>435</id>
+  </item>
+  <item url="WordDocuments/symboleimexplorer.htm">
+    <id>445</id>
+  </item>
+  <item url="WordDocuments/ts.htm">
+    <id>803</id>
+  </item>
+  <item url="WordDocuments/tabellen.htm">
+    <id>460</id>
+  </item>
+  <item url="WordDocuments/tabelleneinstellenparameterderauswertungen.htm">
+    <id>463</id>
+  </item>
+  <item url="WordDocuments/tabellengruppieren.htm">
+    <id>461</id>
+  </item>
+  <item url="WordDocuments/tabellensortieren.htm">
+    <id>462</id>
+  </item>
+  <item url="WordDocuments/threads.htm">
+    <id>430</id>
+  </item>
+  <item url="WordDocuments/topflopkunden.htm">
+    <id>869</id>
+  </item>
+  <item url="WordDocuments/updatehandbuch.htm">
+    <id>840</id>
+  </item>
+  <item url="WordDocuments/verknpfteinhaber.htm">
+    <id>774</id>
+  </item>
+  <item url="WordDocuments/verknpfteinteressenten.htm">
+    <id>775</id>
+  </item>
+  <item url="WordDocuments/verknpfteobjekte.htm">
+    <id>458</id>
+  </item>
+  <item url="WordDocuments/verknpfteobjekte4.htm">
+    <id>900</id>
+  </item>
+  <item url="WordDocuments/verknpfteobjekte6.htm">
+    <id>1012</id>
+  </item>
+  <item url="WordDocuments/verknpfteobjekte5.htm">
+    <id>1010</id>
+  </item>
+  <item url="WordDocuments/verknpfteobjekte7.htm">
+    <id>1014</id>
+  </item>
+  <item url="WordDocuments/verknpftepersonen1.htm">
+    <id>763</id>
+  </item>
+  <item url="WordDocuments/verknpftepersonen.htm">
+    <id>754</id>
+  </item>
+  <item url="WordDocuments/vermgensrechner.htm">
+    <id>910</id>
+  </item>
+  <item url="WordDocuments/verwaltetesvermgen.htm">
+    <id>870</id>
+  </item>
+  <item url="WordDocuments/watchlist.htm">
+    <id>809</id>
+  </item>
+  <item url="WordDocuments/weiterebereiche.htm">
+    <id>496</id>
+  </item>
+  <item url="WordDocuments/weiteremglichkeitenimbereichkunden.htm">
+    <id>777</id>
+  </item>
+  <item url="WordDocuments/weitereobjektfensterimbereichkunden.htm">
+    <id>470</id>
+  </item>
+  <item url="WordDocuments/wertpapierportrt.htm">
+    <id>489</id>
+  </item>
+  <item url="WordDocuments/widgets.htm">
+    <id>862</id>
+  </item>
+  <item url="WordDocuments/zurckfunktion.htm">
+    <id>438</id>
+  </item>
+</context>

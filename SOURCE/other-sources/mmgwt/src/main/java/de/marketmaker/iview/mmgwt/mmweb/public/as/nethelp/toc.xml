@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- saved from url=(0016)http://localhost -->
+<toc>
+  <item url="WordDocuments/onlinehilfezurvwdadvisorysolution.htm">
+    <title><![CDATA[Online-Hilfe zur vwd advisory solution]]></title>
+    <tooltip><![CDATA[Online-Hilfe zur vwd advisory solution]]></tooltip>
+  </item>
+  <item url="WordDocuments/arbeitsumgebung.htm">
+    <title><![CDATA[Arbeitsumgebung]]></title>
+    <tooltip><![CDATA[Arbeitsumgebung]]></tooltip>
+    <item url="WordDocuments/header.htm">
+      <title><![CDATA[Header]]></title>
+      <tooltip><![CDATA[Header]]></tooltip>
+    </item>
+    <item url="WordDocuments/bereichsmen.htm">
+      <title><![CDATA[Bereichsmenü]]></title>
+      <tooltip><![CDATA[Bereichsmenü]]></tooltip>
+    </item>
+    <item url="WordDocuments/navigator.htm">
+      <title><![CDATA[Navigator]]></title>
+      <tooltip><![CDATA[Navigator]]></tooltip>
+    </item>
+    <item url="WordDocuments/auswertungsbereich.htm">
+      <title><![CDATA[Auswertungsbereich]]></title>
+      <tooltip><![CDATA[Auswertungsbereich]]></tooltip>
+    </item>
+    <item url="WordDocuments/statusleiste.htm">
+      <title><![CDATA[Statusleiste]]></title>
+      <tooltip><![CDATA[Statusleiste]]></tooltip>
+    </item>
+    <item url="WordDocuments/marktdatenlaufband.htm">
+      <title><![CDATA[Marktdaten-Laufband]]></title>
+      <tooltip><![CDATA[Marktdaten-Laufband]]></tooltip>
+    </item>
+    <item url="WordDocuments/threads.htm">
+      <title><![CDATA[Threads]]></title>
+      <tooltip><![CDATA[Threads]]></tooltip>
+      <item url="WordDocuments/neuenthreadffnen.htm">
+        <title><![CDATA[Neuen Thread öffnen]]></title>
+        <tooltip><![CDATA[Neuen Thread öffnen]]></tooltip>
+      </item>
+    </item>
+  </item>
+  <item url="WordDocuments/dashboards.htm">
+    <title><![CDATA[Dashboards]]></title>
+    <tooltip><![CDATA[Dashboards]]></tooltip>
+    <item url="WordDocuments/globaledashboards.htm">
+      <title><![CDATA[Globale Dashboards]]></title>
+      <tooltip><![CDATA[Globale Dashboards]]></tooltip>
+    </item>
+    <item url="WordDocuments/inhaberdashboards.htm">
+      <title><![CDATA[Inhaber-Dashboards]]></title>
+      <tooltip><![CDATA[Inhaber-Dashboards]]></tooltip>
+    </item>
+    <item url="WordDocuments/portfoliodashboards.htm">
+      <title><![CDATA[Portfolio-Dashboards]]></title>
+      <tooltip><![CDATA[Portfolio-Dashboards]]></tooltip>
+    </item>
+    <item url="WordDocuments/neuesglobalesdashboardanlegen.htm">
+      <title><![CDATA[Neues globales Dashboard anlegen]]></title>
+      <tooltip><![CDATA[Neues globales Dashboard anlegen]]></tooltip>
+    </item>
+    <item url="WordDocuments/globaledashboardsbearbeiten.htm">
+      <title><![CDATA[Globale Dashboards bearbeiten]]></title>
+      <tooltip><![CDATA[Globale Dashboards bearbeiten]]></tooltip>
+    </item>
+    <item url="WordDocuments/globaledashboardskopieren.htm">
+      <title><![CDATA[Globale Dashboards kopieren]]></title>
+      <tooltip><![CDATA[Globale Dashboards kopieren]]></tooltip>
+    </item>
+    <item url="WordDocuments/globaledashboardslschen.htm">
+      <title><![CDATA[Globale Dashboards löschen]]></title>
+      <tooltip><![CDATA[Globale Dashboards löschen]]></tooltip>
+    </item>
+    <item url="WordDocuments/dashboardsundkundensitzungen.htm">
+      <title><![CDATA[Dashboards und Kundensitzungen]]></title>
+      <tooltip><![CDATA[Dashboards und Kundensitzungen]]></tooltip>
+    </item>
+    <item url="WordDocuments/inhaberundportfoliodashboardsbearbeiten.htm">
+      <title><![CDATA[Inhaber- und Portfolio-Dashboards bearbeiten]]></title>
+      <tooltip><![CDATA[Inhaber- und Portfolio-Dashboards bearbeiten]]></tooltip>
+    </item>
+    <item url="WordDocuments/widgets.htm">
+      <title><![CDATA[Widgets]]></title>
+      <tooltip><![CDATA[Widgets]]></tooltip>
+      <item url="WordDocuments/listederverfgbarenwidgets.htm">
+        <title><![CDATA[Liste der verfügbaren Widgets]]></title>
+        <tooltip><![CDATA[Liste der verfügbaren Widgets]]></tooltip>
+      </item>
+      <item url="WordDocuments/aktivittenstatus.htm">
+        <title><![CDATA[Aktivitäten-Status]]></title>
+        <tooltip><![CDATA[Aktivitäten-Status]]></tooltip>
+      </item>
+      <item url="WordDocuments/aktivittengesamtbersicht.htm">
+        <title><![CDATA[Aktivitäten (Gesamtübersicht)]]></title>
+        <tooltip><![CDATA[Aktivitäten (Gesamtübersicht)]]></tooltip>
+      </item>
+      <item url="WordDocuments/alertsgesamtbersicht.htm">
+        <title><![CDATA[Alerts (Gesamtübersicht)]]></title>
+        <tooltip><![CDATA[Alerts (Gesamtübersicht)]]></tooltip>
+      </item>
+      <item url="WordDocuments/kundenstruktur.htm">
+        <title><![CDATA[Kundenstruktur]]></title>
+        <tooltip><![CDATA[Kundenstruktur]]></tooltip>
+      </item>
+      <item url="WordDocuments/neueinteressenten.htm">
+        <title><![CDATA[Neue Interessenten]]></title>
+        <tooltip><![CDATA[Neue Interessenten]]></tooltip>
+      </item>
+      <item url="WordDocuments/topflopkunden.htm">
+        <title><![CDATA[Top/Flop Kunden]]></title>
+        <tooltip><![CDATA[Top/Flop Kunden]]></tooltip>
+      </item>
+      <item url="WordDocuments/verwaltetesvermgen.htm">
+        <title><![CDATA[Verwaltetes Vermögen]]></title>
+        <tooltip><![CDATA[Verwaltetes Vermögen]]></tooltip>
+      </item>
+      <item url="WordDocuments/kundenwidgetaktivitten.htm">
+        <title><![CDATA[Kundenwidget "Aktivitäten"]]></title>
+        <tooltip><![CDATA[Kundenwidget "Aktivitäten"]]></tooltip>
+      </item>
+      <item url="WordDocuments/kundenwidgetalerts.htm">
+        <title><![CDATA[Kundenwidget "Alerts"]]></title>
+        <tooltip><![CDATA[Kundenwidget "Alerts"]]></tooltip>
+      </item>
+      <item url="WordDocuments/kundenwidgetcashflowbersicht.htm">
+        <title><![CDATA[Kundenwidget "Cashflow-Übersicht"]]></title>
+        <tooltip><![CDATA[Kundenwidget "Cashflow-Übersicht"]]></tooltip>
+      </item>
+      <item url="WordDocuments/kundenwidgetkontodepotbersicht.htm">
+        <title><![CDATA[Kundenwidget "Konto-/Depotübersicht"]]></title>
+        <tooltip><![CDATA[Kundenwidget "Konto-/Depotübersicht"]]></tooltip>
+      </item>
+      <item url="WordDocuments/kundenwidgetperformancerisikoklasse1.htm">
+        <title><![CDATA[Kundenwidget "Performance/Risikoklasse"]]></title>
+        <tooltip><![CDATA[Kundenwidget "Performance/Risikoklasse"]]></tooltip>
+      </item>
+      <item url="WordDocuments/kundenwidgetperformanceverlauf.htm">
+        <title><![CDATA[Kundenwidget "Performanceverlauf"]]></title>
+        <tooltip><![CDATA[Kundenwidget "Performanceverlauf"]]></tooltip>
+      </item>
+      <item url="WordDocuments/kundenwidgetrisikoverlauf.htm">
+        <title><![CDATA[Kundenwidget "Risikoverlauf"]]></title>
+        <tooltip><![CDATA[Kundenwidget "Risikoverlauf"]]></tooltip>
+      </item>
+      <item url="WordDocuments/kundenwidgetvermgensstruktur.htm">
+        <title><![CDATA[Kundenwidget "Vermögensstruktur"]]></title>
+        <tooltip><![CDATA[Kundenwidget "Vermögensstruktur"]]></tooltip>
+      </item>
+      <item url="WordDocuments/kundenwidgetwertvernderung.htm">
+        <title><![CDATA[Kundenwidget "Wertveränderung"]]></title>
+        <tooltip><![CDATA[Kundenwidget "Wertveränderung"]]></tooltip>
+      </item>
+      <item url="WordDocuments/marktdatenwidgetarbitrage.htm">
+        <title><![CDATA[Marktdatenwidget "Arbitrage"]]></title>
+        <tooltip><![CDATA[Marktdatenwidget "Arbitrage"]]></tooltip>
+      </item>
+      <item url="WordDocuments/marktdatenwidgetchart.htm">
+        <title><![CDATA[Marktdatenwidget "Chart"]]></title>
+        <tooltip><![CDATA[Marktdatenwidget "Chart"]]></tooltip>
+      </item>
+      <item url="WordDocuments/marktdatenwidgetcompactquote.htm">
+        <title><![CDATA[Marktdatenwidget "Compact Quote"]]></title>
+        <tooltip><![CDATA[Marktdatenwidget "Compact Quote"]]></tooltip>
+      </item>
+      <item url="WordDocuments/marktdatenwidgetkursliste.htm">
+        <title><![CDATA[Marktdatenwidget "Kursliste"]]></title>
+        <tooltip><![CDATA[Marktdatenwidget "Kursliste"]]></tooltip>
+      </item>
+      <item url="WordDocuments/marktdatenwidgetmarktbersicht.htm">
+        <title><![CDATA[Marktdatenwidget "Marktübersicht"]]></title>
+        <tooltip><![CDATA[Marktdatenwidget "Marktübersicht"]]></tooltip>
+      </item>
+      <item url="WordDocuments/marktdatenwidgetmusterportfolio.htm">
+        <title><![CDATA[Marktdatenwidget "Musterportfolio"]]></title>
+        <tooltip><![CDATA[Marktdatenwidget "Musterportfolio"]]></tooltip>
+      </item>
+      <item url="WordDocuments/marktdatenwidgetnachrichten.htm">
+        <title><![CDATA[Marktdatenwidget "Nachrichten"]]></title>
+        <tooltip><![CDATA[Marktdatenwidget "Nachrichten"]]></tooltip>
+      </item>
+      <item url="WordDocuments/marktdatenwidgettermine.htm">
+        <title><![CDATA[Marktdatenwidget "Termine"]]></title>
+        <tooltip><![CDATA[Marktdatenwidget "Termine"]]></tooltip>
+      </item>
+      <item url="WordDocuments/marktdatenwidgettopsflops.htm">
+        <title><![CDATA[Marktdatenwidget "Tops/Flops"]]></title>
+        <tooltip><![CDATA[Marktdatenwidget "Tops/Flops"]]></tooltip>
+      </item>
+      <item url="WordDocuments/marktdatenwidgetvwdseite.htm">
+        <title><![CDATA[Marktdatenwidget "vwd-Seite"]]></title>
+        <tooltip><![CDATA[Marktdatenwidget "vwd-Seite"]]></tooltip>
+      </item>
+      <item url="WordDocuments/marktdatenwidgetwatchlist.htm">
+        <title><![CDATA[Marktdatenwidget "Watchlist"]]></title>
+        <tooltip><![CDATA[Marktdatenwidget "Watchlist"]]></tooltip>
+      </item>
+    </item>
+  </item>
+  <item url="WordDocuments/suche.htm">
+    <title><![CDATA[Suche]]></title>
+    <tooltip><![CDATA[Suche]]></tooltip>
+    <item url="WordDocuments/objektesuchen.htm">
+      <title><![CDATA[Objekte suchen]]></title>
+      <tooltip><![CDATA[Objekte suchen]]></tooltip>
+      <item url="WordDocuments/livesuche.htm">
+        <title><![CDATA[Live-Suche]]></title>
+        <tooltip><![CDATA[Live-Suche]]></tooltip>
+      </item>
+    </item>
+    <item url="WordDocuments/suchergebnis.htm">
+      <title><![CDATA[Suchergebnis]]></title>
+      <tooltip><![CDATA[Suchergebnis]]></tooltip>
+    </item>
+    <item url="WordDocuments/objektfenster.htm">
+      <title><![CDATA[Objektfenster]]></title>
+      <tooltip><![CDATA[Objektfenster]]></tooltip>
+      <item url="WordDocuments/navigatortoolbarbeigeffnetemobjektfenster.htm">
+        <title><![CDATA[Navigator-Toolbar bei geöffnetem Objektfenster]]></title>
+        <tooltip><![CDATA[Navigator-Toolbar bei geöffnetem Objektfenster]]></tooltip>
+        <item url="WordDocuments/zurckfunktion.htm">
+          <title><![CDATA[Zurück-Funktion]]></title>
+          <tooltip><![CDATA[Zurück-Funktion]]></tooltip>
+        </item>
+        <item url="WordDocuments/kontextlisten.htm">
+          <title><![CDATA[Kontextlisten]]></title>
+          <tooltip><![CDATA[Kontextlisten]]></tooltip>
+        </item>
+      </item>
+      <item url="WordDocuments/steckbriefimnavigatorbeigeffnetemobjektfenster.htm">
+        <title><![CDATA[Steckbrief im Navigator bei geöffnetem Objektfenster]]></title>
+        <tooltip><![CDATA[Steckbrief im Navigator bei geöffnetem Objektfenster]]></tooltip>
+      </item>
+    </item>
+  </item>
+  <item url="WordDocuments/bereichkunden.htm">
+    <title><![CDATA[Bereich "Kunden"]]></title>
+    <tooltip><![CDATA[Bereich "Kunden"]]></tooltip>
+    <item url="WordDocuments/ansichtimbereichkunden.htm">
+      <title><![CDATA[Ansicht im Bereich ʺKundenʺ]]></title>
+      <tooltip><![CDATA[Ansicht im Bereich ʺKundenʺ]]></tooltip>
+      <item url="WordDocuments/kundenportfolioundinteressentenlistenimnavigator.htm">
+        <title><![CDATA[Kunden- , Portfolio- und Interessentenlisten im Navigator]]></title>
+        <tooltip><![CDATA[Kunden- , Portfolio- und Interessentenlisten im Navigator]]></tooltip>
+      </item>
+      <item url="WordDocuments/explorer.htm">
+        <title><![CDATA[Explorer]]></title>
+        <tooltip><![CDATA[Explorer]]></tooltip>
+        <item url="WordDocuments/symboleimexplorer.htm">
+          <title><![CDATA[Symbole im Explorer]]></title>
+          <tooltip><![CDATA[Symbole im Explorer]]></tooltip>
+        </item>
+        <item url="WordDocuments/explorerausundeinblenden.htm">
+          <title><![CDATA[Explorer aus- und einblenden]]></title>
+          <tooltip><![CDATA[Explorer aus- und einblenden]]></tooltip>
+        </item>
+      </item>
+      <item url="WordDocuments/objektansichtenimbereichkunden.htm">
+        <title><![CDATA[Objektansichten im Bereich "Kunden"]]></title>
+        <tooltip><![CDATA[Objektansichten im Bereich "Kunden"]]></tooltip>
+      </item>
+      <item url="WordDocuments/gruppenauswertungen.htm">
+        <title><![CDATA[Gruppenauswertungen]]></title>
+        <tooltip><![CDATA[Gruppenauswertungen]]></tooltip>
+        <item url="WordDocuments/auswertungenimhintergrund.htm">
+          <title><![CDATA[Auswertungen im Hintergrund]]></title>
+          <tooltip><![CDATA[Auswertungen im Hintergrund]]></tooltip>
+        </item>
+      </item>
+    </item>
+    <item url="WordDocuments/objektfensterinhaber1.htm">
+      <title><![CDATA[Objektfenster "Inhaber"]]></title>
+      <tooltip><![CDATA[Objektfenster "Inhaber"]]></tooltip>
+      <item url="WordDocuments/navigator1.htm">
+        <title><![CDATA[Navigator]]></title>
+        <tooltip><![CDATA[Navigator]]></tooltip>
+      </item>
+      <item url="WordDocuments/inhabersteckbrief.htm">
+        <title><![CDATA[Inhaber-Steckbrief]]></title>
+        <tooltip><![CDATA[Inhaber-Steckbrief]]></tooltip>
+      </item>
+      <item url="WordDocuments/stammdaten.htm">
+        <title><![CDATA[Stammdaten]]></title>
+        <tooltip><![CDATA[Stammdaten]]></tooltip>
+        <item url="WordDocuments/kontakt.htm">
+          <title><![CDATA[Kontakt]]></title>
+          <tooltip><![CDATA[Kontakt]]></tooltip>
+        </item>
+        <item url="WordDocuments/verknpftepersonen.htm">
+          <title><![CDATA[Verknüpfte Personen]]></title>
+          <tooltip><![CDATA[Verknüpfte Personen]]></tooltip>
+        </item>
+        <item url="WordDocuments/reporting.htm">
+          <title><![CDATA[Reporting]]></title>
+          <tooltip><![CDATA[Reporting]]></tooltip>
+        </item>
+        <item url="WordDocuments/steuerangaben.htm">
+          <title><![CDATA[Steuerangaben]]></title>
+          <tooltip><![CDATA[Steuerangaben]]></tooltip>
+        </item>
+        <item url="WordDocuments/benutzerdefiniertefelder.htm">
+          <title><![CDATA[Benutzerdefinierte Felder]]></title>
+          <tooltip><![CDATA[Benutzerdefinierte Felder]]></tooltip>
+        </item>
+      </item>
+      <item url="WordDocuments/verknpfteobjekte.htm">
+        <title><![CDATA[Verknüpfte Objekte]]></title>
+        <tooltip><![CDATA[Verknüpfte Objekte]]></tooltip>
+      </item>
+      <item url="WordDocuments/aktivitten.htm">
+        <title><![CDATA[Aktivitäten]]></title>
+        <tooltip><![CDATA[Aktivitäten]]></tooltip>
+      </item>
+      <item url="WordDocuments/dokumente.htm">
+        <title><![CDATA[Dokumente]]></title>
+        <tooltip><![CDATA[Dokumente]]></tooltip>
+      </item>
+      <item url="WordDocuments/dashboard.htm">
+        <title><![CDATA[Dashboard]]></title>
+        <tooltip><![CDATA[Dashboard]]></tooltip>
+      </item>
+      <item url="WordDocuments/auswertungen.htm">
+        <title><![CDATA[Auswertungen]]></title>
+        <tooltip><![CDATA[Auswertungen]]></tooltip>
+        <item url="WordDocuments/tabellen.htm">
+          <title><![CDATA[Tabellen]]></title>
+          <tooltip><![CDATA[Tabellen]]></tooltip>
+          <item url="WordDocuments/tabellengruppieren.htm">
+            <title><![CDATA[Tabellen gruppieren]]></title>
+            <tooltip><![CDATA[Tabellen gruppieren]]></tooltip>
+          </item>
+          <item url="WordDocuments/tabellensortieren.htm">
+            <title><![CDATA[Tabellen sortieren]]></title>
+            <tooltip><![CDATA[Tabellen sortieren]]></tooltip>
+          </item>
+          <item url="WordDocuments/tabelleneinstellenparameterderauswertungen.htm">
+            <title><![CDATA[Tabellen einstellen (Parameter der Auswertungen)]]></title>
+            <tooltip><![CDATA[Tabellen einstellen (Parameter der Auswertungen)]]></tooltip>
+          </item>
+          <item url="WordDocuments/grafikenintabellen.htm">
+            <title><![CDATA[Grafiken in Tabellen]]></title>
+            <tooltip><![CDATA[Grafiken in Tabellen]]></tooltip>
+          </item>
+        </item>
+        <item url="WordDocuments/charts.htm">
+          <title><![CDATA[Charts]]></title>
+          <tooltip><![CDATA[Charts]]></tooltip>
+        </item>
+        <item url="WordDocuments/reports.htm">
+          <title><![CDATA[Reports]]></title>
+          <tooltip><![CDATA[Reports]]></tooltip>
+          <item url="WordDocuments/reportseinstellenparameterderauswertungen.htm">
+            <title><![CDATA[Reports einstellen (Parameter der Auswertungen)]]></title>
+            <tooltip><![CDATA[Reports einstellen (Parameter der Auswertungen)]]></tooltip>
+          </item>
+        </item>
+      </item>
+      <item url="WordDocuments/reportsarchivieren.htm">
+        <title><![CDATA[Reports archivieren]]></title>
+        <tooltip><![CDATA[Reports archivieren]]></tooltip>
+      </item>
+      <item url="WordDocuments/ordering.htm">
+        <title><![CDATA[Ordering]]></title>
+        <tooltip><![CDATA[Ordering]]></tooltip>
+      </item>
+    </item>
+    <item url="WordDocuments/weitereobjektfensterimbereichkunden.htm">
+      <title><![CDATA[Weitere Objektfenster im Bereich "Kunden"]]></title>
+      <tooltip><![CDATA[Weitere Objektfenster im Bereich "Kunden"]]></tooltip>
+      <item url="WordDocuments/objektfensterportfolio1.htm">
+        <title><![CDATA[Objektfenster "Portfolio"]]></title>
+        <tooltip><![CDATA[Objektfenster "Portfolio"]]></tooltip>
+        <item url="WordDocuments/portfoliosteckbrief.htm">
+          <title><![CDATA[Portfolio-Steckbrief]]></title>
+          <tooltip><![CDATA[Portfolio-Steckbrief]]></tooltip>
+        </item>
+        <item url="WordDocuments/verknpfteobjekte5.htm">
+          <title><![CDATA[Verknüpfte Objekte]]></title>
+          <tooltip><![CDATA[Verknüpfte Objekte]]></tooltip>
+        </item>
+      </item>
+      <item url="WordDocuments/objektfensterkonto1.htm">
+        <title><![CDATA[Objektfenster "Konto"]]></title>
+        <tooltip><![CDATA[Objektfenster "Konto"]]></tooltip>
+        <item url="WordDocuments/kontosteckbrief.htm">
+          <title><![CDATA[Konto-Steckbrief]]></title>
+          <tooltip><![CDATA[Konto-Steckbrief]]></tooltip>
+        </item>
+        <item url="WordDocuments/verknpfteobjekte6.htm">
+          <title><![CDATA[Verknüpfte Objekte]]></title>
+          <tooltip><![CDATA[Verknüpfte Objekte]]></tooltip>
+        </item>
+      </item>
+      <item url="WordDocuments/objektfensterdepot1.htm">
+        <title><![CDATA[Objektfenster "Depot"]]></title>
+        <tooltip><![CDATA[Objektfenster "Depot"]]></tooltip>
+        <item url="WordDocuments/depotsteckbrief.htm">
+          <title><![CDATA[Depot-Steckbrief]]></title>
+          <tooltip><![CDATA[Depot-Steckbrief]]></tooltip>
+        </item>
+        <item url="WordDocuments/verknpfteobjekte7.htm">
+          <title><![CDATA[Verknüpfte Objekte]]></title>
+          <tooltip><![CDATA[Verknüpfte Objekte]]></tooltip>
+        </item>
+      </item>
+      <item url="WordDocuments/objektfensterwertpapierwertpapiersteckbrief1.htm">
+        <title><![CDATA[Objektfenster "Wertpapier" (Wertpapier-Steckbrief)]]></title>
+        <tooltip><![CDATA[Objektfenster "Wertpapier" (Wertpapier-Steckbrief)]]></tooltip>
+      </item>
+    </item>
+    <item url="WordDocuments/interessenten.htm">
+      <title><![CDATA[Interessenten]]></title>
+      <tooltip><![CDATA[Interessenten]]></tooltip>
+      <item url="WordDocuments/interessentanlegen.htm">
+        <title><![CDATA[Interessent anlegen]]></title>
+        <tooltip><![CDATA[Interessent anlegen]]></tooltip>
+      </item>
+      <item url="WordDocuments/interessentenlisten.htm">
+        <title><![CDATA[Interessentenlisten]]></title>
+        <tooltip><![CDATA[Interessentenlisten]]></tooltip>
+      </item>
+      <item url="WordDocuments/objektfensterinteressent1.htm">
+        <title><![CDATA[Objektfenster "Interessent"]]></title>
+        <tooltip><![CDATA[Objektfenster "Interessent"]]></tooltip>
+      </item>
+      <item url="WordDocuments/interessentensteckbrief.htm">
+        <title><![CDATA[Interessenten-Steckbrief]]></title>
+        <tooltip><![CDATA[Interessenten-Steckbrief]]></tooltip>
+        <item url="WordDocuments/stammdaten3.htm">
+          <title><![CDATA[Stammdaten]]></title>
+          <tooltip><![CDATA[Stammdaten]]></tooltip>
+          <item url="WordDocuments/kontakt3.htm">
+            <title><![CDATA[Kontakt]]></title>
+            <tooltip><![CDATA[Kontakt]]></tooltip>
+          </item>
+          <item url="WordDocuments/verknpftepersonen1.htm">
+            <title><![CDATA[Verknüpfte Personen]]></title>
+            <tooltip><![CDATA[Verknüpfte Personen]]></tooltip>
+          </item>
+          <item url="WordDocuments/reporting1.htm">
+            <title><![CDATA[Reporting]]></title>
+            <tooltip><![CDATA[Reporting]]></tooltip>
+          </item>
+          <item url="WordDocuments/steuerangaben1.htm">
+            <title><![CDATA[Steuerangaben]]></title>
+            <tooltip><![CDATA[Steuerangaben]]></tooltip>
+          </item>
+          <item url="WordDocuments/benutzerdefiniertefelder3.htm">
+            <title><![CDATA[Benutzerdefinierte Felder]]></title>
+            <tooltip><![CDATA[Benutzerdefinierte Felder]]></tooltip>
+          </item>
+        </item>
+        <item url="WordDocuments/stammdatenbearbeiten.htm">
+          <title><![CDATA[Stammdaten bearbeiten]]></title>
+          <tooltip><![CDATA[Stammdaten bearbeiten]]></tooltip>
+        </item>
+        <item url="WordDocuments/aktivitten1.htm">
+          <title><![CDATA[Aktivitäten]]></title>
+          <tooltip><![CDATA[Aktivitäten]]></tooltip>
+        </item>
+        <item url="WordDocuments/verknpfteobjekte4.htm">
+          <title><![CDATA[Verknüpfte Objekte]]></title>
+          <tooltip><![CDATA[Verknüpfte Objekte]]></tooltip>
+        </item>
+        <item url="WordDocuments/auswertungen1.htm">
+          <title><![CDATA[Auswertungen]]></title>
+          <tooltip><![CDATA[Auswertungen]]></tooltip>
+        </item>
+      </item>
+      <item url="WordDocuments/objektfensterperson1.htm">
+        <title><![CDATA[Objektfenster "Person"]]></title>
+        <tooltip><![CDATA[Objektfenster "Person"]]></tooltip>
+      </item>
+      <item url="WordDocuments/personensteckbrief.htm">
+        <title><![CDATA[Personen-Steckbrief]]></title>
+        <tooltip><![CDATA[Personen-Steckbrief]]></tooltip>
+        <item url="WordDocuments/stammdaten4.htm">
+          <title><![CDATA[Stammdaten]]></title>
+          <tooltip><![CDATA[Stammdaten]]></tooltip>
+          <item url="WordDocuments/kontakt4.htm">
+            <title><![CDATA[Kontakt]]></title>
+            <tooltip><![CDATA[Kontakt]]></tooltip>
+          </item>
+          <item url="WordDocuments/verknpfteinhaber.htm">
+            <title><![CDATA[Verknüpfte Inhaber]]></title>
+            <tooltip><![CDATA[Verknüpfte Inhaber]]></tooltip>
+          </item>
+          <item url="WordDocuments/verknpfteinteressenten.htm">
+            <title><![CDATA[Verknüpfte Interessenten]]></title>
+            <tooltip><![CDATA[Verknüpfte Interessenten]]></tooltip>
+          </item>
+          <item url="WordDocuments/benutzerdefiniertefelder4.htm">
+            <title><![CDATA[Benutzerdefinierte Felder]]></title>
+            <tooltip><![CDATA[Benutzerdefinierte Felder]]></tooltip>
+          </item>
+        </item>
+      </item>
+    </item>
+    <item url="WordDocuments/weiteremglichkeitenimbereichkunden.htm">
+      <title><![CDATA[Weitere Möglichkeiten im Bereich Kunden]]></title>
+      <tooltip><![CDATA[Weitere Möglichkeiten im Bereich Kunden]]></tooltip>
+      <item url="WordDocuments/eigeneinteressenten.htm">
+        <title><![CDATA[Eigene Interessenten]]></title>
+        <tooltip><![CDATA[Eigene Interessenten]]></tooltip>
+      </item>
+      <item url="WordDocuments/fokusliste.htm">
+        <title><![CDATA[Fokusliste]]></title>
+        <tooltip><![CDATA[Fokusliste]]></tooltip>
+      </item>
+    </item>
+  </item>
+  <item url="WordDocuments/beratungsprozess.htm">
+    <title><![CDATA[Beratungsprozess]]></title>
+    <tooltip><![CDATA[Beratungsprozess]]></tooltip>
+    <item url="WordDocuments/aktivittenframeworkundworkflows.htm">
+      <title><![CDATA[Aktivitäten-Framework und Workflows]]></title>
+      <tooltip><![CDATA[Aktivitäten-Framework und Workflows]]></tooltip>
+    </item>
+    <item url="WordDocuments/aktivittenverwenden.htm">
+      <title><![CDATA[Aktivitäten verwenden]]></title>
+      <tooltip><![CDATA[Aktivitäten verwenden]]></tooltip>
+      <item url="WordDocuments/aktivittsbersicht.htm">
+        <title><![CDATA[Aktivitätsübersicht]]></title>
+        <tooltip><![CDATA[Aktivitätsübersicht]]></tooltip>
+      </item>
+      <item url="WordDocuments/aktivittanlegen.htm">
+        <title><![CDATA[Aktivität anlegen]]></title>
+        <tooltip><![CDATA[Aktivität anlegen]]></tooltip>
+      </item>
+      <item url="WordDocuments/aktivittffnen.htm">
+        <title><![CDATA[Aktivität öffnen]]></title>
+        <tooltip><![CDATA[Aktivität öffnen]]></tooltip>
+      </item>
+      <item url="WordDocuments/objektfensteraktivitt1.htm">
+        <title><![CDATA[Objektfenster "Aktivität"]]></title>
+        <tooltip><![CDATA[Objektfenster "Aktivität"]]></tooltip>
+        <item url="WordDocuments/aktivittssteckbrief.htm">
+          <title><![CDATA[Aktivitäts-Steckbrief]]></title>
+          <tooltip><![CDATA[Aktivitäts-Steckbrief]]></tooltip>
+        </item>
+        <item url="WordDocuments/aktivittsnavigationsbereich.htm">
+          <title><![CDATA[Aktivitäts-Navigationsbereich]]></title>
+          <tooltip><![CDATA[Aktivitäts-Navigationsbereich]]></tooltip>
+        </item>
+        <item url="WordDocuments/aktivittsauswertungsbereich.htm">
+          <title><![CDATA[Aktivitäts-Auswertungsbereich]]></title>
+          <tooltip><![CDATA[Aktivitäts-Auswertungsbereich]]></tooltip>
+        </item>
+      </item>
+      <item url="WordDocuments/pflichtfelder.htm">
+        <title><![CDATA[Pflichtfelder]]></title>
+        <tooltip><![CDATA[Pflichtfelder]]></tooltip>
+      </item>
+    </item>
+    <item url="WordDocuments/fallbeispiele.htm">
+      <title><![CDATA[Fallbeispiele]]></title>
+      <tooltip><![CDATA[Fallbeispiele]]></tooltip>
+      <item url="WordDocuments/allgemeineraufbau.htm">
+        <title><![CDATA[Allgemeiner Aufbau]]></title>
+        <tooltip><![CDATA[Allgemeiner Aufbau]]></tooltip>
+      </item>
+      <item url="WordDocuments/aktivittwphgdatenerfassung1.htm">
+        <title><![CDATA[Aktivität "WpHG-Datenerfassung"]]></title>
+        <tooltip><![CDATA[Aktivität "WpHG-Datenerfassung"]]></tooltip>
+      </item>
+      <item url="WordDocuments/aktivittanlagevorschlag1.htm">
+        <title><![CDATA[Aktivität "Anlagevorschlag"]]></title>
+        <tooltip><![CDATA[Aktivität "Anlagevorschlag"]]></tooltip>
+      </item>
+      <item url="WordDocuments/aktivittinternervermerk1.htm">
+        <title><![CDATA[Aktivität "Interner Vermerk"]]></title>
+        <tooltip><![CDATA[Aktivität "Interner Vermerk"]]></tooltip>
+      </item>
+      <item url="WordDocuments/aktivittberatung1.htm">
+        <title><![CDATA[Aktivität "Beratung"]]></title>
+        <tooltip><![CDATA[Aktivität "Beratung"]]></tooltip>
+      </item>
+      <item url="WordDocuments/aktivittberatungsfreiesgeschft1.htm">
+        <title><![CDATA[Aktivität "Beratungsfreies Geschäft"]]></title>
+        <tooltip><![CDATA[Aktivität "Beratungsfreies Geschäft"]]></tooltip>
+      </item>
+    </item>
+  </item>
+  <item url="WordDocuments/bereichmrkte.htm">
+    <title><![CDATA[Bereich "Märkte"]]></title>
+    <tooltip><![CDATA[Bereich "Märkte"]]></tooltip>
+    <item url="WordDocuments/ansichtimbereichmrkte.htm">
+      <title><![CDATA[Ansicht im Bereich ʺMärkteʺ]]></title>
+      <tooltip><![CDATA[Ansicht im Bereich ʺMärkteʺ]]></tooltip>
+      <item url="WordDocuments/marktbersichtenimnavigator.htm">
+        <title><![CDATA[Markt-Übersichten im Navigator]]></title>
+        <tooltip><![CDATA[Markt-Übersichten im Navigator]]></tooltip>
+      </item>
+      <item url="WordDocuments/objektansichtenimbereichmrkte.htm">
+        <title><![CDATA[Objektansichten im Bereich "Märkte"]]></title>
+        <tooltip><![CDATA[Objektansichten im Bereich "Märkte"]]></tooltip>
+      </item>
+    </item>
+    <item url="WordDocuments/objektfensterwertpapier1.htm">
+      <title><![CDATA[Objektfenster "Wertpapier"]]></title>
+      <tooltip><![CDATA[Objektfenster "Wertpapier"]]></tooltip>
+      <item url="WordDocuments/wertpapierportrt.htm">
+        <title><![CDATA[Wertpapierporträt]]></title>
+        <tooltip><![CDATA[Wertpapierporträt]]></tooltip>
+      </item>
+      <item url="WordDocuments/navigatorimobjektfensterwertpapier1.htm">
+        <title><![CDATA[Navigator im Objektfenster "Wertpapier"]]></title>
+        <tooltip><![CDATA[Navigator im Objektfenster "Wertpapier"]]></tooltip>
+        <item url="WordDocuments/steckbriefwertpapier.htm">
+          <title><![CDATA[Steckbrief Wertpapier]]></title>
+          <tooltip><![CDATA[Steckbrief Wertpapier]]></tooltip>
+        </item>
+      </item>
+      <item url="WordDocuments/stammdatenpm.htm">
+        <title><![CDATA[Stammdaten [pm]]]></title>
+        <tooltip><![CDATA[Stammdaten [pm]]]></tooltip>
+      </item>
+      <item url="WordDocuments/arbitrage.htm">
+        <title><![CDATA[Arbitrage]]></title>
+        <tooltip><![CDATA[Arbitrage]]></tooltip>
+      </item>
+      <item url="WordDocuments/ts.htm">
+        <title><![CDATA[T & S]]></title>
+        <tooltip><![CDATA[T & S]]></tooltip>
+      </item>
+      <item url="WordDocuments/kennzahlen.htm">
+        <title><![CDATA[Kennzahlen]]></title>
+        <tooltip><![CDATA[Kennzahlen]]></tooltip>
+      </item>
+      <item url="WordDocuments/nachrichten.htm">
+        <title><![CDATA[Nachrichten]]></title>
+        <tooltip><![CDATA[Nachrichten]]></tooltip>
+      </item>
+      <item url="WordDocuments/chart.htm">
+        <title><![CDATA[Chart]]></title>
+        <tooltip><![CDATA[Chart]]></tooltip>
+      </item>
+      <item url="WordDocuments/derivate.htm">
+        <title><![CDATA[Derivate]]></title>
+        <tooltip><![CDATA[Derivate]]></tooltip>
+      </item>
+    </item>
+  </item>
+  <item url="WordDocuments/bereichnachrichten.htm">
+    <title><![CDATA[Bereich "Nachrichten"]]></title>
+    <tooltip><![CDATA[Bereich "Nachrichten"]]></tooltip>
+    <item url="WordDocuments/nachrichtenbersicht.htm">
+      <title><![CDATA[Nachrichtenübersicht]]></title>
+      <tooltip><![CDATA[Nachrichtenübersicht]]></tooltip>
+    </item>
+    <item url="WordDocuments/nachrichtensuche.htm">
+      <title><![CDATA[Nachrichtensuche]]></title>
+      <tooltip><![CDATA[Nachrichtensuche]]></tooltip>
+    </item>
+  </item>
+  <item url="WordDocuments/dokumentenarchiv.htm">
+    <title><![CDATA[Dokumenten-Archiv]]></title>
+    <tooltip><![CDATA[Dokumenten-Archiv]]></tooltip>
+    <item url="WordDocuments/dokumentearchivieren.htm">
+      <title><![CDATA[Dokumente archivieren]]></title>
+      <tooltip><![CDATA[Dokumente archivieren]]></tooltip>
+    </item>
+    <item url="WordDocuments/listederarchiviertendokumenteanzeigen.htm">
+      <title><![CDATA[Liste der archivierten Dokumente anzeigen]]></title>
+      <tooltip><![CDATA[Liste der archivierten Dokumente anzeigen]]></tooltip>
+    </item>
+    <item url="WordDocuments/dokumentenlisteanzeigen.htm">
+      <title><![CDATA[Dokumentenliste anzeigen]]></title>
+      <tooltip><![CDATA[Dokumentenliste anzeigen]]></tooltip>
+    </item>
+  </item>
+  <item url="WordDocuments/alerts.htm">
+    <title><![CDATA[Alerts]]></title>
+    <tooltip><![CDATA[Alerts]]></tooltip>
+  </item>
+  <item url="WordDocuments/kundensitzungen.htm">
+    <title><![CDATA[Kundensitzungen]]></title>
+    <tooltip><![CDATA[Kundensitzungen]]></tooltip>
+    <item url="WordDocuments/kundensitzungenstarten.htm">
+      <title><![CDATA[Kundensitzungen starten]]></title>
+      <tooltip><![CDATA[Kundensitzungen starten]]></tooltip>
+    </item>
+    <item url="WordDocuments/arbeitsoberflcheundbereichsmeninkundensitzungen.htm">
+      <title><![CDATA[Arbeitsoberfläche und Bereichsmenü in Kundensitzungen]]></title>
+      <tooltip><![CDATA[Arbeitsoberfläche und Bereichsmenü in Kundensitzungen]]></tooltip>
+    </item>
+    <item url="WordDocuments/auswertungenundkundensitzungen.htm">
+      <title><![CDATA[Auswertungen und Kundensitzungen]]></title>
+      <tooltip><![CDATA[Auswertungen und Kundensitzungen]]></tooltip>
+    </item>
+    <item url="WordDocuments/dokumentenarchivundkundensitzungen.htm">
+      <title><![CDATA[Dokumenten-Archiv und Kundensitzungen]]></title>
+      <tooltip><![CDATA[Dokumenten-Archiv und Kundensitzungen]]></tooltip>
+    </item>
+    <item url="WordDocuments/auswirkungenaufdieobjektfensterderverschiedenendepotobjekte.htm">
+      <title><![CDATA[Auswirkungen auf die Objektfenster der verschiedenen Depotobjekte]]></title>
+      <tooltip><![CDATA[Auswirkungen auf die Objektfenster der verschiedenen Depotobjekte]]></tooltip>
+      <item url="WordDocuments/kundensitzungenbeenden.htm">
+        <title><![CDATA[Kundensitzungen beenden]]></title>
+        <tooltip><![CDATA[Kundensitzungen beenden]]></tooltip>
+      </item>
+    </item>
+  </item>
+  <item url="WordDocuments/weiterebereiche.htm">
+    <title><![CDATA[Weitere Bereiche]]></title>
+    <tooltip><![CDATA[Weitere Bereiche]]></tooltip>
+    <item url="WordDocuments/bereichtools.htm">
+      <title><![CDATA[Bereich "Tools"]]></title>
+      <tooltip><![CDATA[Bereich "Tools"]]></tooltip>
+      <item url="WordDocuments/watchlist.htm">
+        <title><![CDATA[Watchlist]]></title>
+        <tooltip><![CDATA[Watchlist]]></tooltip>
+      </item>
+      <item url="WordDocuments/musterportfolio1.htm">
+        <title><![CDATA[Musterportfolio]]></title>
+        <tooltip><![CDATA[Musterportfolio]]></tooltip>
+      </item>
+      <item url="WordDocuments/devisenrechner.htm">
+        <title><![CDATA[Devisenrechner]]></title>
+        <tooltip><![CDATA[Devisenrechner]]></tooltip>
+      </item>
+      <item url="WordDocuments/vermgensrechner.htm">
+        <title><![CDATA[Vermögensrechner]]></title>
+        <tooltip><![CDATA[Vermögensrechner]]></tooltip>
+      </item>
+      <item url="WordDocuments/osrechner.htm">
+        <title><![CDATA[OS-Rechner]]></title>
+        <tooltip><![CDATA[OS-Rechner]]></tooltip>
+      </item>
+      <item url="WordDocuments/renditerechner.htm">
+        <title><![CDATA[Renditerechner]]></title>
+        <tooltip><![CDATA[Renditerechner]]></tooltip>
+      </item>
+      <item url="WordDocuments/flexchartanalyser.htm">
+        <title><![CDATA[flexChartAnalyser]]></title>
+        <tooltip><![CDATA[flexChartAnalyser]]></tooltip>
+      </item>
+    </item>
+    <item url="WordDocuments/bereichsuchergebnis.htm">
+      <title><![CDATA[Bereich "Suchergebnis"]]></title>
+      <tooltip><![CDATA[Bereich "Suchergebnis"]]></tooltip>
+    </item>
+    <item url="WordDocuments/bereichverwaltung.htm">
+      <title><![CDATA[Bereich "Verwaltung"]]></title>
+      <tooltip><![CDATA[Bereich "Verwaltung"]]></tooltip>
+      <item url="WordDocuments/einstellungen.htm">
+        <title><![CDATA[Einstellungen]]></title>
+        <tooltip><![CDATA[Einstellungen]]></tooltip>
+        <item url="WordDocuments/allgemein.htm">
+          <title><![CDATA[Allgemein]]></title>
+          <tooltip><![CDATA[Allgemein]]></tooltip>
+        </item>
+        <item url="WordDocuments/gebhrenprotradefrmusterportfolio.htm">
+          <title><![CDATA[Gebühren pro Trade für Musterportfolio]]></title>
+          <tooltip><![CDATA[Gebühren pro Trade für Musterportfolio]]></tooltip>
+        </item>
+      </item>
+      <item url="WordDocuments/passwortndern.htm">
+        <title><![CDATA[Passwort ändern]]></title>
+        <tooltip><![CDATA[Passwort ändern]]></tooltip>
+      </item>
+    </item>
+    <item url="WordDocuments/bereichhilfe.htm">
+      <title><![CDATA[Bereich "Hilfe"]]></title>
+      <tooltip><![CDATA[Bereich "Hilfe"]]></tooltip>
+      <item url="WordDocuments/info1.htm">
+        <title><![CDATA[Info]]></title>
+        <tooltip><![CDATA[Info]]></tooltip>
+      </item>
+      <item url="WordDocuments/updatehandbuch.htm">
+        <title><![CDATA[Update-Handbuch]]></title>
+        <tooltip><![CDATA[Update-Handbuch]]></tooltip>
+      </item>
+      <item url="WordDocuments/standardaktivittenhandbuch.htm">
+        <title><![CDATA[Standardaktivitäten-Handbuch]]></title>
+        <tooltip><![CDATA[Standardaktivitäten-Handbuch]]></tooltip>
+      </item>
+      <item url="WordDocuments/lexikon.htm">
+        <title><![CDATA[Lexikon]]></title>
+        <tooltip><![CDATA[Lexikon]]></tooltip>
+      </item>
+      <item url="WordDocuments/onlinehilfe.htm">
+        <title><![CDATA[Online-Hilfe]]></title>
+        <tooltip><![CDATA[Online-Hilfe]]></tooltip>
+      </item>
+    </item>
+  </item>
+</toc>

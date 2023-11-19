@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="serviceImpl" class="de.marketmaker.itools.amqprpc.sample.ServiceImpl"/>
+
+    <bean id="connectionManager"
+          class="de.marketmaker.itools.amqprpc.connections.AmqpRpcConnectionManager">
+        <property name="connectionFactory">
+            <bean class="com.rabbitmq.client.ConnectionFactory">
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="exporterChecker" class="de.marketmaker.itools.amqprpc.supervising.PeriodicSupervisor">
+        <property name="checkInterval" value="10"/>
+        <!--keep alive when connection dies-->
+        <property name="usingDaemonThread" value="false"/>
+    </bean>
+
+
+    <bean id="serviceAmqpExporterPrototype"
+          class="de.marketmaker.itools.amqprpc.AmqpServiceExporter"
+          scope="prototype">
+        <property name="serviceInterface" value="de.marketmaker.itools.amqprpc.sample.Service"/>
+        <property name="service" ref="serviceImpl"/>
+        <property name="supervisor" ref="exporterChecker"/>
+        <property name="connectionManager" ref="connectionManager"/>
+        <property name="rpcServerSettings.communicationPattern" value="ONEWAY_NOTIFY_ALL"/>
+        <property name="rpcServerSettings.numberOfMessagesToPrefetch" value="10"/>
+        <property name="address" value="tests/pingpong?exchangeAutoDelete=true&amp;queueAutoDelete=true"/>
+    </bean>
+
+    <bean id="serviceExporter" class="de.marketmaker.istar.common.spring.PrototypeManager">
+        <property name="beanName" value="serviceAmqpExporterPrototype"/>
+        <property name="numInstances" value="2"/>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" id="response"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:include schemaLocation="iview-xml.xsd"/>
+    <xsd:complexType name="AdhocParameter">
+        <xsd:complexContent>
+            <xsd:extension base="Parameter">
+                <xsd:sequence>
+                    <xsd:element name="item" type="AdhocParameterItem" minOccurs="0"
+                                 maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="AdhocParameterItem">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="key" type="xsd:string" use="required"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="DOC_ArchiveSearch">
+        <xsd:complexContent>
+            <xsd:extension base="BlockListType">
+                <xsd:sequence>
+                    <xsd:element name="item" type="DocArchiveItem" minOccurs="0"
+                                 maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="DocArchiveItem">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:string"/>
+            <xsd:element name="wkn" type="xsd:string" nillable="true"/>
+            <xsd:element name="isin" type="xsd:string" nillable="true"/>
+            <xsd:element name="name" type="xsd:string" nillable="true"/>
+            <xsd:element name="type" type="xsd:string" nillable="true"/>
+            <xsd:element name="date" type="xsd:dateTime"/>
+            <xsd:element name="request" type="xsd:string" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="DOC_Availability">
+        <xsd:complexContent>
+            <xsd:extension base="BlockType">
+                <xsd:sequence>
+                    <xsd:element name="item" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:complexType>
+                            <xsd:simpleContent>
+                                <xsd:extension base="xsd:string">
+                                    <xsd:attribute name="symbol" type="xsd:string" use="required"/>
+                                    <xsd:attribute name="available" type="xsd:boolean"
+                                                   use="required"/>
+                                </xsd:extension>
+                            </xsd:simpleContent>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="DOC_Instrument">
+        <xsd:sequence>
+            <xsd:element name="isin" type="xsd:string" nillable="true"/>
+            <xsd:element name="wkn" type="xsd:string" nillable="true"/>
+            <xsd:element name="name" type="xsd:string" nillable="true"/>
+            <xsd:element name="issuer" type="xsd:string" nillable="true"/>
+            <xsd:element name="gd198c" type="xsd:string" nillable="true"/>
+            <xsd:element name="reason" type="xsd:string" nillable="true"/>
+        </xsd:sequence>
+        <xsd:attribute name="symbol" type="xsd:string" use="required"/>
+        <xsd:attribute name="available" type="xsd:boolean" use="required"/>
+        <xsd:attribute name="issuerPibSource" type="xsd:boolean" use="optional"/>
+        <xsd:attribute name="vendorPib" type="xsd:boolean" use="optional"/>
+    </xsd:complexType>
+    <xsd:complexType name="DOC_InstrumentAvailability">
+        <xsd:complexContent>
+            <xsd:extension base="BlockType">
+                <xsd:sequence>
+                    <xsd:element name="item" type="DOC_Instrument" minOccurs="0"
+                                 maxOccurs="unbounded">
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="DOC_Document">
+        <xsd:complexContent>
+            <xsd:extension base="BlockType">
+                <xsd:sequence>
+                    <xsd:element name="id" type="xsd:string" nillable="true"/>
+                    <xsd:element name="wkn" type="xsd:string" nillable="true"/>
+                    <xsd:element name="isin" type="xsd:string" nillable="true"/>
+                    <xsd:element name="name" type="xsd:string" nillable="true"/>
+                    <xsd:element name="creationTime" type="xsd:dateTime" nillable="true"/>
+                    <xsd:element name="pdf" type="xsd:string" nillable="true"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="DOC_URL">
+        <xsd:complexContent>
+            <xsd:extension base="BlockType">
+                <xsd:sequence>
+                    <xsd:element name="id" type="xsd:string" nillable="true"/>
+                    <xsd:element name="wkn" type="xsd:string" nillable="true"/>
+                    <xsd:element name="isin" type="xsd:string" nillable="true"/>
+                    <xsd:element name="name" type="xsd:string" nillable="true"/>
+                    <xsd:element name="creationTime" type="xsd:dateTime" nillable="true"/>
+                    <xsd:element name="request" type="xsd:string" nillable="true"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="DOC_PibData">
+        <xsd:complexContent>
+            <xsd:extension base="BlockType">
+                <xsd:sequence>
+                    <xsd:element name="instrument" type="DOC_Instrument"/>
+                    <xsd:element name="section" type="DocDataSection" minOccurs="0"
+                                 maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="DocDataSection">
+        <xsd:sequence>
+            <xsd:element name="title" type="xsd:string" nillable="true"/>
+            <xsd:element name="text" type="xsd:string" nillable="true"/>
+        </xsd:sequence>
+        <xsd:attribute name="key" type="xsd:string" use="required"/>
+        <xsd:attribute name="source" type="xsd:string" use="required"/>
+    </xsd:complexType>
+    <xsd:complexType name="DOC_VendorDoc">
+        <xsd:complexContent>
+            <xsd:extension base="BlockType">
+                <xsd:sequence>
+                    <xsd:element name="docId" type="xsd:integer"/>
+                    <xsd:element name="succeeded" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="DOC_VendorDocSearch">
+        <xsd:complexContent>
+            <xsd:extension base="BlockListType">
+                <xsd:sequence>
+                    <xsd:element name="item" type="VendorDocItem" minOccurs="0"
+                                 maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="VendorDocItem">
+        <xsd:sequence>
+            <xsd:element name="docId" type="xsd:integer"/>
+            <xsd:element name="wkn" type="xsd:string" nillable="true"/>
+            <xsd:element name="isin" type="xsd:string" nillable="true"/>
+            <xsd:element name="name" type="xsd:string" nillable="true"/>
+            <xsd:element name="date" type="xsd:dateTime"/>
+            <xsd:element name="request" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="DOC_VendorDocGen">
+        <xsd:complexContent>
+            <xsd:extension base="BlockType">
+                <xsd:sequence>
+                    <xsd:element name="docId" type="xsd:integer"/>
+                    <xsd:element name="wkn" type="xsd:string" nillable="true"/>
+                    <xsd:element name="isin" type="xsd:string" nillable="true"/>
+                    <xsd:element name="name" type="xsd:string" nillable="true"/>
+                    <xsd:element name="request" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

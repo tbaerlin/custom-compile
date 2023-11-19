@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://${dbhost}/merger"/>
+        <property name="username" value="merger"/>
+        <property name="password" value="merger"/>
+        <property name="defaultAutoCommit" value="false"/>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="userInserter" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager"/>
+		<property name="target" ref="userInserterTarget"/>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="insertUsers*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+
+    <bean id="userInserterTarget" class="de.marketmaker.istar.merger.user.userimport_pb.UserInserterImpl">
+        <property name="isoCurrencyConversionProvider" ref="isoCurrencyConversionProvider"/>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="issueDbStatements" value="${issueDbStatements}"/>
+    </bean>
+
+    <bean id="userDataReader" class="de.marketmaker.istar.merger.user.userimport_pb.UserDataReader">
+        <property name="baseDir" value="${baseDir}"/>
+        <property name="instrumentServer" ref="instrumentServer"/>
+        <property name="inserter" ref="userInserter"/>
+    </bean>
+
+    <!-- +++++++++++++++++++++ -->
+    <!-- JMS                   -->
+    <!-- +++++++++++++++++++++ -->
+    <bean name="prefetchPolicy" class="org.apache.activemq.ActiveMQPrefetchPolicy">
+        <property name="queuePrefetch" value="10"/>
+    </bean>
+    <bean id="server" abstract="true" class="org.logicblaze.lingo.jms.JmsProxyFactoryBean">
+        <property name="connectionFactory">
+            <bean id="jmsFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+                <property name="brokerURL" value="${brokerURL}"/>
+                <property name="prefetchPolicy" ref="prefetchPolicy"/>
+            </bean>
+        </property>
+        <property name="producerConfig">
+            <bean id="producerConfig" class="org.logicblaze.lingo.jms.JmsProducerConfig">
+                <property name="deliveryMode" value="1"/>
+                <!-- non persistent = 1 -->
+                <property name="timeToLive" value="5000"/>
+                <!-- 5s -->
+            </bean>
+        </property>
+    </bean>
+    <!-- INSTRUMENTSERVER -->
+    <bean id="instrumentServer" parent="server">
+        <property name="serviceInterface"
+                  value="de.marketmaker.istar.instrument.InstrumentServer"/>
+        <property name="destination" ref="instrumentDestination"/>
+    </bean>
+    <bean id="instrumentDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="istar.merger.instrument?consumer.prefetchSize=1"/>
+    </bean>
+    <!-- ISOCURRENCYCONVERSION  -->
+    <bean id="isoCurrencyConversionProvider" parent="server">
+        <property name="serviceInterface"
+                  value="de.marketmaker.istar.merger.provider.IsoCurrencyConversionProvider"/>
+        <property name="destination" ref="isocurrencyconversiondestination"/>
+    </bean>
+    <bean id="isocurrencyconversiondestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0"
+                         value="istar.merger.isocurrencyconversion?consumer.prefetchSize=20"/>
+    </bean>
+</beans>

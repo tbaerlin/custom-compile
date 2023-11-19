@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+    <bean id="inputDataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="${inputDburl}"/>
+        <property name="username" value="importdb"/>
+        <property name="password" value="importdb"/>
+        <property name="defaultAutoCommit" value="true"/>
+    </bean>
+
+    <bean id="outputDataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="${outputDburl}"/>
+        <property name="username" value="merger"/>
+        <property name="password" value="merger"/>
+        <property name="defaultAutoCommit" value="true"/>
+    </bean>
+
+    <bean id="userDataReader" class="de.marketmaker.istar.merger.user.userimport_lbbw.UserDataReader">
+        <property name="dataSource" ref="inputDataSource"/>
+        <property name="instrumentServer" ref="instrumentServer"/>
+        <property name="userProvider" ref="userProvider"/>
+    </bean>
+
+    <bean id="companyProvider" class="de.marketmaker.istar.merger.user.CompanyProviderImpl">
+        <property name="companyCache">
+            <bean id="companyCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+                <property name="cacheManager" ref="cacheMgr"/>
+                <property name="cacheName" value="istar.merger.companies"/>
+            </bean>
+        </property>
+        <property name="companyDao" ref="companyDao"/>
+    </bean>
+    <bean id="companyDao" class="de.marketmaker.istar.merger.user.CompanyDaoDb">
+        <property name="dataSource" ref="outputDataSource"/>
+    </bean>
+    <bean id="userProvider" class="de.marketmaker.istar.merger.user.UserProviderImpl">
+        <property name="userCache">
+            <bean id="userCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+                <property name="cacheManager" ref="cacheMgr"/>
+                <property name="cacheName" value="istar.merger.users"/>
+            </bean>
+        </property>
+        <property name="userDao" ref="userDao"/>
+        <property name="companyProvider" ref="companyProvider"/>
+        <property name="allowRemovePositionWithOrders" value="true"/>
+        <property name="instrumentProvider" ref="instrumentProvider"/>
+    </bean>
+    <bean id="userDao" class="de.marketmaker.istar.merger.user.UserDaoDb">
+        <property name="dataSource" ref="outputDataSource"/>
+    </bean>
+    <bean id="cacheMgr" class="de.marketmaker.istar.common.spring.MmEhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:/de/marketmaker/istar/merger/user/userimport_lbbw/ehcache.xml"/>
+    </bean>
+
+
+    <!-- +++++++++++++++++++++ -->
+    <!-- JMS                   -->
+    <!-- +++++++++++++++++++++ -->
+    <bean name="prefetchPolicy" class="org.apache.activemq.ActiveMQPrefetchPolicy">
+        <property name="queuePrefetch" value="10"/>
+    </bean>
+    <bean id="server" abstract="true" class="org.logicblaze.lingo.jms.JmsProxyFactoryBean">
+        <property name="connectionFactory">
+            <bean id="jmsFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+                <property name="brokerURL" value="${brokerURL}"/>
+                <property name="prefetchPolicy" ref="prefetchPolicy"/>
+            </bean>
+        </property>
+        <property name="producerConfig">
+            <bean id="producerConfig" class="org.logicblaze.lingo.jms.JmsProducerConfig">
+                <property name="deliveryMode" value="1"/>
+                <!-- non persistent = 1 -->
+                <property name="timeToLive" value="5000"/>
+                <!-- 5s -->
+            </bean>
+        </property>
+    </bean>
+    <!-- INSTRUMENTSERVER -->
+    <bean id="instrumentProvider"
+          class="de.marketmaker.istar.merger.provider.InstrumentProviderImpl">
+        <property name="instrumentServer" ref="instrumentServer"/>
+        <property name="instrumentCache">
+            <bean class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+                <property name="cacheManager" ref="cacheMgr"/>
+                <property name="cacheName" value="istar.merger.iid2instrument"/>
+            </bean>
+        </property>
+        <property name="symbolCache">
+            <bean class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+                <property name="cacheManager" ref="cacheMgr"/>
+                <property name="cacheName" value="istar.merger.symbol2iid"/>
+            </bean>
+        </property>
+    </bean>
+    <bean id="instrumentServer" parent="server">
+        <property name="serviceInterface"
+                  value="de.marketmaker.istar.instrument.InstrumentServer"/>
+        <property name="destination" ref="instrumentDestination"/>
+    </bean>
+    <bean id="instrumentDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="istar.merger.instrument?consumer.prefetchSize=1"/>
+    </bean>
+    <!-- ISOCURRENCYCONVERSION  -->
+    <bean id="isoCurrencyConversionProvider" parent="server">
+        <property name="serviceInterface"
+                  value="de.marketmaker.istar.merger.provider.IsoCurrencyConversionProvider"/>
+        <property name="destination" ref="isocurrencyconversiondestination"/>
+    </bean>
+    <bean id="isocurrencyconversiondestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0"
+                         value="istar.merger.isocurrencyconversion?consumer.prefetchSize=20"/>
+    </bean>
+</beans>

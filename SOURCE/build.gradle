@@ -1,0 +1,179 @@
+plugins {
+    id 'java'
+}
+
+ext.branch = 'master'
+
+repositories {
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = [
+                'src/main/java',
+                'other-sources/amqp/src/main/java',
+                'other-sources/comet/src/main/java',
+                'other-sources/common/src/main/java',
+                'other-sources/dmxml-docu-portal/src/main/java',
+                'other-sources/domain/src/main/java',
+                'other-sources/feed/src/main/java',
+                'other-sources/gwt-highcharts-code-master/src/main/java',
+                'other-sources/gwtutil/src/main/java',
+                'other-sources/gxtmm/src/main/java',
+                'other-sources/instrument/src/main/java',
+                'other-sources/iview-tools/src/main/java',
+                'other-sources/merger/src/main/java',
+                'other-sources/mmgwt/src/main/java',
+                'other-sources/news/src/main/java',
+                'other-sources/ratios/src/main/java',
+            ]
+            println("SOURCE DIRS: " + srcDirs)
+        }
+    }
+}
+
+dependencies {
+
+    apply from: rootProject.file('gradle/dependencies.gradle')
+
+
+    /* komisch.. muss doch Einträge von Hand machen */
+    implementation 'io.micrometer:micrometer-registry-prometheus:1.6.4'
+    implementation 'com.sun.grizzly:grizzly-comet:1.9.19'
+    implementation 'com.sun.grizzly:grizzly-http:1.9.19'
+    implementation 'com.sun.grizzly:grizzly-http-servlet:1.9.19'
+    implementation 'org.apache.tomcat:catalina:6.0.26'
+    implementation 'io.micrometer:micrometer-registry-prometheus:1.6.4'
+    implementation 'org.vectomatic:lib-gwt-svg:0.5.10'
+    implementation 'org.projectlombok:lombok:1.18.24'
+    implementation files('C:/infront/custom-compile/copy-6/LIB/org.moxieapps.gwt.highcharts-1.5.0.jar')
+    implementation 'org.iq80.snappy:snappy:0.4'
+
+
+    // Netty
+    implementation 'io.netty:netty-all:4.1.9.Final'
+
+    // RabbitMQ Client
+    implementation 'com.rabbitmq:amqp-client:5.6.0'
+
+    // AOP Alliance
+    implementation 'aopalliance:aopalliance:1.0'
+
+    // Apache Axis
+    implementation 'org.apache.axis:axis:1.4'
+
+    // Bouncy Castle
+    implementation 'org.bouncycastle:bcprov-jdk18on:1.76'
+
+    // Caffeine
+    implementation 'com.github.ben-manes.caffeine:caffeine:2.6.2'
+
+    // Google
+    implementation 'com.google.code.gson:gson:2.3.1'
+
+    // Apache Commons Libraries
+    implementation 'commons-codec:commons-codec:1.10'
+    implementation 'commons-collections:commons-collections:3.2.1'
+    implementation 'commons-discovery:commons-discovery:0.2'
+    implementation 'commons-httpclient:commons-httpclient:3.1'
+    implementation 'commons-io:commons-io:2.5'
+    implementation 'org.apache.commons:commons-lang3:3.7'
+    implementation 'commons-lang:commons-lang:2.6'
+    implementation 'commons-logging:commons-logging:1.2'
+    implementation 'org.apache.commons:commons-pool2:2.0'
+    implementation 'net.sf.ehcache:ehcache-core:2.5.0'
+    implementation 'com.sun.xml.fastinfoset:FastInfoset:1.2.16'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+    implementation 'com.sun.istack:istack-commons-runtime:3.0.8'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.13.3'
+    implementation 'org.codehaus.jackson:jackson-core-asl:1.9.13'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.3'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.8'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.9.8'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8'
+    implementation 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
+    implementation 'javax.activation:javax.activation-api:1.2.0'
+    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+    implementation 'redis.clients:jedis:2.6.0'
+    implementation 'joda-time:joda-time:2.9.9'
+    implementation 'log4j:log4j:1.2.8'
+    implementation 'ch.qos.logback:logback-core:1.1.2'
+
+    // Lucene
+    implementation 'org.apache.lucene:lucene-core:3.0.2'
+    implementation 'org.apache.lucene:lucene-queries:3.0.2'
+
+    // Spring Framework
+    implementation 'org.springframework.boot:spring-boot-loader:1.5.2.RELEASE'
+    implementation 'org.springframework:spring-aop:4.3.7.RELEASE'
+    implementation 'org.springframework:spring-beans:4.3.7.RELEASE'
+    implementation 'org.springframework:spring-context:4.3.7.RELEASE'
+    implementation 'org.springframework:spring-context-support:4.3.7.RELEASE'
+    implementation 'org.springframework:spring-expression:4.3.7.RELEASE'
+    implementation 'org.springframework:spring-jdbc:4.3.7.RELEASE'
+    implementation 'org.springframework:spring-orm:4.3.7.RELEASE'
+    implementation 'org.springframework:spring-oxm:4.3.7.RELEASE'
+    implementation 'org.springframework:spring-tx:4.3.7.RELEASE'
+    implementation 'org.springframework:spring-web:4.3.7.RELEASE'
+    implementation 'org.springframework:spring-webmvc:4.3.7.RELEASE'
+    implementation 'org.springframework:spring-webmvc-portlet:4.3.7.RELEASE'
+
+    // StAX-EX
+    implementation 'org.jvnet.staxex:stax-ex:1.8.1'
+
+    // Swagger 1.5.17
+    implementation 'io.swagger:swagger-annotations:1.5.17'
+    implementation 'io.swagger:swagger-core:1.5.17'
+    implementation 'io.swagger:swagger-models:1.5.17'
+
+    // Swagger 2.0.8
+    implementation 'io.swagger.core.v3:swagger-annotations:2.0.8'
+    implementation 'io.swagger.core.v3:swagger-core:2.0.8'
+    implementation 'io.swagger.core.v3:swagger-models:2.0.8'
+
+    // Local Dependencies
+    implementation files('C:/infront/custom-compile/copy-6/LIB/annotations-1.0.0.jar')
+    implementation files('C:/infront/custom-compile/copy-6/LIB/crypto-201.jar')
+    implementation files('C:/infront/custom-compile/copy-6/LIB/EBICSClient.jar')
+    implementation files('C:/infront/custom-compile/copy-6/LIB/guava-20.0.jar')
+    implementation files('C:/infront/custom-compile/copy-6/LIB/iText-2.1.7.jar')
+    implementation files('C:/infront/custom-compile/copy-6/LIB/jdom-1.1.2.jar')
+    implementation files('C:/infront/custom-compile/copy-6/LIB/org.moxieapps.gwt.highcharts-1.5.0.jar')
+    implementation files('C:/infront/custom-compile/copy-6/LIB/servo-core-0.12.10.jar')
+    implementation files('C:/infront/custom-compile/copy-6/LIB/logback-classic-1.1.2.jar')
+
+    // vwd Projekte
+    implementation files('C:/infront/custom-compile/copy-6/LIB/istar-merger-3.191.5.jar')
+    implementation files('C:/infront/custom-compile/copy-6/LIB/istar-instrument-3.191.5.jar')
+    implementation files('C:/infront/custom-compile/copy-6/LIB/istar-fusion-3.191.5.jar')
+    implementation files('C:/infront/custom-compile/copy-6/LIB/istar-pmxml-3.191.5.jar')
+    implementation files('C:/infront/custom-compile/copy-6/LIB/istar-feed-3.191.5.jar')
+    implementation files('C:/infront/custom-compile/copy-6/LIB/istar-fast-3.191.5.jar')
+
+    // Google Protocol Buffers
+    implementation 'com.google.protobuf:protobuf-java:2.5.0'
+    // implementation 'com.google.gwt.core.client:'
+    implementation 'com.google.gwt:gwt-dev:2.8.0'
+    implementation 'com.google.gwt:gwt-elemental:2.8.0'
+    implementation 'com.google.gwt:gwt-user:2.8.0'
+    implementation 'com.google.gwt:gwt-servlet:2.8.0'
+
+
+    // Servlet API (provided)
+    // providedCompile 'javax.servlet:javax.servlet-api:4.0.1'
+
+    // JUnit
+    testImplementation 'junit:junit:4.12'
+}
+
+// Source compatibility with Java 1.8
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name='com.google.gwt.json.JSON'/>
+    <inherits name='de.marketmaker.iview.dmxml'/>
+    <inherits name='de.marketmaker.iview.pmxml'/>
+    <inherits name='de.marketmaker.iview.pmxml.internaltypes'/>
+    <inherits name='de.marketmaker.itools.gwtutil.GWTUtil'/>
+    <inherits name='de.marketmaker.gwt.emul.Emulation'/>
+    <inherits name='com.extjs.gxt.ui.GXT'/>
+    <inherits name="de.marketmaker.itools.gwtcomet.comet.Comet" />
+    <inherits name="elemental.Elemental"/>
+    <inherits name='com.google.gwt.query.Query'/>
+    <inherits name="com.google.gwt.inject.Inject"/>
+    <entry-point class='de.marketmaker.iview.mmgwt.mmweb.client.MmwebEntryPoint'/>
+    <servlet path='/MmwebService' class='de.marketmaker.iview.mmgwt.mmweb.server.MmwebServiceProxy'/>
+    <servlet path='/UserService' class='de.marketmaker.iview.mmgwt.mmweb.server.UserServiceProxy'/>
+    <servlet path="/PushServlet" class="de.marketmaker.iview.mmgwt.mmweb.server.push.PushServlet"/>
+    <servlet path="/asyncComet" class="de.marketmaker.iview.mmgwt.mmweb.server.async.AsyncCometServlet"/>
+
+    <!-- Enable order entry mocks by setting the property orderEntry in your DevMmweb to mock.
+         Be aware that depot objects with specific object IDs must exist in your pm database -->
+    <define-property name="orderEntry" values="prod,mock"/>
+    <set-property name="orderEntry" value="prod"/>
+    <replace-with class="de.marketmaker.iview.mmgwt.mmweb.client.as.orderentry.mock.OrderMethodsMockMux">
+        <when-type-is class="de.marketmaker.iview.mmgwt.mmweb.client.as.orderentry.OrderMethods"/>
+        <when-property-is name="orderEntry" value="mock"/>
+    </replace-with>
+
+    <replace-with class="de.marketmaker.iview.mmgwt.mmweb.client.IconImageMapping">
+        <when-type-is class="de.marketmaker.itools.gwtutil.client.widgets.IconImageMapping"/>
+    </replace-with>
+
+    <!-- build for "default"-locale and the ones listed here: -->
+    <extend-property name="locale" values="default"/>
+    <extend-property name="locale" values="de"/>
+    <extend-property name="locale" values="en"/>
+    <extend-property name="locale" values="it"/>
+
+    <set-configuration-property name="user.agent.runtimeWarning" value="true" />
+    <extend-property name="user.agent" values="ie8,ie9,ie10,gecko1_8,safari"/>
+
+    <set-property name="compiler.stackMode" value="emulated"/>
+    <set-configuration-property name="compiler.emulatedStack.recordLineNumbers"
+                                value="true"/>
+    <set-property name="compiler.useSymbolMaps" value="true"/>
+
+    <set-property name="gwt.suppressNonStaticFinalFieldWarnings" value="true" />
+
+<!--
+    <stylesheet src="gxt/css/gxt-all.css" />
+    <stylesheet src="mmgwt.css"/>
+-->
+</module>

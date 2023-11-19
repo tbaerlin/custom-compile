@@ -1,0 +1,156 @@
+##################################
+##                              ##
+## Organisatorisches            ##
+##                              ##
+##################################
+
+- 5 separate Abfragen an MDP
+    + Metadaten: alle Märkte, alle Währungen, alle Länder
+    + Entitlements: Zuordnung vwd-Entitlements zu vwd-Symbolen
+    + Instrumente/Quotes
+
+- initial werden die Metadaten und Entitlements gelesen und programm-intern
+  in einer Map vorgehalten; für jedes gelesene Instrument/Quote werden die
+  entsprechenden Informationen dann jeweils aus der Map geholt und verarbeitet
+
+- Hauptabfrage ist die Instrument/Quote-Abfrage, welche letztlich eine grosse
+  Sicht für alle (für uns momentan) relevanten Daten darstellt
+
+- Abfragen erfolgen momentan einmal täglich; wichtig wäre aber eine
+  untertägige Abfragbarkeit aller Instrumente, bei denen sich Änderungen
+  ergeben haben
+
+- momentane Dauer der Abfragen: ca. 10-15 min (wenn ich mich richtig erinnere)
+
+
+##################################
+## Entilements                  ##
+##################################
+- Alle Element der Tabelle a_vwdentitlement
+- Felder: a_vendorkey, a_entitlement
+
+##################################
+## Märkte                       ##
+##################################
+- Left-Join von market und marketsymbol für die Keysysteme 1,2,13,174,795
+- Felder:
+    + market.marketid
+    + market.country
+    + market.marketcategory
+    + marketsymbol.keysystem für obige Keysysteme
+    + marketsymbol.symbol für obige Keysysteme
+
+##################################
+## Länder                       ##
+##################################
+- Left-Join von country und countrysymbol für das Keysystem 1
+- Felder:
+    + country.countryid
+    + country.currency
+    + countrysymbol.keysystem für obige Keysysteme
+    + countrysymbol.symbol für obige Keysysteme
+
+##################################
+## Währungen                    ##
+##################################
+- Left-Join von currency und currencysymbol für das Keysystem 1
+- Felder:
+    + currency.currencyid
+    + currencysymbol.keysystem für obige Keysysteme
+    + currencysymbol.symbol für obige Keysysteme
+
+##################################
+## Instrumente/Quotes           ##
+##################################
+
+Genutzte Felder
+===============
+instrumentid:       security.securityid
+type:               securitytype.kuerzel
+agm:                share_.agm
+cer_und:            certificate.underlying
+fut_und:            future.underlying
+opt_und:            option_.underlying
+wnt_und:            warrant.underlying
+bnd_maturity:       bond.maturity
+cer_maturity:       certificate.maturity
+fnd_maturity:       fund.maturity
+fut_maturity:       future.maturity
+gns_maturity:       profitcertificate.maturity
+opt_maturity:       option_.maturity
+wnt_maturity:       warrant.maturity
+quoted_per_unit:    bond.price_is_percentage [mit Dekodierung als: decode(bnd.price_is_percentage, 'F', 'true', 'false')]
+sector:             security.sector
+homeexchange:       security.homeexchange
+country:            security.country
+name:               security.name
+longname:           security.longname
+defaultmmsymbol:    securitycode.symbol [code=21]
+isin:               securitycode.symbol [code=2]
+wkn:                securitycode.symbol [code=1]
+valorsymbol:        securitycode.symbol [code=169]
+valor:              securitycode.symbol [code=4]
+ticker:             securitycode.symbol [code=278]
+sedol:              securitycode.symbol [code=174]
+cusip:              securitycode.symbol [code=175]
+quoteid:            quote.quoteid
+marketid:           quote.market
+currencyid:         quote.currency
+mmsymbol:           quotesymbol.symbol [keysystem=7]
+vwdfeed:            quotesymbol.symbol [keysystem=2]
+wp_name_kurz:       a_chicago_static_vwd.a_c49
+wp_name_lang:       a_chicago_static_vwd.a_c58
+wp_name_zusatz:     a_chicago_static_vwd.a_c59
+wpk:                a_chicago_static_vwd.a_c76
+wm_ticker:          a_chicago_static_vwd.a_c78
+firstprice:         pricestat.firstprice
+quotedef:           quote.quotedef
+wm_type_id:         wm_type.attribute_key [siehe Definition Sub-Table 'wm_type']
+wm_type_name:       wm_type.attribute_name [siehe Definition Sub-Table 'wm_type']
+
+
+
+
+Joins
+=====
+########## 'normal'
+security und quote
+security und securitytype
+
+########## Left-Join
+security und
+    share_
+    bond
+    certificate
+    future
+    option_
+    warrant
+    profitcertificate
+    fund
+
+security und securitycode (diverse)
+
+security und wm_type
+
+quote und quotesymbol (diverse)
+
+quote und a_chicago_static_vwd (über Umweg quotesymbol)
+
+
+
+
+Sortierung
+==========
+nach security.securityid ASC
+
+
+
+Dynamische Sub-Tables
+=====================
+######## wm_type:
+select wm_map.attribute_key as attribute_key, wm_map.attribute_name as attribute_name, map.securityid as security
+FROM (SELECT attribute_key, attribute_name, id_attribute FROM h_wm_2_feed WHERE id_attribute_context = 42 AND attribute_entity = 'G51') wm_map,
+mdb.tbl_x_securities mdb_s, a_wm_sec_mapping map
+WHERE map.id_instrument (+) = mdb_s.id_instrument
+AND sysdate BETWEEN mdb_s.date_valid_from AND mdb_s.date_valid_to
+AND wm_map.id_attribute (+) = mdb_s.id_wm_gd195_type

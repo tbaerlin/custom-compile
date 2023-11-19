@@ -1,0 +1,16 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+<body>
+<a href="index.html">Startseite</a>&nbsp;|&nbsp;<a href="http://gobi.market-maker.de/workbench/index.html">WebWorkbench</a>&nbsp;|&nbsp;Stand: $date
+<hr>
+<h1>Auswertung für Abo $abo</h1>
+<ul>
+#foreach ($file in $files)
+    <li><a href="${abo}-${file}.html">Datei $file</a></li>
+#end
+    <li><a href="${abo}-all.html">Alle Dateien</a></li>
+</ul>
+</body>
+</html>

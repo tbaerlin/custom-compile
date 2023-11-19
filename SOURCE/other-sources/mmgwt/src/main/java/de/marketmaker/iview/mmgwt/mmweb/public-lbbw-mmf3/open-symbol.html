@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Open symbol in mm[web]</title>
+    <script type="text/javascript">
+        var mmweb;
+
+        function openSymbol() {
+            var symbol = window.location.hash;
+            if (symbol == "#dummy") {
+                // called due to hash reset
+                return;
+            }
+            if (symbol == "") {
+                log("Fehler - Kein symbol angegeben. Bitte #symbol an die URL anhängen");
+                return;
+            }
+
+            symbol = symbol.substr(1);
+            var vwdmmweb = window.open("","vwdmmweb");
+            vwdmmweb.focus();
+            if (vwdmmweb.mmSearch) {
+                vwdmmweb.mmSearch('M_S', symbol);
+                log("Ok - Symbol an bestehende mm[web] Instanz gesendet: " + symbol);
+            }
+            else {
+                vwdmmweb.location.href = 'index.html#M_S/' + symbol;
+                log("Ok - Neue mm[web] Instanz mit Symbol geöffnet: " + symbol);
+            }
+
+            window.close();
+            // window.location.hash = "#dummy"; // hash reset -> make sure same symbol can be opened twice
+        }
+
+        function log(message) {
+            document.getElementById("log").firstChild.data = message;
+        }
+    </script>
+</head>
+<body onload="openSymbol()" onhashchange="openSymbol()">
+<div id="log">Fehler: Ist JavaScript deaktiviert?</div>
+</body>
+</html>

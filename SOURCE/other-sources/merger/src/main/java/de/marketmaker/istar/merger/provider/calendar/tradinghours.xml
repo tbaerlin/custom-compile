@@ -1,0 +1,1023 @@
+<root>
+    <!-- ############## -->
+    <!-- A -->
+    <element>
+        <marketid>176</marketid>
+        <timezone>US/Eastern</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>9:30</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- AU -->
+    <element>
+        <marketid>1</marketid>
+        <timezone>Australia/Melbourne</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>10:00</start>
+                <end>15:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- BHF -->
+    <element>
+        <marketid>30</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>23:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- BL -->
+    <element>
+        <marketid>4</marketid>
+        <timezone>Europe/Brussels</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:30</start>
+                <end>17:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- BLN -->
+    <element>
+        <marketid>94</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>20:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- BNP -->
+    <element>
+        <marketid>31</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>23:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- BRE -->
+    <element>
+        <marketid>2327</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>20:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- CH -->
+    <element>
+        <marketid>213</marketid>
+        <timezone>Europe/Zurich</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- CITIF -->
+    <element>
+        <marketid>3</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>23:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- DBKF -->
+    <element>
+        <marketid>83</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>23:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- DDF -->
+    <element>
+        <marketid>6</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:30</start>
+                <end>20:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- DGBK -->
+    <element>
+        <marketid>85</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>23:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- DJ -->
+    <element>
+        <marketid>591</marketid>
+        <timezone>US/Eastern</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>9:30</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- DK -->
+    <element>
+        <marketid>22</marketid>
+        <timezone>Europe/Copenhagen</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>17:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- DREBA -->
+    <element>
+        <marketid>44</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>23:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- DTB / Eurex -->
+    <element>
+        <marketid>98</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>22:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <element> <!-- EUREX Indizes -->
+        <marketid>510</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>22:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <element> <!-- EUREX Derivates -->
+        <marketid>511</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>22:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- EEU -->
+    <element>
+        <marketid>788</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- ES -->
+    <element>
+        <marketid>71</marketid>
+        <timezone>Europe/Madrid</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:30</start>
+                <end>17:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- ETR -->
+    <element>
+        <marketid>218</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>17:45</end>
+            </session>
+        </regularTradingSessions>
+        <quoteTradingSessions quoteid="3084497" vwdcode="A0C4CA.ETR" name="XDax">
+            <session>
+                <start>08:00</start>
+                <end>09:01</end>
+            </session>
+            <session>
+                <start>17:45</start>
+                <end>22:16</end>
+            </session>
+        </quoteTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- EUS -->
+    <element>
+        <marketid>789</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- EUWAX -->
+    <element>
+        <marketid>728</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>22:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- FFM -->
+    <element>
+        <marketid>221</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>20:00</end>
+            </session>
+        </regularTradingSessions>
+        <quoteTradingSessions>
+            <quote id="966459" name="L/E-DAX"/>
+            <quote id="966460" name="L/E-MDAX"/>
+            <quote id="966461" name="L/E-SDAX"/>
+            <quote id="966462" name="L/E-TecDAX"/>
+            <session>
+                <start>08:00</start>
+                <end>09:01</end>
+            </session>
+            <session>
+                <start>17:45</start>
+                <end>20:01</end>
+            </session>
+        </quoteTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- FFMST -->
+    <element>
+        <marketid>822</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>20:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- FI -->
+    <element>
+        <marketid>192</marketid>
+        <timezone>Europe/Helsinki</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:30</start>
+                <end>16:55</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- FNDSA -->
+    <element>
+        <marketid>227</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>20:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- FNDSD -->
+    <element>
+        <marketid>886</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>20:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- FONDS -->
+    <element>
+        <marketid>224</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>00:00</start>
+                <end>23:59</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- FR -->
+    <element>
+        <marketid>9</marketid>
+        <timezone>Europe/Paris</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- FX -->
+    <element>
+        <marketid>802</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>00:00</start>
+                <end>23:59:59.999</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- FXVWD -->
+    <element>
+        <marketid>6987</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>00:00</start>
+                <end>23:59:59.999</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- HBG -->
+    <element>
+        <marketid>7</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>20:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- HK -->
+    <element>
+        <marketid>122</marketid>
+        <timezone>Asia/Hong_Kong</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>9:30</start>
+                <end>16:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- HKI -->
+    <element>
+        <marketid>23887</marketid>
+        <timezone>Asia/Hong_Kong</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>9:30</start>
+                <end>16:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- HNV -->
+    <element>
+        <marketid>96</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>20:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- HVB -->
+    <element>
+        <marketid>145</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>23:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- IQ -->
+    <element>
+        <marketid>624</marketid>
+        <timezone>US/Eastern</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>9:30</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- IT -->
+    <element>
+        <marketid>104</marketid>
+        <timezone>Europe/Rome</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- IX -->
+    <element>
+        <marketid>48</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>00:00</start>
+                <end>23:59:59.999</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- IX_USA -->
+    <element>
+        <marketid>151</marketid>
+        <timezone>US/Eastern</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>9:30</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- LME -->
+    <element>
+        <marketid>801</marketid>
+        <timezone>Europe/London</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>06:00</start>
+                <end>22:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- LU -->
+    <element>
+        <marketid>105</marketid>
+        <timezone>Europe/Luxembourg</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>10:00</start>
+                <end>16:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- MCH -->
+    <element>
+        <marketid>97</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>20:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- N -->
+    <element>
+        <marketid>178</marketid>
+        <timezone>US/Eastern</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>9:30</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- NIKKEI -->
+    <element>
+        <marketid>9787</marketid>
+        <timezone>Asia/Tokyo</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>16:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- NL -->
+    <element>
+        <marketid>106</marketid>
+        <timezone>Europe/Amsterdam</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>16:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- NMF -->
+    <element>
+        <marketid>223</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>20:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- NMX -->
+    <element>
+        <marketid>220</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>20:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- NW -->
+    <element>
+        <marketid>195</marketid>
+        <timezone>Europe/Oslo</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>10:00</start>
+                <end>16:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- NZX -->
+    <element>
+        <marketid>10187</marketid>
+         <timezone>Pacific/Auckland</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>9:30</start>
+                <end>17:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- OE -->
+    <element>
+        <marketid>90</marketid>
+        <timezone>Europe/Vienna</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:30</start>
+                <end>17:45</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- PH -->
+    <element>
+        <marketid>2305</marketid>
+        <timezone>Asia/Manila</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:30</start>
+                <end>16:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- PT -->
+    <element>
+        <marketid>10</marketid>
+        <timezone>Europe/Lisbon</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:30</start>
+                <end>16:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- Q -->
+    <element>
+        <marketid>216</marketid>
+        <timezone>US/Eastern</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:30</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- RU -->
+    <element>
+        <marketid>825</marketid>
+        <timezone>Europe/Moscow</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>10:00</start>
+                <end>18:45</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- RTS/MICEX -->
+    <element>
+        <marketid>34687</marketid>
+        <timezone>Europe/Moscow</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>10:00</start>
+                <end>18:45</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- SALOF -->
+    <element>
+        <marketid>54</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>23:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- SBVF -->
+    <element>
+        <marketid>190</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>23:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- SCGP -->
+    <element>
+        <marketid>191</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>23:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- SGZF -->
+    <element>
+        <marketid>55</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>23:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- SIP -->
+    <element>
+        <marketid>134</marketid>
+        <timezone>Asia/Singapore</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>18:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- SP -->
+    <element>
+        <marketid>625</marketid>
+        <timezone>US/Eastern</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>9:30</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- SSE -->
+    <element>
+        <marketid>7787</marketid>
+        <timezone>Asia/Shanghai</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>9:15</start>
+                <end>15:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- STG -->
+    <element>
+        <marketid>8</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>22:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- STX -->
+    <element>
+        <marketid>197</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>20:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- SW -->
+    <element>
+        <marketid>196</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>16:15</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- TH -->
+    <element>
+        <marketid>138</marketid>
+        <timezone>Asia/Bangkok</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>10:00</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- TK -->
+    <element>
+        <marketid>130</marketid>
+        <timezone>Asia/Tokyo</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>16:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- TR -->
+    <element>
+        <marketid>112</marketid>
+        <timezone>Europe/Istanbul</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:30</start>
+                <end>17:40</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- TUBD -->
+    <element>
+        <marketid>201</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>23:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- UK,FTSE -->
+    <element>
+        <marketid>115</marketid>
+        <timezone>Europe/London</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>16:31</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- VIX -->
+    <element>
+        <marketid>2318</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:50</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- VX -->
+    <element>
+        <marketid>748</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>09:00</start>
+                <end>17:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- WESTLB -->
+    <element>
+        <marketid>57</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>23:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- TRADE -->
+    <element>
+        <marketid>8787</marketid>
+        <timezone>Europe/Berlin</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>08:00</start>
+                <end>22:00</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+    <!-- ############## -->
+    <!-- XCBO -->
+    <element>
+        <marketid>30994</marketid>
+        <timezone>US/Central</timezone>
+        <!-- <daysWithoutTrading> -->
+        <regularTradingSessions>
+            <session>
+                <start>7:00</start>
+                <end>15:30</end>
+            </session>
+        </regularTradingSessions>
+    </element>
+</root>

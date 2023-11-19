@@ -1,0 +1,55 @@
+<jxb:bindings version="2.1" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+              xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance"
+              xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+              jxb:extensionBindingPrefixes="xjc">
+
+    <jxb:bindings schemaLocation="iview-xml.xsd" node="/xsd:schema">
+        <jxb:globalBindings typesafeEnumMaxMembers="0">
+            <xjc:serializable/>
+
+            <jxb:javaType name="org.joda.time.LocalDate" xmlType="xsd:date"
+                          parseMethod="de.marketmaker.istar.fusion.converter.DateDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.istar.fusion.converter.DateDatatypeConverter.marshal"/>
+            <jxb:javaType name="org.joda.time.LocalDate" xmlType="xsd:gYearMonth"
+                          parseMethod="de.marketmaker.istar.fusion.converter.YearMonthDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.istar.fusion.converter.YearMonthDatatypeConverter.marshal"/>
+            <jxb:javaType name="java.math.BigDecimal" xmlType="xsd:decimal"
+                          parseMethod="de.marketmaker.istar.fusion.converter.BigDecimalDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.istar.fusion.converter.BigDecimalDatatypeConverter.marshal"/>
+            <jxb:javaType name="org.joda.time.DateTime" xmlType="xsd:dateTime"
+                          parseMethod="de.marketmaker.istar.fusion.converter.DateTimeDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.istar.fusion.converter.DateTimeDatatypeConverter.marshal"/>
+            <jxb:javaType name="java.lang.Integer" xmlType="xsd:integer"
+                          parseMethod="de.marketmaker.istar.fusion.converter.BigIntegerDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.istar.fusion.converter.BigIntegerDatatypeConverter.marshal"/>
+            <jxb:javaType name="org.joda.time.Period" xmlType="xsd:duration"
+                          parseMethod="de.marketmaker.istar.fusion.converter.DurationDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.istar.fusion.converter.DurationDatatypeConverter.marshal"/>
+            <jxb:javaType name="org.joda.time.LocalTime" xmlType="xsd:time"
+                          parseMethod="de.marketmaker.istar.fusion.converter.TimeDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.istar.fusion.converter.TimeDatatypeConverter.marshal"/>
+        </jxb:globalBindings>
+
+        <jxb:bindings node="/xsd:schema/xsd:complexType[@name='WMStringField']">
+            <inheritance:implements>de.marketmaker.istar.fusion.dmxml.WMField</inheritance:implements>
+        </jxb:bindings>
+        <jxb:bindings node="/xsd:schema/xsd:complexType[@name='WMDecimalField']">
+            <inheritance:implements>de.marketmaker.istar.fusion.dmxml.WMField</inheritance:implements>
+        </jxb:bindings>
+        <jxb:bindings node="/xsd:schema/xsd:complexType[@name='WMDateField']">
+            <inheritance:implements>de.marketmaker.istar.fusion.dmxml.WMField</inheritance:implements>
+        </jxb:bindings>
+        <jxb:bindings node="/xsd:schema/xsd:complexType[@name='WMIntervalField']">
+            <inheritance:implements>de.marketmaker.istar.fusion.dmxml.WMField</inheritance:implements>
+        </jxb:bindings>
+        <jxb:bindings node="/xsd:schema/xsd:complexType[@name='WMSequenceField']">
+            <inheritance:implements>de.marketmaker.istar.fusion.dmxml.WMField</inheritance:implements>
+        </jxb:bindings>
+
+        <jxb:bindings schemaLocation="iview-xml.xsd"
+                      node="/xsd:schema/xsd:complexType[@name='FundTimeseriesElement']/xsd:complexContent/xsd:extension[@base='TimeseriesElement']/xsd:sequence/xsd:element[@name='netAssetValue']">
+            <jxb:property name="netAssetValue" generateElementProperty="false"/>
+        </jxb:bindings>
+    </jxb:bindings>
+</jxb:bindings>

@@ -1,0 +1,54 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:ivw="urn:import:de.marketmaker.iview.mmgwt.mmweb.client.widgets">
+
+    <ui:with field="i18n" type="de.marketmaker.iview.mmgwt.mmweb.client.I18n" />
+
+    <g:HTMLPanel styleName="as-oe">
+        <ivw:SimpleGlassablePanel ui:field="loadingIndicator" glassStyleName="as-reloadGlassPanel">
+            <g:HTMLPanel tag="table" styleName="cp ft">
+                <colgroup>
+                    <col style="width:100px;"/>
+                    <col style="width:240px;"/>
+                    <col style="width:240px;"/>
+                </colgroup>
+
+                <tr>
+                    <td class="headline" colspan="3"><g:Label text="{i18n.orderEntryOrder}"/></td>
+                </tr>
+                <tr>
+                    <td class="labels"><g:Label text="{i18n.orderEntryOrderNumber}" /></td>
+                    <td><g:Label ui:field="orderNumberField" /></td>
+                </tr>
+                <tr>
+                    <td class="labels"><g:Label text="{i18n.orderEntryKGSOrderCancellationReason}"/></td>
+                    <td><ivw:MappedListBox ui:field="cancellationReasonsChoice" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="labels" colspan="2">
+                        <g:CheckBox ui:field="printCancellationConfirmationCheck" text="{i18n.orderEntryKGSPrintCancellationConfirmation}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="headline" colspan="2"><g:Label text="{i18n.orderEntryCannedTextForOrderConfirmationSection}"/></td>
+                </tr>
+                <tr>
+                    <td class="labels"><g:Label text="{i18n.orderEntryCannedText}"/></td>
+                    <td><ivw:MappedListBox ui:field="cannedTextForOrderConfirmationChoice" withEmptyChoice="false"/></td>
+                </tr>
+                <tr>
+                    <td class="headline" colspan="3"><g:Label text="{i18n.orderEntryTextForInternalUseSection}"/></td>
+                </tr>
+                <tr>
+                    <td class="labels"><g:Label text="{i18n.orderEntryTextForInternalUse1}"/></td>
+                    <td colspan="2"><g:TextBox ui:field="internalText1Field" /></td>
+                </tr>
+                <tr>
+                    <td class="labels"><g:Label text="{i18n.orderEntryTextForInternalUse2}"/></td>
+                    <td colspan="2"><g:TextBox ui:field="internalText2Field" /></td>
+                </tr>
+            </g:HTMLPanel>
+        </ivw:SimpleGlassablePanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

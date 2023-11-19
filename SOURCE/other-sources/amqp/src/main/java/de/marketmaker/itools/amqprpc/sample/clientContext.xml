@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="connectionManager" class="de.marketmaker.itools.amqprpc.connections.AmqpRpcConnectionManager">
+        <property name="connectionFactory">
+            <bean class="com.rabbitmq.client.ConnectionFactory">
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="proxyChecker" class="de.marketmaker.itools.amqprpc.supervising.PeriodicSupervisor">
+        <property name="checkInterval" value="60"/>
+        <property name="usingDaemonThread" value="true"/>
+    </bean>
+
+    <bean id="serviceProxy" class="de.marketmaker.itools.amqprpc.AmqpProxyFactoryBean">
+        <property name="serviceInterface" value="de.marketmaker.itools.amqprpc.sample.Service"/>
+        <property name="rpcClientSettings.usingMandatoryForRequestMessages" value="true"/>
+        <property name="rpcClientSettings.expiration" value="1000"/>
+        <property name="connectionManager" ref="connectionManager"/>
+        <property name="rpcTimeout" value="10000"/>
+        <property name="supervisor" ref="proxyChecker"/>
+        <property name="slowInvocationThreshold" value="3000"/>
+        <property name="address"
+                  value="tests/pingpong.requests?requestQueueMessageTTL=15000&amp;exchangeAutoDelete=true&amp;queueAutoDelete=true"/>
+    </bean>
+    
+    <bean id="client" scope="prototype" class="de.marketmaker.itools.amqprpc.sample.Client">
+        <property name="proxy" ref="serviceProxy"/>
+    </bean>
+
+
+</beans>

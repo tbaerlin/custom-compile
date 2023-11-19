@@ -1,0 +1,49 @@
+html,body,div,form,fieldset,input,th,td {
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: black;
+}
+
+html, body {
+    background-color: #f0f4fa;
+}
+
+.logentry {
+    background-color: white;
+    border: 1px solid #99bbea;
+    margin-bottom: 4px;
+}
+.logentry.response {
+    background-color: #fdfffb;
+    border: 1px solid #bbea99;
+}
+
+td.request {
+    background-color: #f0f4fa;
+}
+
+td.response {
+    background-color: #ffeee3;
+}
+
+td.block {
+    border-bottom: 1px solid #f0f4fa;
+}
+
+td.error {
+    color: white;
+    background-color: red;
+    border-bottom: 1px solid #f0f4fa;
+}
+
+td.key {
+    color: gray;
+    padding-right: 4px;
+}
+
+td.value {
+    color: black;
+}
+
+td.content {
+}

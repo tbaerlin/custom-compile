@@ -1,0 +1,87 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:itwi='urn:import:de.marketmaker.itools.gwtutil.client.widgets'
+             xmlns:ivwi='urn:import:de.marketmaker.iview.mmgwt.mmweb.client.widgets'
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+    <ui:import field="de.marketmaker.iview.mmgwt.mmweb.client.data.SessionData.INSTANCE"/>
+
+    <g:FlowPanel ui:field="toolbarPanel" styleName="x-toolbar mm-topToolbar">
+        <g:FlowPanel visible="false" ui:field="gotoStartPanel">
+            <g:SimplePanel styleName="mm-floatWidget">
+                <itwi:ImageButton ui:field="gotoStartButton"/>
+            </g:SimplePanel>
+            <g:HTML text="&nbsp;" styleName="mm-floatWidget mm-sep wide"/>
+        </g:FlowPanel>
+
+        <g:FlowPanel ui:field="refreshPanel" visible="false">
+            <g:SimplePanel styleName="mm-floatWidget">
+                <itwi:ImageButton ui:field="refreshButton"/>
+            </g:SimplePanel>
+        </g:FlowPanel>
+
+        <g:FlowPanel visible="false" ui:field="setStartPanel">
+            <g:HTML text="&nbsp;" styleName="mm-floatWidget mm-sep wide"/>
+            <g:SimplePanel styleName="mm-floatWidget">
+                <itwi:ImageButton ui:field="setStartButton"/>
+            </g:SimplePanel>
+        </g:FlowPanel>
+
+        <g:FlowPanel visible="false" ui:field="searchBoxPanel">
+            <g:HTML text="&nbsp;" styleName="mm-floatWidget mm-sep wide"/>
+            <ivwi:MmfSearchBox ui:field="searchBox"/>
+        </g:FlowPanel>
+
+        <g:FlowPanel visible="false" ui:field="limitsPanel">
+            <g:HTML text="&nbsp;" styleName="mm-floatWidget mm-sep wide"/>
+            <g:SimplePanel styleName="mm-floatWidget">
+                <itwi:ImageButton ui:field="limitsButton"/>
+            </g:SimplePanel>
+        </g:FlowPanel>
+
+        <g:FlowPanel visible="false" ui:field="pushPanel">
+            <g:HTML text="&nbsp;" styleName="mm-floatWidget mm-sep"/>
+            <g:SimplePanel styleName="mm-floatWidget">
+                <itwi:ImageButton ui:field="pushButton"/>
+            </g:SimplePanel>
+        </g:FlowPanel>
+
+        <g:LazyPanel visible="false" ui:field="printPanel">
+            <g:FlowPanel>
+                <g:HTML text="&nbsp;" styleName="mm-floatWidget mm-sep"/>
+                <g:SimplePanel styleName="mm-floatWidget">
+                    <itwi:ImageButton ui:field="printButton" enabled="false"/>
+                </g:SimplePanel>
+            </g:FlowPanel>
+        </g:LazyPanel>
+
+        <g:FlowPanel visible="false" ui:field="pdfPanel">
+            <g:HTML text="&nbsp;" styleName="mm-floatWidget mm-sep"/>
+            <g:SimplePanel styleName="mm-floatWidget">
+                <ivwi:PdfWidget ui:field="pdfButton" enabled="false"/>
+            </g:SimplePanel>
+        </g:FlowPanel>
+
+        <g:FlowPanel visible="false" ui:field="savePanel">
+            <g:HTML text="&nbsp;" styleName="mm-floatWidget mm-sep"/>
+            <g:SimplePanel styleName="mm-floatWidget">
+                <itwi:ImageButton ui:field="saveButton"/>
+            </g:SimplePanel>
+        </g:FlowPanel>
+
+        <g:FlowPanel ui:field="logoutPanel" visible="false">
+            <g:HTML text="&nbsp;" styleName="mm-floatWidget mm-sep"/>
+            <g:SimplePanel styleName="mm-floatWidget">
+                <itwi:ImageButton ui:field="logoutButton"/>
+            </g:SimplePanel>
+        </g:FlowPanel>
+
+        <g:FlowPanel ui:field="secretActivationPanel" visible="false">
+            <g:HTML text="&nbsp;" styleName="mm-floatWidget mm-sep wide"/>
+            <ivwi:SecretActivationLabel text='{INSTANCE.getUserName}' ui:field="secretActivationLabel"
+                                        styleName="mm-floatWidget text"/>
+        </g:FlowPanel>
+    </g:FlowPanel>
+
+</ui:UiBinder>

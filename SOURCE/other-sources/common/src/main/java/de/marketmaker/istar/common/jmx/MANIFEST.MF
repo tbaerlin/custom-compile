@@ -1,0 +1,1 @@
+Premain-Class: de.marketmaker.istar.common.jmx.JmxAgent

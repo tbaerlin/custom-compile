@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+    <meta name='gwt:module' content='de.marketmaker.iview.mmgwt.mmweb.Mmweb'/>
+    <meta name="mm:canvasRequired" content="true"/>
+    <meta name="pmZone" content="false"/>
+    <link rel="stylesheet" type="text/css" href="gxt/css/gxt-all.css"/>
+    <link rel="stylesheet" type="text/css" href="gwtutil.css"/>
+    <link rel="stylesheet" type="text/css" href="as/mmgwt.css"/>
+    <script src="script.nocache.js" type="text/javascript"></script>
+    <script src="test.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        addTitle();
+        addFavicon();
+        addSpecialHeaderFields();
+    </script>
+
+    <style type="text/css">
+        #mmLoginRoot { position: relative; }
+        #mmLoginRoot .loginFrameContainer { position: relative; width: 360px; margin: 0 auto; }
+        #mmLoginRoot .loginFrame { margin-top: 60px; width: 360px; border-radius: 3px; }
+        #mmLoginRoot .loginHeader { margin: 10px; border-bottom-width: 1px; border-bottom-style: solid; font-size: 20px; font-weight: 600; min-height: 24px; }
+        #mmLoginRoot .loginLogo { padding: 16px; line-height: 0; font-size: 16pt; text-align: center; }
+        #mmLoginRoot .input { width: 80%; background: white; padding: 2px 4px; }
+        #mmLoginRoot input { width: 100%; background: white; border: 0 none; }
+        #mmLoginRoot button { padding: 2px; border: 0 none; font-size: 14px; cursor: pointer; }
+        #mmLoginRoot #mmLoginSendPasswordContainer { height: 25px; }
+
+        /* fix annoying blue focus outline in the as Login-Dialog of WebKit based browsers */
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            /* CSS Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */
+
+            /* render no focus outline for text inputs */
+            body div#mmLoginRoot input[type="text"]:focus,
+            body div#mmLoginRoot input[type="password"]:focus,
+            body .loginHeader a			{
+                outline: none !important;
+            }
+
+            /* render focus outline for all elements that are not text inputs */
+            body div#mmLoginSubmit :focus {
+                outline: #004494 dotted thin !important;
+            }
+        }
+    </style>
+    <script src="flash/swfobject.js" type="text/javascript"></script>
+</head>
+<body class="iceLogin">
+
+<div id="mmLoginRoot">
+    <form id="mmLoginForm" method="post" action="javascript:void(0);" onsubmit="mmLoginOnSubmit(); return false;">
+        <input type="hidden" id="mmLoginSubmitted" value="false"/>
+        <div class="loginFrameContainer">
+            <table id="mmLoginFrame" class="loginFrame" cellspacing="10" cellpadding="0" align="center">
+                <tr><td class="loginHeader" colspan="3"><script type="text/javascript">document.write(dictionary.windowTitle);</script></td></tr>
+                <tr>
+                    <td class="loginLogo" colspan="2">
+                        <div class="ice-login-logo">&nbsp;</div>
+                    </td>
+                </tr>
+                <script type="text/javascript">addIceLanguageLinks();</script>
+                <tr>
+                    <td><script type="text/javascript">document.write(dictionary.username);</script></td>
+                    <td class="input">
+                        <input id="mmLoginUsername" name="idField" type="text" onkeyup="mmLoginResetError()"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><script type="text/javascript">document.write(dictionary.password);</script></td>
+                    <td class="input">
+                        <input id="mmLoginPassword" name="pwField" type="password" onkeyup="mmLoginResetError()"/>
+                    </td>
+                </tr>
+                <script type="text/javascript">addSendNewPasswordContainer();</script>
+                <tr>
+                    <td colspan="2" id="mmLoginResult">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><div id="mmLoginSubmit" style="text-align: right;"><script type="text/javascript">document.write(dictionary.iceLoginButton);</script></div></td>
+                </tr>
+            </table>
+            <div id="mmLoginVersion"></div>
+        </div>
+    </form>
+    <div id="message_of_the_day"></div>
+</div>
+
+<script language="javascript" src="de.marketmaker.iview.mmgwt.mmweb.Mmweb.nocache.js"></script>
+<iframe id="__gwt_historyFrame" style="width:0;height:0;border:0"></iframe>
+<script type="text/javascript">
+    document.getElementById('mmLoginUsername').focus();
+    document.getElementById("mmLoginSubmitted").value = "false";
+    mmDirectLogin();
+</script>
+</body>
+</html>

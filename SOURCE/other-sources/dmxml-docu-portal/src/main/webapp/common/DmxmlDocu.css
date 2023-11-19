@@ -1,0 +1,366 @@
+.mm-loginView {
+  position: absolute;
+  width: 600px;
+  height: 300px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 20px;
+  border-radius: 3px;
+  -moz-border-radius: 4px;
+  /* background: #FFF url(images/dmxml.jpg) top 10px left 10px no-repeat;*/
+  cursor: default;
+  box-shadow: 2px 2px 5px #888;
+}
+
+.mm-company-logo {
+  left: 0;
+  top: 0;
+  width: 220px;
+}
+
+.mm-company-name {
+  color: #076d8c;
+  font-size: 200%;
+}
+
+.mm-contact-person {
+  font-size: 160%;
+}
+
+.mm-contact-label {
+  color: #076d8c;
+  font-size: 160%;
+}
+
+.mm-top-panel {
+  width: 100%;
+}
+
+td {
+  vertical-align: middle ! important;
+}
+
+.mm-loginView-text {
+  width: 100%;
+  bottom: 5px;
+  vertical-align: bottom;
+  position: absolute;
+}
+
+.mm-loginView-contact {
+  text-align: center;
+  width: 100%;
+  line-height: 2em;
+}
+
+.mm-loginView-copyright {
+  text-align: center;
+  width: 100%;
+}
+
+.mm-footer {
+
+  padding-top: 5px;
+  text-align: center;
+  background-color: #00374F;
+  color: #FFFFFF;
+  font-size: 150%;
+}
+
+.mm-footer a {
+  color: white
+}
+
+.mm-flex-table {
+  padding: 30px;
+}
+
+.mm-login-label-col {
+  width: 54%;
+}
+
+.mm-login-label-td {
+  text-align: right;
+}
+
+.mm-login-field-td {
+  text-align: left;
+}
+
+.mm-aboutDialog {
+}
+
+.mm-aboutDialog-text {
+  height: 3em;
+  line-height: 3em;
+}
+
+.mm-aboutDialog-copyrights {
+  padding-left: 450px;
+  height: 2em;
+  line-height: 5em;
+}
+
+.mm-aboutDialog-button {
+  text-align: center;
+}
+
+.mm-supplementary {
+  margin-left: 24pt;
+}
+
+.mm-supplementary h1 {
+  font-size: 130%;
+}
+
+.mm-supplementary h2 {
+  font-size: 110%;
+}
+
+.menu td {
+  height: 100%
+}
+
+.controls td {
+  height: 100%;
+}
+
+.controls td table * {
+  height: 100%;
+}
+
+.firstLine, .firstLine table td * {
+  height: 100%;
+}
+
+.blockControl .gwt-SuggestBox {
+  min-width: 196px;
+  max-width: 196px;
+}
+
+.authControl {
+  height: 100%;
+}
+
+.authControl .gwt-ListBox {
+  min-width: 196px;
+  max-width: 196px;
+  height: 100%;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-left {
+  float: right;
+}
+
+textarea.full-size {
+  height: 100%;
+  width: 100%;
+  resize: none;
+  border: 0 none;
+}
+
+input.invalid-content {
+  background-color: rgba(232, 84, 18, 0.3);
+}
+
+input.valid-content {
+}
+
+select.invalid-content {
+  background-color: rgba(232, 84, 18, 0.3);
+}
+
+select.valid-content {
+}
+
+.plus {
+  width: 16px !important;
+  height: 16px !important;
+  background: url(images/plus.svg) no-repeat center;
+  cursor: pointer;
+}
+
+.minus {
+  width: 16px !important;
+  height: 16px !important;
+  background: url(images/minus.svg) no-repeat center;
+  cursor: pointer;
+}
+
+.equals {
+  width: 16px !important;
+  height: 16px !important;
+  background: url(images/equals.svg) no-repeat center;
+  cursor: pointer;
+}
+
+.disabled .plus {
+  background: url(images/plus-disabled.svg) no-repeat center;
+  cursor: default;
+}
+
+.disabled .minus {
+  background: url(images/minus-disabled.svg) no-repeat center;
+  cursor: default;
+}
+
+.disabled .equals {
+  background: url(images/equals-disabled.svg) no-repeat center;
+  cursor: default;
+}
+
+.xmlTree {
+  font-size: medium;
+}
+
+.xmlTree div {
+  font-family: monospace;
+  white-space: nowrap;
+}
+
+.xmlTree .processingInstruction {
+  color: #009966;
+  font-weight: bold;
+  padding-left: 2em;
+}
+
+.xmlTree .xmlParentElement {
+  position: relative;
+  padding-left: 2em;
+}
+
+.xmlTree .xmlParentElement .opener {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.xmlTree .xmlParentElement.open > .opener {
+  background: url(images/tree-handle-open.svg) no-repeat;
+}
+
+.xmlTree .xmlParentElement.open > .opener:hover {
+  background: url(images/tree-handle-open-hover.svg) no-repeat;
+}
+
+.xmlTree .xmlParentElement.open > .open {
+  display: block;
+}
+
+.xmlTree .xmlParentElement.open > .closed {
+  display: none;
+}
+
+.xmlTree .xmlParentElement.closed > .opener {
+  background: url(images/tree-handle-closed.svg) no-repeat;
+}
+
+.xmlTree .xmlParentElement.closed > .opener:hover {
+  background: url(images/tree-handle-closed-hover.svg) no-repeat;
+}
+
+.xmlTree .xmlParentElement.closed > .open {
+  display: none;
+}
+
+.xmlTree .xmlParentElement.closed > .closed {
+  display: block;
+}
+
+.xmlTree .closedDots {
+  background-color: #ddd;
+}
+
+.xmlTree .tagName {
+  color: #004494;
+  font-weight: bold;
+}
+
+.xmlTree .errorType .tagName {
+  color: #e85412;
+}
+
+.xmlTree .attKey:hover, .xmlTree .tagName.tagStart:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.xmlTree .attKey {
+  color: #004494;
+}
+
+.xmlTree .attValue {
+  color: #717a7c;
+}
+
+.requestXmlPanel {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+table.description {
+  border-collapse: collapse;
+}
+
+table.description td {
+  vertical-align: top;
+  padding: 4px;
+  border: 1px solid #004494;
+}
+
+table.description .option {
+  color: #7e8688;
+  font-style: italic;
+}
+
+.requestParameterPanel button {
+  margin: 0;
+  padding: 1px;
+}
+
+.requestParameterPanel input {
+  margin: 0;
+  padding: 1px;
+  border: 1px solid darkgray;
+  border-radius: 3px;
+}
+
+.blockOverviewPanel {
+  column-width: 18em;
+  column-rule: 1px solid #ddd;
+  -moz-column-width: 18em;
+  -moz-column-rule: 1px solid #ddd;
+  -webkit-column-width: 18em;
+  -webkit-column-rule: 1px solid #ddd;
+  padding: 0.5em;
+}
+
+.blockOverviewPrefix {
+  color: #717a7c;
+  font-weight: bold;
+}
+
+.blockOverviewLabel {
+  margin-left: 2em;
+  color: #004494;
+  cursor: pointer;
+}
+
+.blockOverviewLabel:hover {
+  text-decoration: underline;
+}

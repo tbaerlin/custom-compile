@@ -1,0 +1,79 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version="1.1"
+     width="15"
+     height="95">
+    <defs>
+        <style type="text/css">
+            <![CDATA[
+                .light {
+                    stroke: #fff;
+                }
+                .bg {
+                    stroke: #eee;
+                    fill: #eee;
+                }
+                .fg {
+                    stroke-width: 1px;
+                    fill: none;
+                    stroke-linecap:square;
+                }
+                .fgbg {
+                    stroke-width: 1px;
+                    fill: #eee;
+                }
+                #default .fg, #default .fgbg {
+                    stroke: #888;
+                }
+                #active .fg, #active .fgbg {
+                    stroke: #444;
+                }
+                #over .fg, #over .fgbg {
+                    stroke: #222;
+                }
+                #over .bg {
+                    stroke: #fff;
+                }
+                #over .bg, #over .fgbg {
+                    fill: #fff;
+                }
+                #clicked .fg, #clicked .fgbg {
+                    stroke: #f22;
+                }
+                #disabled .fg, #disabled .fgbg {
+                    stroke: #bbb;
+                }
+            ]]>
+        </style>
+    </defs>
+    <g transform="translate(0.5,0.5)">
+        <g id="default">
+            <line class="light" x1="0" y1="0" x2="0" y2="16"/>
+            <line class="fg" x1="1" y1="1" x2="1" y2="16"/>
+            <path class="fgbg" d="M 6,7 12,7 9,10 z"/>
+        </g>
+        <g id="active" transform="translate(0, 19)">
+            <line class="light" x1="0" y1="0" x2="0" y2="16"/>
+            <line class="fg" x1="1" y1="1" x2="1" y2="16"/>
+            <path class="fgbg" d="M 6,7 12,7 9,10 z"/>
+        </g>
+        <g id="over" transform="translate(0, 38)">
+            <line class="light" x1="0" y1="0" x2="0" y2="16"/>
+            <line class="fg" x1="1" y1="1" x2="1" y2="16"/>
+            <path class="fgbg" d="M 6,7 12,7 9,10 z"/>
+        </g>
+        <g id="clicked" transform="translate(0, 57)">
+            <line class="light" x1="0" y1="0" x2="0" y2="16"/>
+            <line class="fg" x1="1" y1="1" x2="1" y2="16"/>
+            <path class="fgbg" d="M 6,7 12,7 9,10 z"/>
+        </g>
+        <g id="disabled" transform="translate(0, 76)">
+            <line class="light" x1="0" y1="0" x2="0" y2="16"/>
+            <line class="fg" x1="1" y1="1" x2="1" y2="16"/>
+            <path class="fgbg" d="M 6,7 12,7 9,10 z"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>pmreport Schnittstellenbeschreibung</title>
+    <style>
+    code {
+      color: #666;
+    }
+    </style>
+</head>
+<body>
+  <h1>pm[web] Schnittstellenbeschreibung</h1>
+  <h2>Einbindung</h2>
+  Der vwd portfolio manager [web] kann als <code>&lt;iframe&gt;</code> in eine andere HTML-Seite eingebunden werden
+  (siehe Zeile 111). Wenn der iframe geladen ist, dann muss die JavaScript-Verbindung zu pm[web]
+  initialisiert werden. Dazu wird der Parameter <code>onload="initialize()"</code> verwendet.
+  Der iframe wird hier in ein <code>&lt;div&gt;</code> eingebettet, damit er via CSS auf die Seitengröße
+  angepasst werden kann.
+  
+  <h2>Initialisierung</h2>
+  Zeilen 21-39: In der Funktion <code>initialize()</code> werden Callback Funktionen definiert, die von pm[web] bei der
+  Initialisierung aufgerufen werden. Folgende Callback Funktionen müssen definiert werden.
+  
+  <h3><code>mmModuleLoadCallback()</code></h3>
+  Sobald der pm[web]-Code komplett geladen wurde, wird <code>mmModuleLoadCallback()</code> aufgerufen.
+  Nun steht die Funktion <code>mmLogin(username, password)</code> zur Verfügung und kann aufgerufen werden.
+  
+  <h3><code>mmErrorCallback(message)</code></h3>
+  Tritt bei der Initialisierung ein Fehler auf, dann wird eine Fehlermeldung an die Callback Funktion
+  <code>mmErrorCallback(message)</code> übergeben.
+  
+  <h3><code>mmInitializedCallback()</code></h3>
+  <p>
+  Nach der erfolgreichen Anmeldung steht die pm[web]-Funktion <code>mmShowReport(inputObject, report)</code> zur Verfügung.
+  Erst nachdem dieser Callback aufgerufen wurde, können Reports erzeugt werden.
+  Der Button zum Anzeigen der Reports (Zeile 107) wurde daher mit <code>disabled="disabled"</code>
+  gesperrt und wird in diesem Callback in Zeile 35 entsperrt.
+  </p>
+  <p>
+  Die Callback Funktionen werden dann in Zeile 38 mit
+  <code>initializeCallbackFunctions(mmModuleLoadCallback, mmErrorCallback, mmInitializedCallback)</code>
+  an pm[web] übergeben.
+  </p>
+  
+  <h2>Anzeige eines Reports</h2>
+  <p>
+  Die Anzeige eines Reports erfolgt nach erfolgreicher Initialisierung mit der Funktion
+  <code>mmShowReport(inputObject, report)</code>.
+  Dabei bezeichnet <code>inputObject</code> die Eingabeobjekte wie Gruppen, Inhaber, Portfolios, Konten und Depots, wobei
+  Id, Objekttyp und Name mit einem "|" (Senkrechtstrich) getrennt angegeben werden müssen. Optional kann als vierter Wert
+  auch die Zone angegeben werden. Wird die Zone weggelassen, so wird "PUBLIC" verwendet. Beispiele für verschiedene
+  Eingabeobjekte sind in den Zeilen 62-94 zu finden.
+  </p>
+  <p>
+  Der Parameter <code>report</code> gibt den gewünschten Report an. Beispiele für verschiedene Reports sind
+  in den Zeilen 99-104 zu finden. Nicht jeder Report kann für alle <code>inputObject</code>-Typen verwendet werden.
+  Hier wurde einfach durch die Buchstaben GIPDK (Gruppen, Inhaber, Portfolio, Depot, Konto) angedeutet,
+  für welche Typen ein Report zur Verfügung steht. Normalerweise sollten für das gewählte Eingabeobjekt nur die
+  tatsächlich verfügbaren Reports angeboten werden.
+  </p>
+</body>
+</html>

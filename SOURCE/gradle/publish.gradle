@@ -1,0 +1,21 @@
+apply plugin: 'maven-publish'
+
+artifactory {
+  contextUrl = "${artifactory_contextUrl}"
+
+  publish {
+    repository {
+      repoKey = "libs-${isRelease ? 'releases' : 'snapshots'}-sbs"
+      username = "${artifactory_user}"
+      password = "${artifactory_password}"
+      maven = true
+    }
+    defaults {
+      publications ('mavenJava')
+      publishPom = true
+      publishArtifacts = true
+      publishBuildInfo = true
+      properties = ['qa.level': 'basic', 'dev.team': 'core-dm']
+    }
+  }
+}

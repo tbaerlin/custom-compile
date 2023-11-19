@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" id="response"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="response" type="ResponseType"/>
+    <xsd:element name="request" type="RequestType"/>
+    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+    <xsd:complexType name="RequestType">
+        <xsd:sequence>
+            <xsd:element name="authentication" type="xsd:string"/>
+            <xsd:element name="authenticationType" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="block" type="RequestedBlockType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+    <xsd:complexType name="ResponseType">
+        <xsd:sequence>
+            <xsd:element name="header" type="HeaderType"/>
+            <xsd:element name="data" type="DataType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+    <xsd:complexType name="HeaderType">
+        <xsd:sequence>
+            <xsd:element name="generated" type="xsd:string"/>
+            <xsd:element name="requestedBlocks" type="RequestedBlocksType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="RequestedBlocksType">
+        <xsd:sequence>
+            <xsd:element name="block" type="RequestedBlockType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="RequestedBlockType">
+        <xsd:sequence>
+            <xsd:element name="parameter" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:attribute name="key" type="xsd:string" use="required"/>
+                    <xsd:attribute name="value" type="xsd:string" use="required"/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="key" type="xsd:string" use="required"/>
+        <xsd:attribute name="id" type="xsd:string" use="optional"/>
+        <xsd:attribute name="depends-on-id" type="xsd:string" use="optional"/>
+    </xsd:complexType>
+    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+    <xsd:complexType name="DataType">
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+            <xsd:element name="block" type="BlockType"/>
+            <xsd:element name="error" type="ErrorType"/>
+        </xsd:choice>
+    </xsd:complexType>
+    <xsd:complexType name="BlockOrError" abstract="true"/>
+    <xsd:complexType name="ErrorType">
+        <xsd:complexContent>
+            <xsd:extension base="BlockOrError">
+                <xsd:sequence>
+                    <xsd:element name="level" type="Level" nillable="true"/>
+                    <xsd:element name="code" type="xsd:string" nillable="true"/>
+                    <xsd:element name="description" type="xsd:string" nillable="true"/>
+                </xsd:sequence>
+                <xsd:attribute name="correlationId" type="xsd:string" use="optional"/>
+                <xsd:attribute name="key" type="xsd:string" use="required"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:simpleType name="Level">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ERROR"/>
+            <xsd:enumeration value="FATAL_ERROR"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="BlockType" abstract="true">
+        <xsd:complexContent>
+            <xsd:extension base="BlockOrError">
+                <xsd:attribute name="key" type="xsd:string" use="required"/>
+                <xsd:attribute name="language" type="xsd:string" use="optional"/>
+                <xsd:attribute name="correlationId" type="xsd:string" use="optional"/>
+                <xsd:attribute name="ttl" type="xsd:duration" use="required"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxx TYPES xxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+    <xsd:complexType name="InstrumentData">
+        <xsd:sequence>
+            <xsd:element name="iid" type="xsd:string"/>
+            <xsd:element name="isin" type="xsd:string" nillable="true"/>
+            <xsd:element name="wkn" type="xsd:string" nillable="true"/>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="type" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="QuoteData">
+        <xsd:sequence>
+            <xsd:element name="qid" type="xsd:string"/>
+            <xsd:element name="vwdcode" type="xsd:string" nillable="true"/>
+            <xsd:element name="marketVwd" type="xsd:string" nillable="true"/>
+            <xsd:element name="marketName" type="xsd:string" nillable="true"/>
+            <xsd:element name="currencyIso" type="xsd:string" nillable="true"/>
+            <xsd:element name="quotedPer" type="QuotedPerEnum" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="QuotedPerEnum">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="UNKNOWN"/>
+            <xsd:enumeration value="PERCENT"/>
+            <xsd:enumeration value="PERMILLE"/>
+            <xsd:enumeration value="POINT"/>
+            <xsd:enumeration value="UNIT"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+	<xsd:complexType name="IdentifierData">
+        <xsd:sequence>
+            <xsd:element name="instrumentdata" type="InstrumentData"/>
+            <xsd:element name="quotedata" type="QuoteData"/>
+        </xsd:sequence>
+        <xsd:attribute name="share" type="xsd:decimal" use="optional"/>
+    </xsd:complexType>	
+    <xsd:complexType name="MSC_StaticData">
+        <xsd:complexContent>
+            <xsd:extension base="BlockType">
+                <xsd:sequence>
+                    <xsd:element name="instrumentdata" type="InstrumentData"/>
+                    <xsd:element name="quotedata" type="QuoteData"/>
+                    <xsd:element name="typename" type="xsd:string" nillable="true"/>
+                    <xsd:element name="sector" type="xsd:string" nillable="true"/>
+                    <xsd:element name="country" type="xsd:string" nillable="true"/>
+                    <xsd:element name="tickersymbol" type="xsd:string" nillable="true"/>
+                    <xsd:element name="vwdsymbol" type="xsd:string" nillable="true"/>
+                    <xsd:element name="benchmark" type="IdentifierData" nillable="true"/>
+                    <xsd:element name="underlying" type="IdentifierData" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>    
+</xsd:schema>

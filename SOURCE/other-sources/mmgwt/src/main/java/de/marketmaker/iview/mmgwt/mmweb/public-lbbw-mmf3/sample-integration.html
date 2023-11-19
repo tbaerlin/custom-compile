@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Beispiel-Integration des mm[web]</title>
+    <style type="text/css">
+        pre, code {
+            color: #068;
+        }
+    </style>
+</head>
+<body>
+<div>Dies ist die umgebende Seite.</div>
+
+<div>
+    Um im mm[web] ein Symbol zu öffnen wird ein Link notiert, der folgende Bedingungen erfüllt:
+    <ul>
+        <li>Die Zielseite (<code>href</code>) enthält javascript code mit zwei Statements</li>
+        <li>Das erste Statement (<code>window.open()</code>) öffnet ein neues Fenster, das sich nach Injektion des Symbols im mm[web] selbst wieder schließt.</li>
+        <li>Das zweite Statement (<code>void(0)</code>) verhindert, dass sich der Seiteninhalt der aufrufenden Seite ändert</li>
+    </ul>
+    Beispiel:<br/>
+    <pre>&lt;a href="javascript:window.open('http://mmfweb.vwd.com/lbbw-mmf3/open-symbol.html#DE0007100000', '_blank', ''); void(0);"&gt;Daimler in mm[web] öffnen&lt;/a&gt;</pre>
+</div>
+<div>
+    So sieht das dann aus: <a href="javascript:window.open('http://mmfweb.vwd.com/lbbw-mmf3/open-symbol.html#DE0007100000', '_blank', ''); void(0);">Daimler in mm[web] öffnen</a>
+</div>
+
+</body>
+</html>

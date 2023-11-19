@@ -1,0 +1,11 @@
+repositories {
+  mavenLocal()
+  mavenCentral()
+  maven {
+    url "${artifactory_contextUrl}/libs-${isRelease ? 'releases' : 'snapshot'}"
+    credentials {
+      username = "${artifactory_user}"
+      password = "${artifactory_password}"
+    }
+  }
+}

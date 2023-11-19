@@ -1,0 +1,399 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent"> <!-- The doctype is only necessary if you want to use HTML entities as we do below -->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:itu="urn:import:de.marketmaker.itools.gwtutil.client.widgets"
+             xmlns:ivdp="urn:import:de.marketmaker.iview.mmgwt.mmweb.client.widgets.datepicker"
+             xmlns:ivw="urn:import:de.marketmaker.iview.mmgwt.mmweb.client.widgets"
+             xmlns:oe="urn:import:de.marketmaker.iview.mmgwt.mmweb.client.as.orderentry"
+             xmlns:idtp="urn:import:de.marketmaker.itools.gwtutil.client.widgets.datepicker">
+
+    <ui:with field="i18n" type="de.marketmaker.iview.mmgwt.mmweb.client.I18n" />
+
+    <g:HTMLPanel styleName="as-oe" width="720px" height="580px">
+        <ivw:SimpleGlassablePanel ui:field="loadingIndicator" glassStyleName="as-reloadGlassPanel">
+            <g:TabLayoutPanel ui:field="tabLayoutPanel" barUnit="PX" barHeight="30" width="720px" height="580px">
+                <g:tab>
+                    <g:customHeader><g:HTMLPanel styleName="gwt-HTML"><ui:text from="{i18n.orderEntryBHLKGSTabBasicData}"/><g:Image ui:field="errorImageTab1" /></g:HTMLPanel></g:customHeader>
+                    <g:HTMLPanel styleName="cp withTabs">
+                        <table class="ft" style="table-layout:fixed;">
+                            <colgroup>
+                                <col style="width:100px; max-width:100px;"/>
+                                <col style="width:240px; max-width:240px;"/>
+                            </colgroup>
+
+                            <tr>
+                                <td class="headline" colspan="2">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryTransaction}"/></td>
+                                <td>
+                                    <ivw:MappedListBox ui:field="orderActionTypeChoice" withEmptyChoice="true" />
+                                    <g:Label ui:field="orderActionTypeField" />
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="ft" style="table-layout:fixed;">
+                            <colgroup>
+                                <col style="width:100px; max-width:100px;"/>
+                                <col style="width:240px; max-width:240px;"/>
+                                <col style="width:100px; max-width:100px;"/>
+                                <col style="width:240px; max-width:240px;"/>
+                            </colgroup>
+
+                            <tr>
+                                <td class="headline" colspan="4"><g:Label text="{i18n.portfolio}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.pmInvestor}"/></td>
+                                <td><g:Label addStyleNames="as-oe-ellipsis" ui:field="investorNameField" /></td>
+                                <td class="rightcols labels"><g:Label text="{i18n.investorNumberAbbr}" /></td>
+                                <td><g:Label ui:field="investorNumberField" /></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.pmDepot}"/></td>
+                                <td>
+                                    <ivw:MappedListBox ui:field="depotChoice" withEmptyChoice="false"/>
+                                    <g:Label addStyleNames="as-oe-ellipsis" ui:field="depotNameField" />
+                                </td>
+                                <td class="rightcols labels"><g:Label text="{i18n.orderEntryDepotNo}"/></td>
+                                <td><g:Label ui:field="depotNumberField" /></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryAccount}"/></td>
+                                <td><ivw:MappedListBox ui:field="accountChoice" withEmptyChoice="false"/></td>
+                                <td class="rightcols labels"><g:Label text="{i18n.accountNo}"/></td>
+                                <td><g:Label ui:field="accountNumberField" /></td>
+                            </tr>
+                            <tr>
+                                <td/>
+                                <td/>
+                                <td class="rightcols labels"><g:Label text="{i18n.orderEntryAccountBalance}"/></td>
+                                <td><g:Label ui:field="accountBalanceField" /></td>
+                            </tr>
+                        </table>
+
+                        <table class="ft" style="table-layout:fixed;">
+                            <colgroup>
+                                <col style="width:100px; max-width:100px;"/>
+                                <col style="width:240px; max-width:240px;"/>
+                                <col style="width:60px; max-width:60px;"/>
+                                <col style="width:110px; max-width:110px;"/>
+                                <col style="width:60px; max-width:60px;"/>
+                                <col style="width:90px; max-width:90px;"/>
+                            </colgroup>
+
+                            <tr>
+                                <td class="headline" colspan="6"><g:Label text="{i18n.instrument}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryBHLKGSInstrumentName}"/></td>
+                                <td>
+                                    <g:HorizontalPanel ui:field="selectInstrumentPanel" addStyleNames="si">
+                                        <g:TextBox ui:field="instrumentField" />
+                                        <itu:ImageButton ui:field="selectInstrumentButton" />
+                                        <oe:MenuItemSelectionDelegate ui:field="selectInstrumentFromDepotChoiceDelegate" />
+                                    </g:HorizontalPanel>
+
+                                    <g:HTMLPanel tag="table" ui:field="selectIpoInstrumentPanel" styleName="siBhlIpo">
+                                        <tr>
+                                            <td align="left">
+                                                <g:Label ui:field="ipoInstrumentLabel"/>
+                                            </td>
+                                            <td align="right">
+                                                <itu:Button ui:field="selectIpoInstrumentButton" text="{i18n.orderEntryBHLKGSActiveIPOinWKN}"/>
+                                            </td>
+                                        </tr>
+                                    </g:HTMLPanel>
+
+                                    <g:HTMLPanel tag="table" ui:field="instrumentNamePanel" styleName="siName">
+                                        <tr>
+                                            <td>
+                                                <g:Label ui:field="instrumentNameField" />
+                                            </td>
+                                        </tr>
+                                    </g:HTMLPanel>
+                                </td>
+                                <td class="rightcols labels"><g:Label text="{i18n.type}"/></td>
+                                <td><g:Label ui:field="instrumentTypeField" /></td>
+                                <td class="labels" colspan="2">
+                                    <itu:Button ui:field="showArbitrageButton" visible="false" enabled="false" text="{i18n.arbitrage}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryBHLKGSExchangeDomestic}"/></td>
+                                <td><ivw:MappedListBox ui:field="exchangeChoiceDomestic" withEmptyChoice="true"/></td>
+                                <td class="rightcols labels"><g:Label text="ISIN"/></td>
+                                <td><g:Label ui:field="isinField" /></td>
+                                <td class="labels"><g:Label text="WKN"/></td>
+                                <td><g:Label ui:field="wknField" /></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryBHLKGSExchangeForeign}"/></td>
+                                <td><ivw:MappedListBox ui:field="exchangeChoiceForeign" withEmptyChoice="true"/></td>
+                                <td class="rightcols labels"><g:Label text="{i18n.orderEntryTradingIndicator}"/></td>
+                                <td><ivw:MappedListBox ui:field="tradingIndicatorChoice" withEmptyChoice="false"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryBHLKGSExchangeOther}" /> </td>
+                                <td><ivw:MappedListBox ui:field="exchangeChoiceOther" withEmptyChoice="true"/></td>
+                                <td class="rightcols" colspan="4">
+                                    <g:CheckBox ui:field="exchangeAccordingToCustomerCheck"
+                                                text="{i18n.orderEntryExchangeAccordingToCustomer}"/>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="ft" style="table-layout:fixed;">
+                            <colgroup>
+                                <col style="width:100px;"/>
+                                <col style="width:240px;"/>
+                                <col style="width:60px;"/>
+                                <col style="width:110px;"/>
+                                <col style="width:60px;"/>
+                                <col style="width:90px;"/>
+                            </colgroup>
+                            <tr>
+                                <td class="headline" colspan="4"><ui:text from="{i18n.orderEntryOrder}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryAmountNominal}"/></td>
+                                <td><g:TextBox ui:field="amountNominalField"/></td>
+                                <td class ="rightcols labels">
+                                    <g:Label ui:field="amountNominalCurrencyOrUnit"/>
+                                </td>
+                                <!--<td class="rightcols labels"><g:Label text="ca. Auftragswert" /></td>
+                                <td><g:Label text="23.42 EUR" ui:field="approxOrderValueField"/></td>-->
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryDepository}"/></td>
+                                <td><ivw:MappedListBox ui:field="depositoriesChoice" withEmptyChoice="true"/></td>
+                            </tr>
+                        </table>
+
+                        <table class="ft" style="table-layout:fixed;">
+                            <colgroup>
+                                <col style="width:100px;"/>
+                                <col style="width:180px;"/>
+                                <col style="width:150px;"/>
+                                <col style="width:170px;"/>
+                            </colgroup>
+
+                            <tr>
+                                <td class="headline" colspan="4"><g:Label text="{i18n.orderEntryOrderTypes}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryValidity}"/></td>
+                                <td><g:RadioButton name="validity" ui:field="validityRadioNone" text="{i18n.orderEntryBHLKGSLimitValidityDefault}"/></td>
+                                <td class="rightcols labels">
+                                    <g:Label text="{i18n.orderEntryLimitOrStopLimit}" />
+                                </td>
+                                <td>
+                                    <g:HorizontalPanel addStyleNames="limitPanel">
+                                        <g:TextBox name="limit" visibleLength="12" ui:field="limitOrStopLimitField"/>
+                                        <ivw:MappedListBox ui:field="limitCurrencyChoice" withEmptyChoice="true"/>
+                                    </g:HorizontalPanel>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td/>
+                                <td><g:RadioButton name="validity" ui:field="validityRadioToday" text="{i18n.today}"/></td>
+                                <td class="rightcols labels"><g:Label text="{i18n.orderEntryLimitClause}"/></td>
+                                <td><ivw:MappedListBox ui:field="limitClauseChoice" withEmptyChoice="false"/></td>
+                            </tr>
+                            <tr>
+                                <td/>
+                                <td><g:RadioButton name="validity" ui:field="validityRadioUltimo" text="{i18n.orderEntryUltimo}" /></td>
+                                <td class="rightcols labels"><g:Label text="{i18n.orderEntryLimitAfterStopLimit}"/></td>
+                                <td><g:TextBox ui:field="limitAfterStopLimitField"/> </td>
+                            </tr>
+
+                            <tr>
+                                <td/>
+                                <td>
+                                    <g:HorizontalPanel styleName="validityDataPanel">
+                                        <g:RadioButton name="validity" ui:field="validityRadioDate"/>
+                                        <ivdp:ToolbarDateButton enabled="true" ui:field="validityDateButton"/>
+                                    </g:HorizontalPanel>
+                                </td>
+                                <td class="rightcols labels"><g:Label text="{i18n.orderEntryLimitTrailingAmountOrPercent}"/></td>
+                                <td><g:TextBox ui:field="limitTrailingAmountField" /></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" />
+                                <td class="rightcols labels"><g:Label text="{i18n.orderEntryLimitPeakSizeQuantity}"/></td>
+                                <td><g:TextBox ui:field="limitPeakSizeQuantityField" /></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"/>
+                                <td class="rightcols labels"/>
+                                <td><g:CheckBox text="{i18n.orderEntryLimitFee}" ui:field="limitFeeCheck"/></td>
+                            </tr>
+                        </table>
+                    </g:HTMLPanel>
+                </g:tab>
+                <g:tab>
+                    <g:customHeader><g:HTMLPanel styleName="gwt-HTML"><ui:text from="{i18n.orderEntryBHLKGSTabContract}"/><g:Image ui:field="errorImageTab2" /></g:HTMLPanel></g:customHeader>
+                    <g:HTMLPanel styleName="cp withTabs">
+                        <table class="ft" style="table-layout:fixed;">
+                            <colgroup>
+                                <col style="width:130px;"/>
+                                <col style="width:224px;"/>
+                                <col style="width:16px;"/>
+                            </colgroup>
+
+                            <tr>
+                                <td class="headline" colspan="4"><g:Label text="{i18n.orderEntryOrderer}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryOrdererInterlocutor}"/></td>
+                                <td>
+                                    <ivw:MappedListBox ui:field="ordererChoice" withEmptyChoice="true"/>
+                                </td>
+                                <td>
+                                    <oe:MenuItemSelectionDelegate ui:field="selectOrdererChoiceDelegate" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryOrdererIdentifier}"/></td>
+                                <td><g:TextBox ui:field="ordererIdentifierField" /></td>
+                                <td/>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryOrdererCustomerNumber}"/></td>
+                                <td><g:TextBox ui:field="ordererCustomerNumberField" /></td>
+                                <td/>
+                            </tr>
+                        </table>
+
+                        <table class="ft" style="table-layout:fixed;">
+                            <colgroup>
+                                <col style="width:130px;"/>
+                                <col style="width:240px;"/>
+                            </colgroup>
+                            <tr>
+                                <td class="headline" colspan="2"><g:Label text="{i18n.others}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntrySettlementType}"/></td>
+                                <td><ivw:MappedListBox ui:field="settlementTypeChoice" withEmptyChoice="false"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryBusinessSegment}"/></td>
+                                <td><ivw:MappedListBox ui:field="businessSegmentChoice" withEmptyChoice="false"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryPlacingOfOrderVia}"/></td>
+                                <td><ivw:MappedListBox ui:field="placingOfOrderViaChoice" withEmptyChoice="false"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryExternalTypist}"/></td>
+                                <td><g:TextBox ui:field="externalTypist"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryBHLKGSContractDate}"/></td>
+                                <td>
+                                    <table class="contractDateTimePanel">
+                                        <tr>
+                                            <td><idtp:DateBox ui:field="contractDateBox" /></td>
+                                            <td class="labels"><g:Label text="{i18n.orderEntryBHLKGSContractTime}"/></td>
+                                            <td><g:TextBox ui:field="contractTimeField"/></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="headline" colspan="4"><g:Label text="{i18n.orderEntryMinutesOfTheConsultation}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryMinutesOfTheConsultationState}"/></td>
+                                <td><ivw:MappedListBox ui:field="minutesOfTheConsultationTypeChoice" withEmptyChoice="false"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryMinutesOfTheConsultationNumber}"/></td>
+                                <td><g:TextBox ui:field="minutesOfTheConsultationNumberField"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryMinutesOfTheConsultationDate}"/></td>
+                                <td><idtp:DateBox ui:field="minutesOfTheConsultationDateBox" /></td>
+                            </tr>
+
+                            <tr>
+                                <td class="headline" colspan="2"><g:Label text="{i18n.orderEntryBHLKGSSectionCommission}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryBHLKGSCommission}"/></td>
+                                <td>
+                                    <ivw:MappedListBox ui:field="commissionChoice" withEmptyChoice="false"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryBHLKGSDifferentCommission}"/></td>
+                                <td>
+                                    <g:TextBox ui:field="differentCommissionField" visibleLength="12"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </g:HTMLPanel>
+                </g:tab>
+                <g:tab>
+                    <g:header><ui:text from="{i18n.orderEntryBHLKGSTabTexts}"/> </g:header>
+                    <g:HTMLPanel styleName="cp withTabs">
+                        <table class="ft" style="table-layout:fixed;">
+                            <colgroup>
+                                <col style="width:100px;"/>
+                                <col style="width:500px;"/>
+                            </colgroup>
+
+                            <tr>
+                                <td class="headline" colspan="2"><g:Label text="{i18n.orderEntryCannedTextForBillingReceiptSection}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryCannedTextForBillingReceipt1}"/></td>
+                                <td><ivw:MappedListBox ui:field="cannedTextForBillingReceiptChoice1" withEmptyChoice="false"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryCannedTextForBillingReceipt2}"/></td>
+                                <td><ivw:MappedListBox ui:field="cannedTextForBillingReceiptChoice2" withEmptyChoice="false"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryCannedTextForBillingReceipt3}"/></td>
+                                <td><ivw:MappedListBox ui:field="cannedTextForBillingReceiptChoice3" withEmptyChoice="false"/></td>
+                            </tr>
+                            <tr>
+                                <td class="headline" colspan="2"><g:Label text="{i18n.orderEntryCannedTextForOrderConfirmationSection}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryCannedText}"/></td>
+                                <td><ivw:MappedListBox ui:field="cannedTextForOrderConfirmationChoice" withEmptyChoice="false"/></td>
+                            </tr>
+                            <tr>
+                                <td class="headline" colspan="2"><g:Label text="{i18n.orderEntryTextForOrderReceiptSection}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryTextForOrderReceipt1}"/></td>
+                                <td><g:TextBox ui:field="textForOrderReceiptField1" maxLength="60"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryTextForOrderReceipt2}"/></td>
+                                <td><g:TextBox ui:field="textForOrderReceiptField2" maxLength="60"/></td>
+                            </tr>
+                            <tr>
+                                <td class="headline" colspan="2"><g:Label text="{i18n.orderEntryTextForInternalUseSection}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryTextForInternalUse1}"/></td>
+                                <td><g:TextBox ui:field="textForInternalUseField1" maxLength="60"/></td>
+                            </tr>
+                            <tr>
+                                <td class="labels"><g:Label text="{i18n.orderEntryTextForInternalUse2}"/></td>
+                                <td><g:TextBox ui:field="textForInternalUseField2" maxLength="60"/></td>
+                            </tr>
+                        </table>
+                    </g:HTMLPanel>
+                </g:tab>
+            </g:TabLayoutPanel>
+        </ivw:SimpleGlassablePanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

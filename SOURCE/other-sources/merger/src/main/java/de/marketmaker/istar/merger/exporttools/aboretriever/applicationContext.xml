@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="startFile" class="de.marketmaker.istar.common.lifecycle.StartFileCreator"/>
+
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="url" value="jdbc:oracle:thin:@(description=(address=(host=dp2prod.market-maker.de)(protocol=tcp)(port=1521))(connect_data=(service_name=dp2)))"/>
+        <property name="username" value="output"/>
+        <property name="password" value="output"/>
+    </bean>
+
+    <bean id="entitlementProvider" class="de.marketmaker.istar.feed.vwd.EntitlementProviderVwd">
+        <property name="entitlementFieldGroups" value="${baseDir}/EntitlementFieldGroups.txt"/>
+        <property name="entitlementRules" value="${baseDir}/EntitlementRules.XFeed.txt"/>
+    </bean>
+
+    <bean id="pmAboRetriever" class="de.marketmaker.istar.merger.exporttools.aboretriever.PmAboRetriever">
+        <property name="entitlementProvider" ref="entitlementProvider"/>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="baseDir" value="${baseDir}"/>
+    </bean>
+
+    <bean id="mdpDataRetriever" class="de.marketmaker.istar.merger.exporttools.aboretriever.MdpDataRetriever">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="baseDir" value="${baseDir}"/>
+    </bean>
+</beans>

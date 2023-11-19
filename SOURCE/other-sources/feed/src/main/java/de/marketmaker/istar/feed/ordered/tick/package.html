@@ -1,0 +1,28 @@
+<body>
+<h3>What is Tick Data?</h3>
+Tick data is comprised of the set of fields for which every single update is stored (as opposed
+to snap data, for which only the latest update is stored). In addition to common tick fields (those
+with an order id less than {@link de.marketmaker.istar.feed.vwd.VwdFieldOrder#FIRST_NON_TICK} and
+not skipped by {@link de.marketmaker.istar.feed.ordered.tick.TickBuilder#addTickFields}), market
+specific tick fields with larger order ids are defined in {@link de.marketmaker.istar.feed.vwd.MarketTickFields}.
+<p>
+The detection of whether an update contains ticks is performed by an instance of
+    {@link de.marketmaker.istar.feed.vwd.TickTypeCheckerVwd}, wich usually runs in the
+    <tt>istar-multicast-mdps</tt> process and adds tick flags (see {@link de.marketmaker.istar.feed.FeedUpdateFlags})
+    to multicasted feed records. The receiving processes just reuse those flags
+    (see {@link de.marketmaker.istar.feed.TickTypeCheckerByFlags}). So whenever the set of tick
+    fields changes, both <tt>istar-multicast-mdps</tt> and <tt>istar-chicago3</tt> have to be
+    updated, the former to add the correct flags, the latter to store the corresponding fields when
+    the received flags tell it to do so.
+</p>
+<h3>How is Tick Data stored?</h3>
+Tick data is stored by a {@link de.marketmaker.istar.feed.ordered.tick.TickBuilder}, which collects
+tick fields in a local ByteBuffer and then tells a {@link de.marketmaker.istar.feed.ordered.tick.MemoryTickStore}
+to add this tick record for the given <tt>FeedData</tt> object. This, in turn, will modify fields
+of the {@link de.marketmaker.istar.feed.ordered.tick.OrderedTickData} object stored in the
+<tt>(Ordered)FeedData</tt> object.
+<p>
+As not all ticks for a day can be stored in memory, the <tt>MemoryTickStore</tt> will submit full
+tick chunks to a {@link de.marketmaker.istar.feed.ordered.tick.TickWriter} which asynchronously
+appends ticks to tick files.
+</body>

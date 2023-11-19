@@ -1,0 +1,61 @@
+/***********************************************************************************/
+/* Special apo styles                                                              */
+/***********************************************************************************/
+
+a, a:active, a:visited, a:link, .mm-link {
+    color: #1e325f;
+    text-decoration: none;
+}
+a:hover, .mm-link:hover {
+    text-decoration: underline;
+}
+
+.x-window-tl .x-window-header { color: #1e325f; }
+body.x-body-masked .x-window-plain .x-window-mc { background-color: #f3f4f5; }
+.x-progress-wrap { border-color: #6e6e6e; }
+.x-progress-bar { background-color:#8c91a0; border-bottom:1px solid #8c91a0; border-right:1px solid #8c91a0; border-top:1px solid #d2d8e6; }
+
+.x-panel-header { color: #1e325f; }
+
+.x-panel-noborder .x-panel-header-noborder,
+
+.mm-mainPanel { background-color: white; }
+
+.mm-topPanel { background-image: url( images/apo-logo.gif ); }
+.mm-icon-apo { background: url( images/mm/mm-icon-apo.gif ) no-repeat; }
+
+.mm-content .x-panel-body { background-color: white; }
+
+.mm-topMenu .x-toolbar { background-color: #1e325f; }
+.mm-topMenu .x-tab-panel-bwrap { border-right: 0; }
+
+.x-toolbar.mm-subMenu .x-btn-over .x-btn-center .x-btn-text{ color:#1e325f; }
+.x-toolbar.mm-subMenu .x-btn-menu-active .x-btn-center .x-btn-text { color: #1e325f; }
+.x-menu-item-active{ border-color: #58595b; }
+
+table.mm-snippetTable th {
+    color: #58595b;
+}
+
+td.mm-snippetTable-label {
+    color: #58595b;
+}
+
+table.mm-shbcGraph td.mm-explain.buy { color: #287826; }
+table.mm-shbcGraph td.mm-explain.hold { color: #58595b; }
+table.mm-shbcGraph td.mm-explain.sell { color: #782841; }
+.mm-shb.buy { background-color: #287826; }
+.mm-shb.hold { background-color: #58595b; }
+.mm-shb.sell { background-color: #782841; }
+
+.mm-chartcenter-dd.dragOver { border-color: #782841; }
+
+.mm-mandatory { color: #782841; }
+
+.mm-finder-instrumentName.dragOver { border-color: #782841; }
+
+.mm-contentData.mm-finder-wrapper .x-panel-body { background-color: white; }
+
+.x-tree-node .x-tree-selected { background-color: #e8e9ec; }
+
+.external-tool-header { background: #eeeeee url(images/mm/toolbar/top-tb-bg.gif) repeat-x top; }

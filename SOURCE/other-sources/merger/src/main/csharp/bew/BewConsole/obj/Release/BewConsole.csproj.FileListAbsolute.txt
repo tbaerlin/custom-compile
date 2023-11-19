@@ -1,0 +1,8 @@
+D:\Java\Source\sbs-net\bew\BewConsole\bin\Release\BewConsole.exe.config
+D:\Java\Source\sbs-net\bew\BewConsole\bin\Release\BewConsole.exe
+D:\Java\Source\sbs-net\bew\BewConsole\bin\Release\BewConsole.pdb
+D:\Java\Source\sbs-net\bew\BewConsole\bin\Release\BewCore.dll
+D:\Java\Source\sbs-net\bew\BewConsole\bin\Release\BewCore.pdb
+D:\Java\Source\sbs-net\bew\BewConsole\obj\Release\ResolveAssemblyReference.cache
+D:\Java\Source\sbs-net\bew\BewConsole\obj\Release\BewConsole.exe
+D:\Java\Source\sbs-net\bew\BewConsole\obj\Release\BewConsole.pdb

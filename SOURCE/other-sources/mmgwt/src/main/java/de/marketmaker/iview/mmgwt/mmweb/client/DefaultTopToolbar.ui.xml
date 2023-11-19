@@ -1,0 +1,51 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:itwi="urn:import:de.marketmaker.itools.gwtutil.client.widgets"
+             xmlns:ivwi="urn:import:de.marketmaker.iview.mmgwt.mmweb.client.widgets"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+    <ui:import field="de.marketmaker.iview.mmgwt.mmweb.client.data.SessionData.INSTANCE"/>
+
+    <ui:style>
+        .pointer {
+            cursor: pointer;
+        }
+
+        .separator2 {
+            margin-left: 10px;
+        }
+    </ui:style>
+
+    <g:FlowPanel ui:field="toolbarPanel" styleName="x-toolbar mm-topToolbar as-topToolbar">
+        <g:Image ui:field="leftLogo" url="clear.cache.gif"
+                 styleName="mm-floatLeft {style.pointer}"/>
+
+        <g:SimplePanel addStyleNames="mm-floatLeft">
+            <ivwi:SearchBox ui:field="searchBox"/>
+        </g:SimplePanel>
+
+        <g:Image ui:field="separator1" addStyleNames="mm-floatLeft"/>
+
+        <itwi:ImageButton ui:field="refreshButton" addStyleNames="mm-floatLeft"/>
+
+        <itwi:Button ui:field="pushButton" visible="false" addStyleNames="mm-floatLeft"/>
+
+        <ivwi:PdfWidget ui:field="pdfButton" visible="false" enabled="false" addStyleNames="mm-floatLeft"/>
+
+        <itwi:ImageButton ui:field="printButton" visible="false" enabled="false" addStyleNames="mm-floatLeft"/>
+
+        <itwi:Button ui:field="limitsButton" visible="false" addStyleNames="mm-floatLeft"/>
+
+        <itwi:Button ui:field="defineHomeButton" visible="false" addStyleNames="mm-floatLeft"/>
+
+        <itwi:Button ui:field="favouritesButton" visible="false" enabled="false" addStyleNames="mm-floatLeft"/>
+
+        <g:Image ui:field="rightLogo" styleName="as-right-logo mm-floatRight"/>
+
+        <itwi:ImageButton ui:field="logoutButton" addStyleNames="logoutButton"/>
+        <g:Label ui:field="username" text="{INSTANCE.getUserName}" styleName="as-topToolbarText loginName"/>
+        <g:Image ui:field="separator2" addStyleNames="mm-floatRight {style.separator2}" />
+        <itwi:Button ui:field="privacyModeButton" addStyleNames="mm-floatRight"/>
+    </g:FlowPanel>
+</ui:UiBinder>

@@ -1,0 +1,32 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:itu="urn:import:de.marketmaker.itools.gwtutil.client.widgets"
+             xmlns:ivw="urn:import:de.marketmaker.iview.mmgwt.mmweb.client.widgets"
+             xmlns:h="urn:import:com.google.gwt.user.client.ui">
+
+    <ui:with field="i18n" type="de.marketmaker.iview.mmgwt.mmweb.client.I18n" />
+
+    <g:HTMLPanel addStyleNames="as-uod">
+        <div class="section selected">
+            <div class="as-objectView-header"><ui:text from="{i18n.orderEntryBHLKGSOrderBookQueryCriteria}"/></div>
+            <div class="as-objectView-field">
+                <g:Label addStyleNames="as-objectView-label" text="{i18n.orderEntryState}" title="{i18n.orderEntryState}"/>
+                <ivw:MappedListBox ui:field="stateChoice"  addStyleNames="as-objectView-valueInputWidget" />
+            </div>
+            <div class="as-objectView-field">
+                <g:Label addStyleNames="as-objectView-label" text="WKN" title="WKN" />
+                <g:TextBox ui:field="wknField" addStyleNames="as-objectView-valueInputWidget" title="WKN" maxLength="6"/>
+            </div>
+            <div class="as-objectView-field">
+                <g:Label addStyleNames="as-objectView-label" text="{i18n.orderEntryOrderNumber}" title="{i18n.orderEntryOrderNumber}"/>
+                <g:TextBox ui:field="orderNumberField" addStyleNames="as-objectView-valueInputWidget" title="{i18n.orderEntryOrderNumber}" />
+            </div>
+            <div class="as-objectView-field">
+                <h:HorizontalPanel addStyleNames="buttonStrip">
+                    <itu:Button ui:field="okButton" text="{i18n.ok}" />
+                    <itu:Button ui:field="cancelButton" text="{i18n.cancel}"/>
+                </h:HorizontalPanel>
+            </div>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>

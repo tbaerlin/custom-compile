@@ -1,0 +1,130 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:mm="urn:import:de.marketmaker.iview.mmgwt.dmxmldocu.client.parameter"
+             xmlns:w="urn:import:de.marketmaker.iview.mmgwt.dmxmldocu.client.widgets">
+    <g:DockLayoutPanel unit="EM" ui:field="panel">
+        <g:north size="2.5">
+            <g:DockLayoutPanel unit="PX">
+                <g:center>
+                    <g:HorizontalPanel styleName="menu" verticalAlignment="ALIGN_TOP">
+                        <g:HorizontalPanel styleName="controls" verticalAlignment="ALIGN_TOP">
+                            <g:SuggestBox ui:field="selectedBlockSuggestBox" width="28ex" styleName="blockControl"/>
+                            <w:AuthSelectBox ui:field="authSelectBox" width="28ex" styleName="authControl"/>
+                        </g:HorizontalPanel>
+                        <g:HorizontalPanel styleName="firstLine" verticalAlignment="ALIGN_MIDDLE">
+                            <g:HTML ui:field="firstSentenceBlockHTML">
+                                <em>Select a block ...</em>
+                            </g:HTML>
+                        </g:HorizontalPanel>
+                    </g:HorizontalPanel>
+                </g:center>
+                <g:east size="200">
+                    <g:HorizontalPanel>
+                        <g:Button ui:field="logoutButton" text="Logout" styleName="mm-Button"/>
+                        <g:Button ui:field="aboutButton" text="About/Contact" styleName="mm-Button"/>
+                    </g:HorizontalPanel>
+                </g:east>
+            </g:DockLayoutPanel>
+        </g:north>
+        <g:center>
+            <g:TabLayoutPanel ui:field="topTabPanel" barHeight="1.8" barUnit="EM">
+                <g:tab>
+                    <g:header>Block Overview</g:header>
+                    <g:ScrollPanel>
+                        <mm:BlockOverviewPanel ui:field="blockOverviewPanel"/>
+                    </g:ScrollPanel>
+                </g:tab>
+                <g:tab xml:id="tabRequestAndResponse">
+                    <g:header>Request &amp; Response</g:header>
+                    <g:SplitLayoutPanel>
+                        <g:north size="400">
+                            <g:SplitLayoutPanel>
+                                <g:west size="600">
+                                    <g:DockLayoutPanel>
+                                        <g:center>
+                                            <g:TextArea ui:field="rawRequestTextArea"
+                                                        styleName="full-size"/>
+                                        </g:center>
+                                        <g:south size="30">
+                                            <g:DockLayoutPanel unit="PX">
+                                                <g:center>
+                                                    <g:Button ui:field="sendRequestButton"
+                                                              text="Send request" styleName="mm-Button"/>
+                                                </g:center>
+                                                <g:east size="40">
+                                                    <g:Image ui:field="responseStatusImage"
+                                                    url="empty.png"/>
+                                                </g:east>
+                                                <g:east size="40">
+                                                    <g:Image ui:field="requestStatusImage"
+                                                             url="empty.png"/>
+                                                </g:east>
+                                            </g:DockLayoutPanel>
+                                        </g:south>
+                                    </g:DockLayoutPanel>
+                                </g:west>
+                                <g:center>
+                                    <g:ScrollPanel>
+                                        <mm:RequestParameterPanel ui:field="requestParameterPanel"/>
+                                    </g:ScrollPanel>
+                                </g:center>
+                            </g:SplitLayoutPanel>
+                        </g:north>
+                        <g:center>
+                            <g:TabLayoutPanel barHeight="1.8" barUnit="EM">
+                                <g:tab>
+                                    <g:header>Response</g:header>
+                                    <g:SplitLayoutPanel>
+                                        <g:east size="400">
+                                            <g:FlowPanel>
+                                                <g:HTML ui:field="responseElementDocuXml"/>
+                                            </g:FlowPanel>
+                                        </g:east>
+                                        <g:center>
+                                            <g:ScrollPanel>
+                                                <mm:XmlTree ui:field="xmlTree"/>
+                                            </g:ScrollPanel>
+                                        </g:center>
+                                    </g:SplitLayoutPanel>
+                                </g:tab>
+                                <g:tab>
+                                    <g:header>Raw Response</g:header>
+                                    <g:FlowPanel>
+                                        <g:TextArea ui:field="rawResponseTextArea"
+                                                    styleName="full-size"/>
+                                    </g:FlowPanel>
+                                </g:tab>
+                            </g:TabLayoutPanel>
+                        </g:center>
+                    </g:SplitLayoutPanel>
+                </g:tab>
+                <g:tab>
+                    <g:header>Description</g:header>
+                    <g:ScrollPanel>
+                        <g:FlowPanel>
+                            <g:HTML ui:field="blockNameHTML"/>
+                            <g:HTML ui:field="blockDescriptionHTML"/>
+                            <g:HTML>
+                                <h3>Parameter Description</h3>
+                            </g:HTML>
+                            <g:HTML ui:field="parametersDescriptionHTML"/>
+                        </g:FlowPanel>
+                    </g:ScrollPanel>
+                </g:tab>
+                <g:tab>
+                    <g:header>Supplementary Information</g:header>
+                    <g:ScrollPanel>
+                        <g:HTML addStyleNames="mm-supplementary" ui:field="supplementaryInformation"/>
+                    </g:ScrollPanel>
+                </g:tab>
+            </g:TabLayoutPanel>
+        </g:center>
+        <g:south size="2.5">
+            <g:HTMLPanel styleName="mm-footer" tag="span">
+                Infront Data Manager XML -
+                <g:Hyperlink ui:field="aboutLink">About/Contact</g:Hyperlink>
+                - &#169; Infront Group
+            </g:HTMLPanel>
+        </g:south>
+    </g:DockLayoutPanel>
+</ui:UiBinder>

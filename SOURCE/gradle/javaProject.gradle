@@ -1,0 +1,61 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+
+ext {
+    hasGroovySource = sourceSets.main.groovy.srcDirs.any { it.exists() }
+    compileTasks = tasks.matching { it instanceof AbstractCompile }
+    testTasks = tasks.withType(Test)
+    jarTasks = tasks.withType(Jar)
+}
+
+dependencies {
+    compile libraries.findbugs
+    testCompile libraries.junit, libraries.spring_test
+}
+
+if (hasGroovySource) {
+    dependencies {
+        compile libraries.groovy
+    }
+} else {
+    // Remove Groovy configuration from compile classpath
+    configurations.compile.extendsFrom = []
+}
+
+tasks.withType(AbstractCompile) {
+  options.encoding = 'utf-8'
+  options.compilerArgs = ['-Xlint:-options']
+}
+
+tasks.withType(GroovyCompile) {
+  groovyOptions.encoding = 'utf-8'
+}
+
+task writeRuntimeLibs {
+  doLast {
+    def file = file("${buildDir}/tmp/libs.txt")
+    file.parentFile.mkdir()
+    file.withPrintWriter { pw ->
+      configurations.runtime.incoming.resolutionResult.allComponents.each { d ->
+        pw.println d
+      }
+    }
+  }
+}
+
+jar {
+  manifest.attributes["Created-By"] =
+          "${System.getProperty("java.version")} (${System.getProperty("java.specification.vendor")})"
+  manifest.attributes["Implementation-Title"] = project.name
+  manifest.attributes["Implementation-Version"] = project.version
+
+  from("${buildDir}/tmp/") {
+    include "libs.txt"
+    into "META-INF"
+  }
+}
+
+jar {
+  dependsOn writeRuntimeLibs
+}

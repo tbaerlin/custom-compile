@@ -1,0 +1,15 @@
+.mm-topPanel {
+    background: transparent url( images/zones/kwt/logo-walser-privatbank.png ) no-repeat right top;
+}
+
+.mm-dateBox input {
+    width: 80px !important;
+}
+
+.mm-dropdown input {
+    width: 120px !important;
+}
+
+.mm-topToolbar .mm-floatWidget.text {
+    color: #807a70;
+}

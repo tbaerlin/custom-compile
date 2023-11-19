@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BewGui", "BewGui\BewGui.csproj", "{9D75A864-4D23-48CE-800F-C02CC0B3CD94}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8D5C6647-BCB7-44C1-BF29-AA9A223535E4} = {8D5C6647-BCB7-44C1-BF29-AA9A223535E4}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BewCore", "BewCore\BewCore.csproj", "{8D5C6647-BCB7-44C1-BF29-AA9A223535E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BewConsole", "BewConsole\BewConsole.csproj", "{3B0EEF8C-7AB9-4EF5-860F-68B63EDCD3C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D75A864-4D23-48CE-800F-C02CC0B3CD94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D75A864-4D23-48CE-800F-C02CC0B3CD94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D75A864-4D23-48CE-800F-C02CC0B3CD94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D75A864-4D23-48CE-800F-C02CC0B3CD94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D5C6647-BCB7-44C1-BF29-AA9A223535E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D5C6647-BCB7-44C1-BF29-AA9A223535E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D5C6647-BCB7-44C1-BF29-AA9A223535E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D5C6647-BCB7-44C1-BF29-AA9A223535E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B0EEF8C-7AB9-4EF5-860F-68B63EDCD3C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B0EEF8C-7AB9-4EF5-860F-68B63EDCD3C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B0EEF8C-7AB9-4EF5-860F-68B63EDCD3C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B0EEF8C-7AB9-4EF5-860F-68B63EDCD3C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,67 @@
+<body>
+Packages/Klassen, die in anderen Modulen verwendet werden, i.d.R.
+wird eine eng begrenzte Funktionalität zur Verfügung gestellt, die
+von allgemeinem Nutzen ist.
+<dl>
+    <dt>compile</dt>
+    <dd>Kompilierung von Java-Code zur Laufzeit</dd>
+    <dt>http</dt>
+    <dd>Wrapper für commons-httpclient zur einfachen Verwendung
+        http-basierter Schnittstellen
+    </dd>
+    <dt>io</dt>
+    <dd>DataFile: eine Datei, die per FileChannel (nio) manipuliert wird</dd>
+    <dt>jmx</dt>
+    <dd>Hilfsklassen zur Integration eigener Klassen in JMX-Schnittstellen</dd>
+    <dt>lifecycle</dt>
+    <dd>Phasen im Lebenszyklus eines Objekts (Beans)
+    </dd>
+    <dt>log</dt>
+    <dd>JmxLog um eine Zeile per JMX in das Applikationslog zu schreiben.</dd>
+    <dt>mcast</dt>
+    <dd>Multicast-Pakete senden und empfangen</dd>
+    <dt>mm</dt>
+    <dd>Klassen zur Anbindung eines portfolio managers (Java-Teil, native Methoden
+        werden per C++ realisiert (istar/common/src/main/cpp)
+    </dd>
+    <dt>mock</dt>
+    <dd>Test des MMService. <b>???</b></dd>
+    <dt>monitor</dt>
+    <dd>Überwachung von Resourcen (Files, Directories) und Auslösen von Ereignissen,
+        wenn sich diese Resourcen ändern
+    </dd>
+    <dt>nioframework</dt>
+    <dd>tcp-basierter Server, der non-blocking IO einsetzt (d.h. 1 Selector-Thread,
+        der die angebundenen Clients verwaltet)
+    </dd>
+    <dt>pool</dt>
+    <dd>Pool von DataChunk-Objekten, die letzlich byte[] enthalten und sich
+        verketten lassen
+    </dd>
+    <dt>request</dt>
+    <dd>Grundlegende Interfaces/Top-Level-Klassen für Remote Service Aufrufe/Antworten</dd>
+    <dt>rmi</dt>
+    <dd><em>obsolet</em></dd>
+    <dt>spring</dt>
+    <dd>Hilfsklassen für Spring-basierte Applikationen: Main ist unsere allgemeine
+        Startklasse, die einen ApplicationContext anlegt und dazu von
+        de.marketmaker.istar.launcher.spring.Launcher angelegt wird.
+    </dd>
+    <dt>statistics</dt>
+    <dd>Erfassung von Statistiken
+    </dd>
+    <dt>util</dt>
+    <dd>Sammlung eigenständiger Hilfsklassen</dd>
+    <dt>validator</dt>
+    <dd>Validierung von Objekten basierend auf Annotationen. In der Regel verwendet,
+        um Command-Objekte (spring CommandController) zu validieren, deren Properties
+        auf Basis von HTTP-Request-Parametern gefüllt werden
+    </dd>
+    <dt>wsdl2java</dt>
+    <dd>WSDL zu Java Konvertierung</dd>
+    <dt>xml</dt>
+    <dd>zur Verarbeitung von xml</dd>
+</dl>
+
+
+</body>

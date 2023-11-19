@@ -1,0 +1,97 @@
+div.x-panel-tbar,
+.mm-printchartcenter-empty{
+    display: none;
+}
+
+.mm-printview.asView table {
+    font-size: 11px;
+}
+
+.mm-onlyPrint-block {
+    display: block;
+}
+
+.mm-print-invisible {
+    display: none !important;
+}
+
+
+.mm-printCaption {
+    float: left;
+    margin: 1px 5px;
+    white-space: nowrap;
+}
+
+table.mm-chartcenter {
+    margin-top: 20px;
+}
+
+div.mm-chartcenter {    
+    font-size: 10pt;
+}
+
+.mm-compactQuote-invisible {
+    display: block;
+    margin: 3px;    
+}
+
+.mm-calendar-date-invisible {
+    display: block;
+    margin: 3px;        
+}
+
+table.mm-listSnippetTable td {
+    font-size: 8px;
+}
+
+table.mm-listSnippetTable th {
+    font-size: 8px;
+}
+
+table.mm-listSnippetTable {
+    width: 600px;
+}
+
+.mm-printHeader {
+    font-size: 120%;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+}
+.mm-printFooter {
+    border-top: 1px solid black;
+    margin-top: 1em;
+}
+
+.mm-desktopChartIcon {
+}
+
+img.mm-trendbar-zero {
+    margin-top: -1px;
+}
+
+.mm-small-font div {
+    font-size: 7px !important;
+}
+
+.mm-small-font td {
+    font-size: 7px !important;
+}
+
+.mm-small-font th {
+    font-size: 7px !important;
+}
+
+div.x-panel-body {
+    height: auto !important;
+    width: auto !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+}
+
+.dt-print-box { }
+.dt-print-footer { float: left; }
+.mm-printview .dt-header { position: relative; height: auto; overflow: visible; }
+.mm-printview .dt-header .dt-table { position: relative; height: auto; }
+.mm-printview .dt-body { position: relative; height: auto; overflow: visible; top: 0; }
+.pm-report-footer-panel-divider { float: none; margin: 10px; border: 0 none; }

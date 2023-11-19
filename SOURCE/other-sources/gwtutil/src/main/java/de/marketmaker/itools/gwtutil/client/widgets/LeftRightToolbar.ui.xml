@@ -1,0 +1,15 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <g:Grid ui:field="grid" styleName="mm-toolbar" cellPadding="0" cellSpacing="0">
+        <g:row>
+            <g:customCell styleName="left">
+                <g:FlexTable ui:field="tableLeft" cellPadding="0" cellSpacing="0"/>
+            </g:customCell>
+            <g:customCell styleName="right">
+                <g:FlexTable ui:field="tableRight" cellPadding="0" cellSpacing="0"/>
+            </g:customCell>
+        </g:row>
+     </g:Grid>
+
+</ui:UiBinder>

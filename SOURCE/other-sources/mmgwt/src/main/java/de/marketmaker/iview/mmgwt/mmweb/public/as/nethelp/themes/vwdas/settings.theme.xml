@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- saved from url=(0016)http://localhost -->
+<settings>
+  <references>
+    <join>settings.xml</join>
+  </references>
+  <theme>
+    <name>vwdas</name>
+    <predefined>false</predefined>
+  </theme>
+</settings>

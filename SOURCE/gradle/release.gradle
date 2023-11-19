@@ -1,0 +1,4 @@
+ext {
+  branch = System.getenv('BRANCH_NAME') ? System.getenv('BRANCH_NAME') : grgit.branch.current().name
+  isRelease = !String.valueOf(project.version).toLowerCase().contains('snapshot')
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request/Response Specification for MSC_HistoricData</title>
+</head>
+<body>
+<h1>Request/Response Specification for MSC_HistoricData</h1>
+
+This document describes the main ideas for the request and response models for the MSC_HistoricData
+block.
+
+<h2>Relevant Parameters</h2>
+<ul>
+    <li>
+        <strong>type:</strong>
+        <ul>
+            <li>Possible values: CLOSE, OHLC, OHLCV, FUND, PERFORMANCE, VOLUME_AGGREGATION</li>
+            <li>Default: CLOSE</li>
+            <li>CLOSE/OHLC/OHLCV are proper subsets in ascending order, so only OHLCV will be
+                discussed here. OHLCV (or OHLC and CLOSE, resp.) is the functional view on historic
+                time series data offered by dm[xml] (as opposed to raw vwd field requests)
+            </li>
+            <li>FUND is for fund quotes and returns issue price, repurchase price and net asset
+                value (NAV still to be done)
+            </li>
+            <li>PERFORMANCE is the same as CLOSE with blendDividends==true and
+                blendCorporateActions==true wrt. returned data
+            </li>
+            <li>VOLUME_AGGREGATION is a special rendering of data of vwd market XEQDV</li>
+        </ul>
+    </li>
+    <li>
+        <strong>tickType:</strong>
+        <ul>
+            <li>Possible values: TRADE, BID, ASK, YIELD, SETTLEMENT, ADDITIONAL_FIELD</li>
+            <li>Default: TRADE</li>
+            <li>TRADE: triggers use of standard logical vwd->functional transformation based on
+                OPEN, HIGH, LOW, CLOSE, VOLUME fields of MDP-based funtional view definition
+            </li>
+            <li>BID/ASK: triggers use of ADF_Geld/ADF_Brief as raw base data, which basically
+                results in use of ADF_Geld/ADF_Brief as values for CLOSE in above TRADE explanation.
+                If (later) more raw bid/ask related fields (like ADF_Geld_Tageshoch etc.) are
+                available in the historic data, those could be used for filling the other functional
+                fields like HIGH, etc.
+            </li>
+            <li>YIELD: as BID/ASK, triggers use of ADF_Rendite, ADF_Rendite_ISMA as raw base data
+                for functional field CLOSE
+            </li>
+            <li>YIELD: as BID/ASK, triggers use of ADF_Settlement as raw base data for functional
+                field CLOSE
+            </li>
+            <li>ADDITIONAL_FIELD: deactivates delivery of functional records (like OHLCV) and only
+                returns raw vwd fields
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>baseField:</strong>
+        <ul>
+            <li>Possible values: i) exactly one vwd field id or vwd field name (e.g., '83' or
+                'ADF_Umsatz_gesamt'), ii) list of vwd field ids/names mapped to functional slots
+                (e.g., O=ADF_Anfang, h=ADF_Tageshoch, L=ADF_Tagestief, C=ADF_Schluss,
+                V=ADF_Umsatz_gesamt)
+                <br/>
+                <
+                ToDo/PROBLEM: ADF_Schluss might be difficult as sometimes ADF_Bezahlt (or other
+                fields like ADF_Mittelkurs etc.) is used in history. Further more, requests based on
+                (e.g.) field ADF_Schluss_Vortag might be relevant. Solution: ?, maybe internal list
+                of possible backup fields for the most prominent external field
+            </li>
+            <li>Default: none</li>
+        </ul>
+    </li>
+    <li>
+        <strong>field:</strong>
+        <ul>
+            <li>repeated, possible values are a vwd field id or vwd field name</li>
+            <li>Default: none</li>
+        </ul>
+    </li>
+    <li>
+        <strong>aggregation:</strong>
+        <ul>
+            <li>Possible values: P\d(D|W|M|Y)</li>
+            <li>Default: P1D</li>
+            <li>
+                <table border="1">
+                    <tr>
+                        <th>Case</th>
+                        <th>Behavior</th>
+                    </tr>
+                    <tr>
+                        <td>Open</td>
+                        <td>first</td>
+                    </tr>
+                    <tr>
+                        <td>High</td>
+                        <td>max</td>
+                    </tr>
+                    <tr>
+                        <td>Low</td>
+                        <td>min</td>
+                    </tr>
+                    <tr>
+                        <td>Close</td>
+                        <td>last</td>
+                    </tr>
+                    <tr>
+                        <td>Volume</td>
+                        <td>sum</td>
+                    </tr>
+                    <tr>
+                        <td>default</td>
+                        <td>last</td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>functionalFill: </strong> in case of baseField is used, determine if missing values
+        for a given baseField should be filled functionally. Use case: ADF_Schluss might be
+        difficult as sometimes ADF_Bezahlt (or other fields like ADF_Mittelkurs etc.) is used in
+        history. Further more, requests based on (e.g.) field ADF_Schluss_Vortag might be relevant.
+    </li>
+</ul>
+
+<h2>Examples</h2>
+<ol>
+    <li>all default
+        <ul>
+            <li>Request: none of above parameters</li>
+            <li>Response: CloseTimeseriesElement, close is functional CLOSE value as defined in
+                MDP
+            </li>
+        </ul>
+    </li>
+    <li>aggregated default
+        <ul>
+            <li>Request: type=OHLC, aggregation=P1W</li>
+            <li>Response: OHLCTimeseriesElement, open is first (of week) functional OPEN as defined
+                in MDP, ..., close is last (of week) functional CLOSE
+            </li>
+        </ul>
+    </li>
+    <li>functional record with suppemental vwd fields
+        <ul>
+            <li>Request: type=OHLC, field=83, field=ADF_Anzahl_Handel</li>
+            <li>Response: i) OHLCTimeseriesElement, open is functional OPEN as defined in MDP, ...,
+                close is functional CLOSE, ii) choice of StringField/DecimalField/NumberField as in
+                TicksTimeseriesElement, each filled (if available) with respective raw data of
+                fields as defined in request
+            </li>
+        </ul>
+    </li>
+</ol>
+<h2>Cases</h2>
+<table border="1">
+    <tr>
+        <th>tickType</th>
+        <th>type and behavior</th>
+    </tr>
+    <tr>
+        <td>TRADE</td>
+        <td>
+            <table border="1">
+                <tr>
+                    <td>C/OHLC/OHLCV</td>
+                    <td>If baseField is set, take them as O,H,L,C,V.
+                        Otherwise use functional definitions
+                    </td>
+                </tr>
+                <tr>
+                    <td>FUND</td>
+                    <td>Ignore baseField, use issuePrice, Redemption and NAV</td>
+                </tr>
+                <tr>
+                    <td>PERFORMANCE</td>
+                    <td>Same as CLOSE, with Dividend/Factor turned on.</td>
+                </tr>
+                <tr>
+                    <td>VOLUME_AGGREGATION</td>
+                    <td>?</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>BID/ASK</td>
+        <td>
+            <table border="1">
+                <tr>
+                    <td>C/OHLC/OHLCV</td>
+                    <td>Ignore baseField, use ADF_GELD/BRIEF. (Also use
+                        ADF_GELD_Tageshoch etc. if they are available)
+                    </td>
+                </tr>
+                <tr>
+                    <td>FUND</td>
+                    <td>?</td>
+                </tr>
+                <tr>
+                    <td>PERFORMANCE</td>
+                    <td>?</td>
+                </tr>
+                <tr>
+                    <td>VOLUME_AGGREGATION</td>
+                    <td>?</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>YIELD</td>
+        <td>
+            <table border="1">
+                <tr>
+                    <td>CLOSE</td>
+                    <td>Ignore baseField, use ADF_Rendite complemented with
+                        ADF_Rendite_ISMA.
+                    </td>
+                </tr>
+                <tr>
+                    <td>OTHERS</td>
+                    <td>?</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>SETTLEMENT</td>
+        <td>
+            <table border="1">
+                <tr>
+                    <td>CLOSE</td>
+                    <td>Ignore baseField, use ADF_Settlement.</td>
+                </tr>
+                <tr>
+                    <td>OTHERS</td>
+                    <td>?</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>ADDITIONAL_FIELD</td>
+        <td>Ignore type and baseField, just return raw prices for the given
+            vwd fields.
+        </td>
+    </tr>
+</table>
+</body>
+</html>

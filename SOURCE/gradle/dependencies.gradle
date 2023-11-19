@@ -1,0 +1,157 @@
+// maps with version numbers by branch name:
+ext.istar_versions = ['master': '[3.192.0,3.9999.0)'].withDefault { '4.0.0-SNAPSHOT' }
+ext.itools_versions = ['master': '3.0'].withDefault { '3.1' }
+
+ext {
+    branch = 'master' // System.getenv('BRANCH_NAME') ? System.getenv('BRANCH_NAME') : grgit.branch.current().name
+    isRelease = !String.valueOf(project.version).toLowerCase().contains('snapshot')
+}
+
+ext.versions = [
+        istar : istar_versions[branch],
+        itools: itools_versions[branch],
+        spring: '4.3.27.RELEASE',
+        gwt   : '2.8.0-20151005', // from nexus, downloaded from https://oss.sonatype.org/content/repositories/google-snapshots/com/google/gwt/
+        gquery: '1.4.4-20150721'  // from nexus, downloaded from https://oss.sonatype.org/content/repositories/snapshots/com/googlecode/gwtquery/
+]
+
+println "branch name ${branch}"
+println "istar version ${versions.istar}"
+
+ext.libraries = [
+        amqprpc                : 'de.marketmaker.itools:core-if-dm-amqp:3.7.3',
+        amqprpc4               : 'dev.infrontfinance.dm.amqprpc:dm-amqp-rpc-lib:4.2.0',
+        ant                    : 'org.apache.ant:ant:1.10.11',
+        antlr                  : 'org.antlr:antlr:3.5.2',
+        antlr_runtime          : 'org.antlr:antlr-runtime:3.5.2',
+        batik_awt_util         : "org.apache.xmlgraphics:batik-awt-util:${versions.batik}",
+        batik_dom              : "org.apache.xmlgraphics:batik-dom:${versions.batik}",
+        batik_ext              : "org.apache.xmlgraphics:batik-ext:${versions.batik}",
+        batik_svggen           : "org.apache.xmlgraphics:batik-svggen:${versions.batik}",
+        bouncycastle           : 'org.bouncycastle:bcprov-jdk15on:1.54',
+        build_tools            : "de.marketmaker.istar:build-tools:4.1.1",
+        commons_codec          : 'commons-codec:commons-codec:1.10',
+        commons_dbcp           : 'org.apache.commons:commons-dbcp2:2.7.0',
+        commons_io             : 'commons-io:commons-io:2.4',
+        commons_lang3          : 'org.apache.commons:commons-lang3:3.11',
+        commons_math           : 'org.apache.commons:commons-math:2.2',
+        commons_pool           : 'org.apache.commons:commons-pool2:2.2',
+        cxf_frontend_jaxws     : "org.apache.cxf:cxf-rt-frontend-jaxws:${versions.cxf}",
+        cxf_frontend_simple    : "org.apache.cxf:cxf-rt-frontend-simple:${versions.cxf}",
+        cxf_transports_http    : "org.apache.cxf:cxf-rt-transports-http:${versions.cxf}",
+        disruptor              : 'com.lmax:disruptor:3.3.6',
+        ehcache_core           : 'net.sf.ehcache:ehcache:2.10.6',
+        fastutil               : 'it.unimi.dsi:fastutil:7.0.10',
+        findbugs               : 'com.google.code.findbugs:findbugs:3.0.1',
+        fop                    : 'org.apache.xmlgraphics:fop:1.1',
+        groovy                 : 'org.codehaus.groovy:groovy-all:2.5.14',
+        groovy_wslite          : 'com.github.groovy-wslite:groovy-wslite:0.8.0',
+        gson                   : 'com.google.code.gson:gson:2.3.1',
+        guava                  : 'com.google.guava:guava:20.0',
+        http_builder           : 'org.codehaus.groovy.modules.http-builder:http-builder:0.5.2',
+        httpclient             : 'org.apache.httpcomponents:httpclient:4.5.13',
+        httpunit               : 'httpunit:httpunit:1.7',
+        icu4j                  : 'com.ibm.icu:icu4j:54.1.1',
+        itext                  : 'com.lowagie:itext:2.1.7',
+        jackson_core           : 'com.fasterxml.jackson.core:jackson-databind:2.9.5',
+        jackson_datatype_joda  : 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.9.5',
+        jaxen                  : 'jaxen:jaxen:1.0-FCS',
+        jcip                   : 'net.jcip:jcip-annotations:1.0',
+        jcl_over_slf4j         : "org.slf4j:jcl-over-slf4j:${versions.slf4j}",
+        jdom                   : 'jdom:jdom:1.0',
+        jexcel                 : 'net.sourceforge.jexcelapi:jxl:2.6.10',
+        joda_time              : 'joda-time:joda-time:2.7',
+        kafka_client           : 'org.apache.kafka:kafka-clients:3.2.3',
+        kafka_utils            : 'dev.infrontfinance.dm.kafka:dm-kafka-utils:1.0.2',
+        largebuffer            : 'dev.infrontfinance.dm:dm-largebuffer:0.2.0',
+        logback_classic        : 'ch.qos.logback:logback-classic:1.2.11',
+        logback_core           : 'ch.qos.logback:logback-core:1.2.11',
+        lombok                 : 'org.projectlombok:lombok:1.18.22',
+        lucene_core            : "org.apache.lucene:lucene-core:${versions.lucene}",
+        lucene_highlighter     : "org.apache.lucene:lucene-highlighter:${versions.lucene}",
+        lucene_queries         : "org.apache.lucene:lucene-queries:${versions.lucene}",
+        mail                   : 'javax.mail:mail:1.4.1',
+        micrometer_prometheus  : 'io.micrometer:micrometer-registry-prometheus:1.6.4',
+        mockito                : 'org.mockito:mockito-core:2.+',
+        netty                  : 'io.netty:netty-all:4.1.9.Final',
+        ojdbc                  : 'com.oracle.database.jdbc:ojdbc8:19.6.0.0',
+        pdfbox                 : 'org.apache.pdfbox:pdfbox:2.0.3',
+        pdfbox_app             : 'org.apache.pdfbox:pdfbox-app:2.0.3',
+        pngencoder             : "objectplanet:pngencoder:2.0.1",
+        poi_ooxml              : 'org.apache.poi:poi-ooxml:3.7',
+        protobuf               : 'com.google.protobuf:protobuf-java:3.19.1',
+        protobuf_java_util     : 'com.google.protobuf:protobuf-java-util:3.19.1',
+        dm_chicago             : 'dev.infrontfinance.proto.dm:dm-chicago:0.1.2',
+        saxpath                : 'saxpath:saxpath:1.0-FCS',
+        scribe                 : 'com.github.scribejava:scribejava-apis:8.3.1',
+        servlet_api_3_1        : 'javax.servlet:javax.servlet-api:3.1.0',
+        servo_core             : 'com.netflix.servo:servo-core:0.12.10',
+        slf4j_api              : "org.slf4j:slf4j-api:${versions.slf4j}",
+        snappy_iq80            : 'org.iq80.snappy:snappy:0.3',
+        snappy_xerial          : 'org.xerial.snappy:snappy-java:1.1.1.6',
+        spock                  : 'org.spockframework:spock-core:1.3-groovy-2.5',
+        spring_aop             : "org.springframework:spring-aop:${versions.spring}",
+        spring_aspects         : "org.springframework:spring-aspects:${versions.spring}",
+        spring_beans           : "org.springframework:spring-beans:${versions.spring}",
+        spring_context         : "org.springframework:spring-context:${versions.spring}",
+        spring_context_support : "org.springframework:spring-context-support:${versions.spring}",
+        spring_core            : "org.springframework:spring-core:${versions.spring}",
+        spring_expression      : "org.springframework:spring-expression:${versions.spring}",
+        spring_jdbc            : "org.springframework:spring-jdbc:${versions.spring}",
+        spring_orm             : "org.springframework:spring-orm:${versions.spring}",
+        spring_oxm             : "org.springframework:spring-oxm:${versions.spring}",
+        spring_tx              : "org.springframework:spring-tx:${versions.spring}",
+        spring_web             : "org.springframework:spring-web:${versions.spring}",
+        spring_webmvc          : "org.springframework:spring-webmvc:${versions.spring}",
+        spring_ws              : "org.springframework.ws:spring-ws-core:${versions.spring_ws}",
+        stringtemplate         : 'de.marketmaker.itools:stringtemplate:4.0.4mm',
+        validator              : 'org.hibernate:hibernate-validator:5.4.2.Final',
+        validator_ap           : 'org.hibernate:hibernate-validator-annotation-processor:5.4.2.Final',
+        velocity               : 'org.apache.velocity:velocity:1.7',
+        velocity_tools         : 'velocity-tools:velocity-tools:1.4',
+        velocity_tools_generic : 'velocity-tools:velocity-tools-generic:1.4',
+        vertx_health_check     : 'io.vertx:vertx-health-check:4.1.2',
+        vertx_support          : 'dev.infrontfinance.dm:dm-vertx-support:0.1.2',
+        wsdl4j                 : 'wsdl4j:wsdl4j:1.6.3',
+        xalan                  : 'xalan:xalan:2.7.1',
+        xerces                 : 'xerces:xercesImpl:2.11.0',
+
+        catalina          : 'org.apache.tomcat:catalina:6.0.26',
+        avalon_api        : 'org.apache.avalon.framework:avalon-framework-api:4.3.1',
+        avalon_impl       : 'org.apache.avalon.framework:avalon-framework-impl:4.3.1',
+        commons_cli       : 'commons-cli:commons-cli:1.1',
+        commons_fileupload: 'commons-fileupload:commons-fileupload:1.2.1',
+        commons_lang      : 'commons-lang:commons-lang:2.6',
+        google_appengine  : 'com.google.appengine:appengine-api-1.0-sdk:1.3.0',
+        gquery            : "com.googlecode.gwtquery:gwtquery:${versions.gquery}",
+        grizzly_comet     : 'com.sun.grizzly:grizzly-comet:1.9.19',
+        grizzly_framework : 'com.sun.grizzly:grizzly-framework:1.9.19',
+        grizzly_http      : 'com.sun.grizzly:grizzly-http:1.9.19',
+        grizzly_servlet   : 'com.sun.grizzly:grizzly-http-servlet:1.9.19',
+        gwt_dev           : "com.google.gwt:gwt-dev:${versions.gwt}",
+        gwt_elemental     : "com.google.gwt:gwt-elemental:${versions.gwt}",
+        gwt_user          : "com.google.gwt:gwt-user:${versions.gwt}",
+        gwt_servlet       : "com.google.gwt:gwt-servlet:${versions.gwt}",
+        gwt_svg           : 'org.vectomatic:lib-gwt-svg:0.5.10',
+        gwt_highcharts    : "org.moxieapps.gwt:highcharts:1.6.0",
+        istar_common      : "de.marketmaker.istar:istar-common:${versions.istar}",
+        istar_merger      : "de.marketmaker.istar:istar-merger:${versions.istar}",
+        istar_dmxml       : "de.marketmaker.istar:istar-dmxml:${versions.istar}:sources",
+        istar_pmxml       : "de.marketmaker.istar:istar-pmxml:${versions.istar}:sources",
+        junit             : 'junit:junit:4.12',
+        spring_test       : "org.springframework:spring-test:${versions.spring}",
+        servlet_api       : "javax.servlet:javax.servlet-api:3.1.0",
+        websocket_api     : "javax.websocket:javax.websocket-api:1.1",
+        jul_to_slf4j      : 'org.slf4j:jul-to-slf4j:1.7.32',
+        gwtmockito        : 'com.google.gwt.gwtmockito:gwtmockito:1.1.6',
+        gin               : 'com.google.gwt.inject:gin:2.1.2'
+]
+
+libraries.jaxb_xjc = dependencies.module("com.sun.xml.bind:jaxb-xjc:2.2.5-2") {
+  dependency "com.sun.xml.bind:jaxb-impl:2.2.5-2"
+  dependency "org.jvnet.jaxb2_commons:jaxb2-basics:0.6.5"
+  dependency "org.jvnet.jaxb2_commons:jaxb2-basics-ant:0.6.5"
+  dependency "org.jvnet.jaxb2_commons:xjc-if-ins:1.0"
+  dependency "org.jvnet.jaxb2_commons:jaxb2-default-value:1.1"
+  dependency "org.jvnet.jaxb2_commons:jaxb2-basics-annotate:0.6.0"
+}

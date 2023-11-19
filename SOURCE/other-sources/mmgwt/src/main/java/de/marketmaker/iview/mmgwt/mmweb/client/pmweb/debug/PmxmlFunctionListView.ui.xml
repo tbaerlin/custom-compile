@@ -1,0 +1,15 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:w="urn:import:de.marketmaker.iview.mmgwt.mmweb.client.snippets">
+    <ui:with field="i18n" type="de.marketmaker.iview.mmgwt.mmweb.client.I18n"/>
+    <g:FlowPanel ui:field="panel">
+        <g:ScrollPanel height="300px" width="650px">
+            <w:SnippetTableWidget ui:field="table" />
+        </g:ScrollPanel>
+        <g:FlowPanel>
+            <g:Button ui:field="okButton">
+                <ui:text from="{i18n.ok}"/>
+            </g:Button>
+        </g:FlowPanel>
+    </g:FlowPanel>
+</ui:UiBinder>

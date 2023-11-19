@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+<!-- SETTING UP A SERVER: -->
+    <bean name="serverSelectorThread"
+          class="de.marketmaker.istar.common.nioframework.SelectorThread">
+        <property name="daemon" value="false"/>
+    </bean>
+
+    <bean name="acceptor" class="de.marketmaker.istar.common.nioframework.Acceptor">
+        <property name="selectorThread" ref="serverSelectorThread"/>
+        <property name="listenPort" value="2708"/>
+        <property name="maxNumClients" value="10"/>
+        <property name="listener" ref="messageServer"/>
+    </bean>
+
+    <!-- messageServer is-a AcceptorListener, will be called for each new connection -->
+    <bean name="messageServer" class="de.marketmaker.istar.feed.mdps.MdpsMessageServer">
+    </bean>
+
+    <!-- SETTING UP A CLIENT: -->
+    <bean name="clientSelectorThread" class="de.marketmaker.istar.common.nioframework.SelectorThread">
+        <property name="daemon" value="false"/>
+    </bean>
+
+    <bean name="connector" class="de.marketmaker.istar.common.nioframework.ConnectorServiceImpl">
+        <property name="selectorThread" ref="clientSelectorThread"/>
+        <property name="host" value="localhost"/>
+        <property name="port" value="2708"/>
+        <property name="receiveBufferSize" value="32768"/>
+        <property name="sendBufferSize" value="256"/>
+    </bean>
+
+    <!-- the read client is-a ConnectionHandler that uses a DefaultConnectorListener -->
+    <!-- and the connector bean to establish a connection -->
+
+</beans>

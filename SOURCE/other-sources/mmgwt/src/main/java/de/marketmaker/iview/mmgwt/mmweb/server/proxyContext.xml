@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <bean id="producerConfig" class="org.logicblaze.lingo.jms.JmsProducerConfig">
+<!-- non persistent = 1 -->
+    <property name="deliveryMode" value="1"/>
+<!-- 10 sec -->
+    <property name="timeToLive" value="10000"/>
+  </bean>
+  <bean name="prefetchPolicy" class="org.apache.activemq.ActiveMQPrefetchPolicy">
+    <property name="queuePrefetch" value="10"/>
+  </bean>
+  <bean id="jmsFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+    <property name="brokerURL" value="tcp://localhost:61616?jms.optimizeAcknowledge=true"/>
+    <property name="prefetchPolicy" ref="prefetchPolicy"/>
+  </bean>
+  <bean id="mmwebService" class="org.logicblaze.lingo.jms.JmsProxyFactoryBean">
+    <property name="serviceInterface" value="de.marketmaker.iview.mmgwt.mmweb.client.MmwebService"/>
+    <property name="connectionFactory" ref="jmsFactory"/>
+    <property name="destination" ref="mmwebServiceDestination"/>
+    <property name="producerConfig" ref="producerConfig"/>
+  </bean>
+  <bean id="mmwebServiceDestination" class="org.apache.activemq.command.ActiveMQQueue">
+    <constructor-arg index="0" value="iview.mmweb?consumer.prefetchSize=20"/>
+  </bean>
+  <bean id="gwtuserService" class="org.logicblaze.lingo.jms.JmsProxyFactoryBean">
+    <property name="serviceInterface" value="de.marketmaker.iview.mmgwt.mmweb.client.UserService"/>
+    <property name="connectionFactory" ref="jmsFactory"/>
+    <property name="destination" ref="gwtuserServiceDestination"/>
+    <property name="producerConfig" ref="producerConfig"/>
+  </bean>
+  <bean id="gwtuserServiceDestination" class="org.apache.activemq.command.ActiveMQQueue">
+    <constructor-arg index="0" value="iview.gwtuser?consumer.prefetchSize=20"/>
+  </bean>
+</beans>

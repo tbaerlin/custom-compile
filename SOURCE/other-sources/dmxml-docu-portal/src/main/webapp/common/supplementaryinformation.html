@@ -1,0 +1,146 @@
+<h1>data manager [xml]</h1>
+<p>vwd data manager [xml] provides an http-based xml interface from which all data of the data manager can be requested.</p>
+<p>The data is broken down into so called atoms, where each atom contains a set of attributes. Examples of atoms are price data or static data for an instrument.</p>
+<p>Atoms are combined into molecules which are the entities provided in the interface. Atoms can be composed per request (into molecules) to delivery only data needed by this specific request.</p>
+<p>Currently there are more than 100 atoms supported in vwd data manager [xml].</p>
+
+<h2>Encoding</h2>
+<p>An http-based xml interface implied a request and response interaction pattern. vwd data manager [xml]
+requires that the request is encoded in &quot;<b>UTF-8</b>&quot;.</p>
+
+<h2>Fusion</h2>
+<p>Fusion is a template engine which transforms xml data into other textual or graphical representations.</p>
+<p>It can provide customer-specific xml, csv, html snippets, or PDFs.</p>
+
+<h2>Example Clients</h2>
+<p>For your convenience, we provide some example clients for dm [xml] written in Java,
+    which you may obtain from <a href="dmxml-java-examples.zip" target="_blank">here</a>.</p>
+<p>
+    These examples comprise a very simple client purely written in Java,
+    a client that uses JDOM2 and Jaxen to access the XML content,
+    and a client that uses JAXB in conjunction with binding classes generated from your zone specific
+    XSD file.
+</p>
+<p>
+    To build the examples, you need apache maven (we used 3.0.4).
+    Just change into the source folder,
+    e.g. <code>dmxml-java-examples</code> and call <code>mvn compile</code>.
+</p>
+<p>You should get an output similar to the following:</p>
+<pre>
+a.dent@linux ~/dmxml-java-examples
+$ mvn compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building dmxml-java-examples 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ dmxml-java-examples ---
+[debug] execute contextualize
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ dmxml-java-examples ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 21 source files to C:\cygwin\home\mdick\dmxml-java-examples\target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.069s
+[INFO] Finished at: Wed Sep 26 12:39:37 CEST 2012
+[INFO] Final Memory: 8M/154M
+[INFO] ------------------------------------------------------------------------
+</pre>
+<p>
+    After the build, the compiled class files reside in the <code>target/classes</code> directory.
+    The example clients can be executed from the command line as follows:
+</p>
+<pre>
+a.dent@linux ~/dmxml-java-examples
+$ java -cp target/classes/ com.vwd.dmxml.examples.simple.VerySimpleExample
+usage: zone  auth  authType  hostname  [port]
+</pre>
+<p>
+   The necessary program arguments <code>zone</code>, <code>auth</code>, <code>authType</code>,
+   and <code>hostname</code> are provided by vwd Customer Service (refer to the About/Contact
+   dialog).
+</p>
+<p>The fully qualified class names of the example clients are:</p>
+<ul>
+    <li><code>com.vwd.dmxml.examples.simple.VerySimpleExample</code></li>
+    <li><code>com.vwd.dmxml.examples.jaxb.JaxbExample</code></li>
+    <li><code>com.vwd.dmxml.examples.jdom.JdomExample</code></li>
+</ul>
+<p>For the JDOM example client, it is necessary to supply the required third-party libraries
+(JDOM2 and Jaxen), which have been already downloaded by maven to your local maven repository.
+After setting the environment variable <code>$MAVEN_REPO</code> to the base directory
+of your maven repository, you can call the example client with the following command:
+<p>
+<pre>
+a.dent@linux ~/dmxml-java-examples
+$ java -cp "target/classes;$MAVEN_REPO/org/jdom/jdom2/2.0.3/jdom2-2.0.3.jar;$MAVEN_REPO/jaxen/jaxen/1.1.4/jaxen-1.1.4.jar" com.vwd.dmxml.examples.jdom.JdomExample
+</pre>
+<p>If everything goes right, you should see an output similar to the following
+    (only the very simple client outputs the received XML data as is; the other
+    clients print it human readable):</p>
+<pre>
+    Sending dm[xml] request to: http://localhost:8080/dmxml-1/iview/retrieve.xml
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;request&gt;
+&lt;authentication&gt;XXXXX_YOUR_AUTH_XXXXX&lt;/authentication&gt;
+&lt;authenticationType&gt;XXXXX_YOUR_AUTH_TYPE_XXXXX&lt;/authenticationType&gt;
+&lt;locale&gt;de&lt;/locale&gt;
+&lt;block key=&quot;MSC_StaticData&quot;&gt;
+&lt;parameter key=&quot;symbol&quot; value=&quot;DE0005204705&quot;/&gt;
+&lt;/block&gt;
+&lt;/request&gt;
+
+dm[xml] response received:
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;response xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;http://localhost/dmxml-1/XXXXX_YOUR_ZONE_XXXXX-xml.xsd&quot;&gt;
+&lt;header&gt;
+&lt;generated&gt;2012-09-26T12:58:38+02:00&lt;/generated&gt;
+&lt;!-- took 228 --&gt;
+&lt;requestedBlocks&gt;
+&lt;block key=&quot;MSC_StaticData&quot; &gt;
+&lt;parameter key=&quot;symbol&quot; value=&quot;DE0005204705&quot;/&gt;
+&lt;/block&gt;
+&lt;/requestedBlocks&gt;
+&lt;/header&gt;
+&lt;data&gt;
+&lt;block key=&quot;MSC_StaticData&quot;  ttl=&quot;PT30S&quot; xsi:type=&quot;MSC_StaticData&quot;&gt;
+&lt;instrumentdata&gt;
+&lt;iid&gt;27716.iid&lt;/iid&gt;
+&lt;isin&gt;DE0005204705&lt;/isin&gt;
+&lt;wkn&gt;520470&lt;/wkn&gt;
+&lt;name&gt;vwd AG&lt;/name&gt;
+&lt;type&gt;STK&lt;/type&gt;
+&lt;expiration xsi:nil=&quot;true&quot;/&gt;
+&lt;/instrumentdata&gt;
+&lt;quotedata&gt;
+&lt;qid&gt;133846.qid&lt;/qid&gt;
+&lt;vwdcode&gt;520470.FFM&lt;/vwdcode&gt;
+&lt;marketVwd&gt;FFM&lt;/marketVwd&gt;
+&lt;marketName&gt;Frankfurt&lt;/marketName&gt;
+&lt;currencyIso&gt;EUR&lt;/currencyIso&gt;
+
+[...]
+
+&lt;/quotedata&gt;
+&lt;/benchmark&gt;
+&lt;/block&gt;
+&lt;/data&gt;
+&lt;/response&gt;
+&lt;!-- 0:00:00.042 --&gt;
+</pre>
+
+<p>
+    <em>Please note that these examples are simple demonstrators and are not intended to be used for
+    production purposes due to their simplicity.</em>
+</p>
+
+
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="speedTestImpl" class="de.marketmaker.itools.amqprpc.sample.SpeedTestServiceImpl"/>
+
+    <bean id="connectionManager"
+          class="de.marketmaker.itools.amqprpc.connections.AmqpRpcConnectionManager">
+        <property name="connectionFactory">
+            <bean class="com.rabbitmq.client.ConnectionFactory">
+            </bean>
+        </property>
+    </bean>
+
+
+    <bean id="connectionChecker" scope="prototype"
+          class="de.marketmaker.itools.amqprpc.supervising.PeriodicSupervisor">
+        <property name="checkInterval" value="10"/>
+        <property name="usingDaemonThread" value="false"/>
+    </bean>
+
+
+    <bean id="speedTestPrototype" class="de.marketmaker.itools.amqprpc.AmqpServiceExporter"
+          scope="prototype">
+        <property name="supervisor" ref="connectionChecker"/>
+        <property name="serviceInterface"
+                  value="de.marketmaker.itools.amqprpc.sample.SpeedTestService"/>
+        <property name="service" ref="speedTestImpl"/>
+        <property name="connectionManager" ref="connectionManager"/>
+        <property name="rpcServerSettings.numberOfMessagesToPrefetch" value="10"/>
+        <property name="rawByteArrayReplyMethods">
+            <set value-type="java.lang.String">
+                <value>returnJunkOfSize</value>
+            </set>
+        </property>
+<!--
+        <property name="rpcServerSettings.serverId">
+            <bean factory-bean="uuid" factory-method="toString"/>
+        </property>
+-->
+    </bean>
+
+    <bean id="speedTestExporter" class="de.marketmaker.istar.common.spring.PrototypeManager">
+        <property name="beanName" value="speedTestPrototype"/>
+        <property name="numInstances" value="2"/>
+    </bean>
+
+<!--    <bean id="uuid" scope="prototype" class="java.util.UUID" factory-method="randomUUID"/>-->
+</beans>

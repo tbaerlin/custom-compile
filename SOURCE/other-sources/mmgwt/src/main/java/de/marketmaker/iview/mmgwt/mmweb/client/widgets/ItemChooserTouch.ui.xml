@@ -1,0 +1,60 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+    xmlns:mm='urn:import:de.marketmaker.itools.gwtutil.client.widgets'>
+
+  <ui:with field="i18n" type="de.marketmaker.iview.mmgwt.mmweb.client.I18n"/>
+  <ui:style>
+    .scroll { height: 18em; background: white; }
+  </ui:style>
+  <g:HTMLPanel>
+
+    <table style="width: 100%; table-layout: fixed">
+      <colgroup>
+        <col style="width: 50%-21px;"/>
+        <col style="width: 21px;"/>
+        <col style="width: 50%-21px;"/>
+        <col style="width: 21px;"/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td><g:Label ui:field='panelAvailable'></g:Label></td>
+          <td></td>
+          <td><g:Label ui:field='panelSelected'></g:Label></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td rowspan="4"><g:ScrollPanel styleName='mm-borderedContent {style.scroll}'><c:CellList ui:field='cellListAvailable'></c:CellList></g:ScrollPanel></td>
+          <td></td>
+          <td rowspan="4"><g:ScrollPanel styleName='mm-borderedContent {style.scroll}'><c:CellList ui:field='cellListSelected'></c:CellList></g:ScrollPanel></td>
+          <td><mm:Button ui:field='toTop'></mm:Button></td>
+        </tr>
+        <tr>
+          <td><mm:Button ui:field='select'></mm:Button></td>
+          <td><mm:Button ui:field='moveUp'></mm:Button></td>
+        </tr>
+        <tr>
+          <td><mm:Button ui:field='deselect'></mm:Button></td>
+          <td><mm:Button ui:field='moveDown'></mm:Button></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><mm:Button ui:field='toBottom'></mm:Button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="mm-dlg-tb" style="width: 100%; margin-top: 14px;">
+      <tbody>
+        <tr>
+          <td><mm:Button ui:field='resetButton' text='{i18n.reset}'></mm:Button></td>
+          <td style="width: 90%"></td>
+          <td><mm:Button ui:field='okButton' text='{i18n.ok}'></mm:Button></td>
+          <td><mm:Button ui:field='cancelButton' text='{i18n.cancel}'></mm:Button></td>
+        </tr>
+      </tbody>
+    </table>
+  </g:HTMLPanel>
+</ui:UiBinder>

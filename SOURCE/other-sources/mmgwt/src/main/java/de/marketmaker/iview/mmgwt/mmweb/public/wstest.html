@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WebSockets test</title>
+    <script type="text/javascript">
+        var ws;
+        var msgInput;
+
+        function init() {
+            var protocol = window.location.protocol == 'https:' ? "wss://" : "ws://";
+            var url = protocol + window.location.host + "/pmxml-1/wsTest";
+            console.log("WebSocket url: " + url);
+            ws = new WebSocket(url);
+            ws.onopen = function(event) {
+                addMessage('WebSocket opened');
+            };
+            ws.onclose = function(event) {
+                addMessage('WebSocket closed');
+            };
+            ws.onmessage = function(event) {
+                addMessage('onMessage: ' + event.data);
+            };
+
+            msgInput = document.getElementById('msgInput');
+            msgInput.onkeydown = function(event) {
+                if (event.keyCode == 13) {
+                    send(msgInput.value);
+                }
+            }
+        }
+
+        function send(text) {
+            ws.send(text);
+        }
+
+        function addMessage(msgText) {
+            var eltMessages = document.getElementById('messages');
+            var eltMessage = document.createElement('div');
+            var textNode = document.createTextNode(msgText);
+            eltMessage.appendChild(textNode);
+            if (eltMessages.hasChildNodes()) {
+                eltMessages.insertBefore(eltMessage, eltMessages.firstChild);
+            }
+            else {
+                eltMessages.appendChild(eltMessage);
+            }
+        }
+    </script>
+</head>
+
+<body onload="init()">
+<div>
+    <input id="msgInput" type="text"/>
+</div>
+<div id="messages"></div>
+</body>
+</html>

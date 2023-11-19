@@ -1,0 +1,273 @@
+.rowhell{
+        font-size:10px;
+        background-color:#EEEEEE;
+        }
+.rowdark{
+        font-size:10px;
+        background-color:#EEEEEE;
+        }
+.unmodified {
+            font-family : Arial,Helvetica,Helv,sans-serif;
+            font-size:11px;
+            line-height:12px;
+            color:#333333
+            }
+.unmodifiedVrb {
+            font-family : Arial,Helvetica,Helv,sans-serif;
+	   		font-size:11px;
+	   		font-weight:normal;
+            line-height:14px;
+            color:#383431;
+            background-color:#d9e7f2;
+            }
+.toolbarButtonsVrb  {
+	color:#383431;
+	padding:0 0 0 5px;
+	margin:5px 0 5px 0;
+}
+a.toolbarButtonsVrb:hover {
+	color:#383431;
+         text-decoration:underline;
+         }
+a.toolbarButtonsVrb:link {
+	color:#383431;
+         text-decoration:none;
+         }
+a.toolbarButtonsVrb:visited {
+	color:#383431;
+         text-decoration:none;
+         }
+a.toolbarButtonsVrb:active {
+	color:#383431;
+         text-decoration:none;
+         }
+
+a.blueLinkButtonVrb:hover {
+         text-decoration:underline;
+         }
+a.blueLinkButtonVrb:link {
+         text-decoration:none;
+         }
+a.blueLinkButtonVrb:visited {
+         text-decoration:none;
+         }
+a.blueLinkButtonVrb:active {
+         text-decoration:none;
+         }
+
+.kurslistenbgcolor {background-color:#EEEEEE; }
+tr.kurslistenheader {
+                        background-color:#DDDCDC;
+                        font-size:12px;
+                        line-height:17px;
+                        font-weight: bold;
+                        color:#004992;
+                    }
+.kurslistenheaderLink{
+                        background-color:#DDDCDC;
+                        font-size:12px;
+                        line-height:17px;
+                        font-weight: bold;
+                        color:#777777;
+}
+.kurslisten {
+                font-size:11px;
+                color:#777777
+            }
+.kurslisteTitle {
+                font-family : Arial,Helvetica,Helv,sans-serif;
+                font-size:12px;
+                line-height:13px;
+                font-weight: bold;
+                color:#004992;
+                background-color:#DDDCDC;
+                }
+.kurslisteTitleVrb {
+                font-family : Arial,Helvetica,Helv,sans-serif;
+                font-size:11px;
+				background-color:#0061b2;
+				color:#ffffff;
+				}
+.kurslistefont {  font-family : Arial,Helvetica,Helv,sans-serif;
+                  font-size:11px;
+                  line-height:13px;
+                  font-weight: bold;
+                  color:#FFFFFF;
+                }
+.mediumfont     {
+                    font-size:10px;
+                    color:#666666
+                }
+.largefont     {
+                    font-size:12px;
+                    color:#666666
+                }
+.linkmedium     { color:#000000; font-size:13px }
+.titleBgColor{
+    background-color:#004992;
+}
+tr.titletab {
+                font-family : Arial,Helvetica,Helv,sans-serif;
+                font-size:11px;
+                line-height:12px;
+                font-weight: bold;
+                color:#FFFFFF;
+                background-repeat:repeat-X;
+                background-color:#004992;
+            }
+tr.titletabBig {
+                font-family : Arial,Helvetica,Helv,sans-serif;
+                font-size:14px;
+                line-height:16px;
+                font-weight: bold;
+                color:#FFFFFF;
+                background-repeat:repeat-X;
+                background-color:#004992;
+            }
+
+.titleline{
+    background-color:#004992;
+    font-family : Arial,Helvetica,Helv,sans-serif;
+    font-style : normal;
+    font-size : 12px;
+    font-weight: bold;
+    color:#FFFFFF;
+}
+.titlelineVrb {
+    font-family : Arial,Helvetica,Helv,sans-serif;
+    font-size:14pt;
+    font-weight:normal;
+    line-height:16pt;
+    text-transform:uppercase;
+    color:#383431;
+    background-color:#FFFFFF;
+}
+.pageNumberAktiv{
+    background-color:#004992;
+    font-family : Arial,Helvetica,Helv,sans-serif;
+    font-style : normal;
+    font-size : 12px;
+    font-weight: bold;
+    color:#FFFFFF;
+    text-decoration : underline;
+}
+.pageNumberPassiv{
+    background-color:#004992;
+    font-family : Arial,Helvetica,Helv,sans-serif;
+    font-style : normal;
+    font-size : 12px;
+    font-weight: bold;
+    color:#AAAAAA;
+    text-decoration : underline;
+}
+.titlelink{
+    font-family : Arial,Helvetica,Helv,sans-serif;
+    font-size:12px;
+    line-height:15px;
+    font-weight: bold;
+    color:#FFFFFF;
+}
+.panelLink {
+    font-family : Arial,Helvetica,Helv,sans-serif;
+    text-decoration : none;
+    font-size:11px;
+    color:#000000;
+}
+.imageLink {
+    text-decoration : none;
+}
+BODY {
+    font-family : Arial,Helvetica,Helv,sans-serif;
+    line-height:14px;
+    color:#666666;
+    font-style : normal;
+    font-weight : normal;
+    font-size:12px;
+    background-color : #FFFFFF;
+}
+p,td {
+    font-family : Arial,Helvetica,Helv,sans-serif;
+    line-height:14px;
+    color:#666666;
+    font-style : normal;
+    font-weight : normal;
+    font-size:12px;
+    background-color : #FFFFFF;
+}
+.footer{
+        font-size:10px;
+        color:#333333
+        }
+.footerLine{
+    	background-color : #000000;
+        }
+.linkgreymitunderline {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   color: #666666;
+   text-decoration: underline;
+}
+.tdbgweissdis {
+   background-color : #FFFFFF;
+   font-style : normal;
+   font-weight : normal;
+   font-size : 9px;
+   font-family : Arial,Helvetica,sans-serif;
+   color : #2E4B9B;
+}
+
+a:link {
+    font-family : Arial,Helvetica,Helv,sans-serif;
+    font-size:12px;
+    line-height:14px;
+    color:#024990;
+    font-style : normal;
+    font-weight : normal;
+    text-decoration : underline;
+}
+a:visited {
+    font-family : Arial,Helvetica,Helv,sans-serif;
+    font-size:12px;
+    line-height:14px;
+    color:#024990;
+    font-style : normal;
+    font-weight : normal;
+    text-decoration : underline;
+    }
+a:active {
+    font-family : Arial,Helvetica,Helv,sans-serif;
+    font-size:12px;
+    line-height:14px;
+    color:#024990;
+    font-style : normal;
+    font-weight : normal;
+    text-decoration : underline;
+}
+A { color: #024990; text-decoration: underline; }
+A:HOVER { text-decoration: none; }
+
+/* Linkdefinition in den Overviewpages */
+A.overview { color: #666666; font-size: 12px; }
+A.overview A, overview:ACTIVE, overview:LINK, overview:VISITED { color: #666666; font-size: 12px; }
+A.overview:HOVER { text-decoration: none; color: #024990; }
+
+
+/* Headline-Zeile Overview */
+TR.overviewhead, TD.overviewhead { background-color: #004D9A; color: #FFFFFF; font-family: Arial, Helv; font-size: 12px; font-weight: bold; }
+/* Contentzeile der Overview */
+TD.overviewdepart, TR.overviewdepart {  font-family: Arial, Helv; font-size: 12px; font-weight: bold; color: #004D9A; background-color: #E4ECF4; }
+/* Overviewhintergrund */
+TABLE.overview { background-color: #FFFFFF; color: #666666; font-family: Arial, Helv; font-size: 12px; }
+/* Contentzeile Overview */
+TD.overview, TR.overview {  font-family: Arial, Helv; font-size: 12px; color: #666666; background-color: #FFFFFF; }
+
+/* Linkdefinition A200 */
+A.ovtbl { font-size:12px; color: #666666; text-decoration: underline;}
+A.ovtbl A, ovtbl:ACTIVE, ovtbl:LINK, ovtbl:VISITED { color: #666666; }
+A.ovtbl:HOVER { text-decoration: none; color: #666666; }
+/* ovtblnformat */
+/* Headline-Zeile overviewbox */
+TR.ovtbltop, TD.ovtbltop { background-color: #004D9A; color: #FFFFFF; font-family: Arial, Helv; font-size: 12px; font-weight: bold; }
+TABLE.ovtbl { background-color: #FFFFFF; color: #666666; font-family: Arial, Helv; font-size: 12px;}
+TD.ovtblhead, TR.ovtblhead { background-color: #DADADA; color: #0056AB; font-family: Arial, Helv; font-size: 12px; font-weight: bold; }
+TD.ovtbl, TR.ovtbl { background-color: #F2F3F3; color: #666666; font-family: Arial, Helv; font-size: 12px; }

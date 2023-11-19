@@ -1,0 +1,126 @@
+/* SimpleButton */
+.mm-simpleButton .mm-btn-default { border: 1px solid darkgray; }
+.mm-simpleButton .mm-btn-over { background-color: lightgray; }
+.mm-simpleButton .mm-btn-clicked { background-color: darkgray; }
+
+.mm-dropdown img { width: 17px; }
+.mm-dropdown-popup { border: 1px solid darkgray; cursor: pointer; }
+.mm-dateBox img { width: 17px; }
+
+.mm-form-invalid {
+    background-color: #ffeeee;}
+
+.mm-button .saveIcon,
+.as-button .saveIcon {
+    background-image: url(svg/mm/gwtutil/save.svg);
+    width: 16px; height: 16px;
+}
+
+.mm-menuItem.saveIcon {
+    background-image: url(svg/mm/gwtutil/save.svg);
+}
+
+div,td {
+    font-family: Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;
+    font-size: 11px;
+}
+
+.as-topLine {
+    white-space: nowrap;
+}
+.as-topLine .as-topLine-element {
+    display: inline;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.as-topLine .as-topLine-element:hover {
+    background-color: white;
+}
+.as-topLine .as-topLine-element span {
+    margin-right: 5px;
+}
+.as-topLine .as-topLine-element .price {
+    font-weight: bold;
+}
+
+.mm-barChart { background-color: #f8f8f8; }
+.mm-barChart .mm-lines .mm-label { color: #888; }
+.mm-barChart .mm-entryLabels td { color: #888; }
+
+.mm-pieChart path:nth-child(12n+1)  {fill:#adcae9;}
+.mm-pieChart path:nth-child(12n+2)  {fill:#5b96d4;}
+.mm-pieChart path:nth-child(12n+3)  {fill:#2863a1;}
+.mm-pieChart path:nth-child(12n+4)  {fill:#143150;}
+.mm-pieChart path:nth-child(12n+5)  {fill:#b7b7b7;}
+.mm-pieChart path:nth-child(12n+6)  {fill:#6f6f6f;}
+.mm-pieChart path:nth-child(12n+7)  {fill:#3c3c3c;}
+.mm-pieChart path:nth-child(12n+8)  {fill:#1e1e1e;}
+.mm-pieChart path:nth-child(12n+9)  {fill:#ecb9a5;}
+.mm-pieChart path:nth-child(12n+10) {fill:#d9734c;}
+.mm-pieChart path:nth-child(12n+11) {fill:#a64019;}
+.mm-pieChart path:nth-child(12n+12) {fill:#531f0c;}
+
+.mm-pieChart path.hover { fill: #ff8; }
+
+.mm-barChart .mm-bars .mm-bar:nth-child(12n+1)  {background-color:#adcae9;}
+.mm-barChart .mm-bars .mm-bar:nth-child(12n+2)  {background-color:#5b96d4;}
+.mm-barChart .mm-bars .mm-bar:nth-child(12n+3)  {background-color:#2863a1;}
+.mm-barChart .mm-bars .mm-bar:nth-child(12n+4)  {background-color:#143150;}
+.mm-barChart .mm-bars .mm-bar:nth-child(12n+5)  {background-color:#b7b7b7;}
+.mm-barChart .mm-bars .mm-bar:nth-child(12n+6)  {background-color:#6f6f6f;}
+.mm-barChart .mm-bars .mm-bar:nth-child(12n+7)  {background-color:#3c3c3c;}
+.mm-barChart .mm-bars .mm-bar:nth-child(12n+8)  {background-color:#1e1e1e;}
+.mm-barChart .mm-bars .mm-bar:nth-child(12n+9)  {background-color:#ecb9a5;}
+.mm-barChart .mm-bars .mm-bar:nth-child(12n+10) {background-color:#d9734c;}
+.mm-barChart .mm-bars .mm-bar:nth-child(12n+11) {background-color:#a64019;}
+.mm-barChart .mm-bars .mm-bar:nth-child(12n+12) {background-color:#531f0c;}
+
+.mm-barChart .mm-bars.singleValue .mm-entry:nth-child(12n+1)  .mm-bar {background-color:#adcae9;}
+.mm-barChart .mm-bars.singleValue .mm-entry:nth-child(12n+2)  .mm-bar {background-color:#5b96d4;}
+.mm-barChart .mm-bars.singleValue .mm-entry:nth-child(12n+3)  .mm-bar {background-color:#2863a1;}
+.mm-barChart .mm-bars.singleValue .mm-entry:nth-child(12n+4)  .mm-bar {background-color:#143150;}
+.mm-barChart .mm-bars.singleValue .mm-entry:nth-child(12n+5)  .mm-bar {background-color:#b7b7b7;}
+.mm-barChart .mm-bars.singleValue .mm-entry:nth-child(12n+6)  .mm-bar {background-color:#6f6f6f;}
+.mm-barChart .mm-bars.singleValue .mm-entry:nth-child(12n+7)  .mm-bar {background-color:#3c3c3c;}
+.mm-barChart .mm-bars.singleValue .mm-entry:nth-child(12n+8)  .mm-bar {background-color:#1e1e1e;}
+.mm-barChart .mm-bars.singleValue .mm-entry:nth-child(12n+9)  .mm-bar {background-color:#ecb9a5;}
+.mm-barChart .mm-bars.singleValue .mm-entry:nth-child(12n+10) .mm-bar {background-color:#d9734c;}
+.mm-barChart .mm-bars.singleValue .mm-entry:nth-child(12n+11) .mm-bar {background-color:#a64019;}
+.mm-barChart .mm-bars.singleValue .mm-entry:nth-child(12n+12) .mm-bar {background-color:#531f0c;}
+
+.mm-barChart .mm-bars .mm-bar.barHover,
+.mm-barChart .mm-bars.singleValue .mm-entry .mm-bar.barHover { background-color: #ff8; }
+.mm-barChart .mm-entryLabels td.entryHover { color: black; }
+
+
+.mm-floatPanel { background-color: #aaa; }
+
+table.mm-sliderGraph .mm-shbcGraph {
+    position: absolute;
+    left: 1px;
+    width: 100px;
+}
+table.mm-sliderGraph .mm-sliderbox {
+    width: 96px;
+}
+
+.southPanel {
+    background-color: #444;
+}
+
+.southPanel .as-button {
+    color: white;
+}
+
+.mm-validatingBox.invalid {
+    background-color: #ffc0cb;
+}
+
+.mm-completionPopup {
+    background-color: white;
+    box-shadow: 0 0 3px #ccc;
+}
+
+.bigger {
+    font-size: 160%;
+}

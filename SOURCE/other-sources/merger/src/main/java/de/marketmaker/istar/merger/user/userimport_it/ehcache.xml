@@ -1,0 +1,27 @@
+<ehcache>
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+            maxElementsInMemory="1000"
+            eternal="false"
+            timeToLiveSeconds="120"
+            overflowToDisk="false"
+            />
+
+    <cache name="istar.merger.iid2instrument"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToLiveSeconds="3600"
+           overflowToDisk="false"
+            />
+
+    <cache name="istar.merger.symbol2iid"
+           maxElementsInMemory="15000"
+           eternal="false"
+           timeToLiveSeconds="10800"
+           overflowToDisk="false"
+            />
+
+
+</ehcache>

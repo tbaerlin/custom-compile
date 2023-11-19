@@ -1,0 +1,360 @@
+<jxb:bindings version="2.0" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+              xmlns:ai="http://jaxb.dev.java.net/plugin/if_insertion"
+              xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance"
+              xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+              jxb:extensionBindingPrefixes="xjc">
+
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema">
+        <jxb:globalBindings typesafeEnumMaxMembers="0">
+            <xjc:serializable/>
+            <jxb:javaType name="String" xmlType="xsd:date"
+                          parseMethod="de.marketmaker.iview.dmxml.converter.DateDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.iview.dmxml.converter.DateDatatypeConverter.marshal"/>
+            <jxb:javaType name="String" xmlType="xsd:decimal"
+                          parseMethod="de.marketmaker.iview.dmxml.converter.BigDecimalDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.iview.dmxml.converter.BigDecimalDatatypeConverter.marshal"/>
+            <jxb:javaType name="String" xmlType="xsd:dateTime"
+                          parseMethod="de.marketmaker.iview.dmxml.converter.DateTimeDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.iview.dmxml.converter.DateTimeDatatypeConverter.marshal"/>
+            <jxb:javaType name="String" xmlType="xsd:integer"
+                          parseMethod="de.marketmaker.iview.dmxml.converter.BigIntegerDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.iview.dmxml.converter.BigIntegerDatatypeConverter.marshal"/>
+            <jxb:javaType name="String" xmlType="xsd:duration"
+                          parseMethod="de.marketmaker.iview.dmxml.converter.DurationDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.iview.dmxml.converter.DurationDatatypeConverter.marshal"/>
+            <jxb:javaType name="String" xmlType="xsd:time"
+                          parseMethod="de.marketmaker.iview.dmxml.converter.TimeDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.iview.dmxml.converter.TimeDatatypeConverter.marshal"/>
+        </jxb:globalBindings>
+    </jxb:bindings>
+
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:complexType[@name='MMNumber']">
+        <ai:interfaces check="false">de.marketmaker.iview.pmxml.HasValue</ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:complexType[@name='MMDateTime']">
+        <ai:interfaces check="false">de.marketmaker.iview.pmxml.HasValue</ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:complexType[@name='MMString']">
+        <ai:interfaces check="false">de.marketmaker.iview.pmxml.HasValue</ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:complexType[@name='MMDBRef']">
+        <ai:interfaces check="false">de.marketmaker.iview.pmxml.HasCode</ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:complexType[@name='MMTypRef']">
+        <ai:interfaces check="false">de.marketmaker.iview.pmxml.HasCode</ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:complexType[@name='MMIndexedString']">
+        <ai:interfaces check="false">de.marketmaker.iview.pmxml.HasCode</ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:complexType[@name='MMRestriktion']">
+        <ai:interfaces check="false">de.marketmaker.iview.pmxml.HasId</ai:interfaces>
+    </jxb:bindings>
+
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ServerLoginResult']">
+        <jxb:typesafeEnumClass name="ServerLoginResult"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='PasswordState']">
+        <jxb:typesafeEnumClass name="PasswordState"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='OrderResultCode']">
+        <jxb:typesafeEnumClass name="OrderResultCode"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='OrderResultMSGType']">
+        <jxb:typesafeEnumClass name="OrderResultMSGType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='OrderActionType']">
+        <jxb:typesafeEnumClass name="OrderActionType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='OrderExpirationType']">
+        <jxb:typesafeEnumClass name="OrderExpirationType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='OrderLimitType']">
+        <jxb:typesafeEnumClass name="OrderLimitType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='MarketMode']">
+        <jxb:typesafeEnumClass name="MarketMode"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='OrderExecutionOption']">
+        <jxb:typesafeEnumClass name="OrderExecutionOption"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='OrderValidationType']">
+        <jxb:typesafeEnumClass name="OrderValidationType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='OrderValidationServerityType']">
+        <jxb:typesafeEnumClass name="OrderValidationServerityType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='OrderTransaktionType']">
+        <jxb:typesafeEnumClass name="OrderTransaktionType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='SearchType']">
+        <jxb:typesafeEnumClass name="SearchType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='SearchTypeWP']">
+        <jxb:typesafeEnumClass name="SearchTypeWP"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ShellMMTyp']">
+        <jxb:typesafeEnumClass name="ShellMMType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='BrokerageModuleID']">
+        <jxb:typesafeEnumClass name="BrokerageModuleID"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='MMLayoutType']">
+        <jxb:typesafeEnumClass name="MMLayoutType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='SessionState']">
+        <jxb:typesafeEnumClass name="SessionState"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ThreeValueBoolean']">
+        <jxb:typesafeEnumClass name="ThreeValueBoolean"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='GroupSummaryMode']">
+        <jxb:typesafeEnumClass name="GroupSummaryMode"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='AusrichtungsTypen']">
+        <jxb:typesafeEnumClass name="AusrichtungsTypen"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='TeeSeriesTypes']">
+        <jxb:typesafeEnumClass name="TeeSeriesTypes"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='DTSeperatorStyle']">
+        <jxb:typesafeEnumClass name="DTSeperatorStyle"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='TiType']">
+        <jxb:typesafeEnumClass name="TiType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='UserFieldEntity']">
+        <jxb:typesafeEnumClass name="UserFieldEntity"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='UMRightBody']">
+        <jxb:typesafeEnumClass name="UMRightBody"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='UMZoneType']">
+        <jxb:typesafeEnumClass name="UMZoneType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='UMSessionType']">
+        <jxb:typesafeEnumClass name="UMSessionType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='MMTypRefType']">
+        <jxb:typesafeEnumClass name="MMTypRefType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='VerificationStatus']">
+        <jxb:typesafeEnumClass name="VerificationStatus"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ReportingFrequenz']">
+        <jxb:typesafeEnumClass name="ReportingFrequenz"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ExternExchangeTyp']">
+        <jxb:typesafeEnumClass name="ExternExchangeType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='TextTyp']">
+        <jxb:typesafeEnumClass name="TextType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='AsyncState']">
+        <jxb:typesafeEnumClass name="AsyncState"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='TaskFramworkPrio']">
+        <jxb:typesafeEnumClass name="TaskFramworkPrio"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ProvisionType']">
+        <jxb:typesafeEnumClass name="ProvisionType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='StdEnumTypesIds']">
+        <jxb:typesafeEnumClass name="StdEnumTypesIds"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ActivityInstanceStatus']">
+        <jxb:typesafeEnumClass name="ActivityInstanceStatus"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ActivityTaskStatus']">
+        <jxb:typesafeEnumClass name="ActivityTaskStatus"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ActivityType']">
+        <jxb:typesafeEnumClass name="ActivityType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='FlowTaskType']">
+        <jxb:typesafeEnumClass name="FlowTaskType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='SubmitAction']">
+        <jxb:typesafeEnumClass name="SubmitAction"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='FlowKind']">
+        <jxb:typesafeEnumClass name="FlowKind"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='WidgetInputAction']">
+        <jxb:typesafeEnumClass name="WidgetInputAction"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='PersistenceLevel']">
+        <jxb:typesafeEnumClass name="PersistenceLevel"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ActivityNavigationDirection']">
+        <jxb:typesafeEnumClass name="ActivityNavigationDirection"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='MMClassIndex']">
+        <jxb:typesafeEnumClass name="MMClassIndex"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='Geschlecht']">
+        <jxb:typesafeEnumClass name="Geschlecht"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='Familienstand']">
+        <jxb:typesafeEnumClass name="Familienstand"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='OwnerPersonLinkType']">
+        <jxb:typesafeEnumClass name="OwnerPersonLinkType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='LanguageType']">
+        <jxb:typesafeEnumClass name="LanguageType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='SelectionMode']">
+        <jxb:typesafeEnumClass name="SelectionMode"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='SortMode']">
+        <jxb:typesafeEnumClass name="SortMode"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='TiDateKind']">
+        <jxb:typesafeEnumClass name="TiDateKind"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='DocumentOrigin']">
+        <jxb:typesafeEnumClass name="DocumentOrigin"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='Product']">
+        <jxb:typesafeEnumClass name="Product"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='WorkspacePartition']">
+        <jxb:typesafeEnumClass name="WorkspacePartition"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='QueryResponseState']">
+        <jxb:typesafeEnumClass name="QueryResponseState"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='CreateShellMMResponseType']">
+        <jxb:typesafeEnumClass name="CreateShellMMResponseType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ServerProcessType']">
+        <jxb:typesafeEnumClass name="ServerProcessType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='StatType']">
+        <jxb:typesafeEnumClass name="StatType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='DefinitionStatus']">
+        <jxb:typesafeEnumClass name="DefinitionStatus"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='UMReferenceClass']">
+        <jxb:typesafeEnumClass name="UMReferenceClass"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='AlertProcessMode']">
+        <jxb:typesafeEnumClass name="AlertProcessMode"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='AlertType']">
+        <jxb:typesafeEnumClass name="AlertType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ExampleEnum']">
+        <jxb:typesafeEnumClass name="ExampleEnum"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='WorksheetDefaultMode']">
+        <jxb:typesafeEnumClass name="WorksheetDefaultMode"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ErrorSeverity']">
+        <jxb:typesafeEnumClass name="ErrorSeverity"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='CreatePortfolioVersionResponseType']">
+        <jxb:typesafeEnumClass name="CreatePortfolioVersionResponseType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='DeletePortfolioVersionResponseType']">
+        <jxb:typesafeEnumClass name="DeletePortfolioVersionResponseType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='AvailableLayoutsSortMode']">
+        <jxb:typesafeEnumClass name="AvailableLayoutsSortMode"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='MMLayoutError']">
+        <jxb:typesafeEnumClass name="MMLayoutError"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='SoftwareModuleType']">
+        <jxb:typesafeEnumClass name="SoftwareModuleType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='LoginFeature']">
+        <jxb:typesafeEnumClass name="LoginFeature"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='LayoutOpenMode']">
+        <jxb:typesafeEnumClass name="LayoutOpenMode"/>
+    </jxb:bindings>
+    <!--<jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='DocmanAvailability']">
+        <jxb:typesafeEnumClass name="DocmanAvailability"/>
+    </jxb:bindings>-->
+   <!-- <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='DocmanStatus']">
+        <jxb:typesafeEnumClass name="DocmanStatus"/>
+    </jxb:bindings>-->
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='RaiseExceptionType']">
+        <jxb:typesafeEnumClass name="RaiseExceptionType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='TaskState']">
+        <jxb:typesafeEnumClass name="TaskState"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='IntervalType']">
+        <jxb:typesafeEnumClass name="IntervalType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='InputTypes']">
+        <jxb:typesafeEnumClass name="InputTypes"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='MMModuleType']">
+        <jxb:typesafeEnumClass name="MMModuleType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='PSIExchangeDataBlocktype']">
+        <jxb:typesafeEnumClass name="PSIExchangeDataBlocktype"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='BloombergLimitTyp']">
+        <jxb:typesafeEnumClass name="BloombergLimitTyp"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='TSOXTimeInForce']">
+        <jxb:typesafeEnumClass name="TSOXTimeInForce"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='EMSXTimeInForce']">
+        <jxb:typesafeEnumClass name="EMSXTimeInForce"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ProcessType']">
+        <jxb:typesafeEnumClass name="ProcessType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='TaskFinishState']">
+        <jxb:typesafeEnumClass name="TaskFinishState"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='PostboxResponseStatus']">
+        <jxb:typesafeEnumClass name="PostboxResponseStatus"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='UpdateAccountUUIDResult']">
+        <jxb:typesafeEnumClass name="UpdateAccountUUIDResult"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ServiceStatusEnum']">
+        <jxb:typesafeEnumClass name="ServiceStatusEnum"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='TargetMarketMatchType']">
+        <jxb:typesafeEnumClass name="TargetMarketMatchType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='AuthMode']">
+        <jxb:typesafeEnumClass name="AuthMode"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='RegHubDocumentType']">
+        <jxb:typesafeEnumClass name="RegHubDocumentType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='CostsPostExAnteResults']">
+        <jxb:typesafeEnumClass name="CostsPostExAnteResults"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ProfilingEntityType']">
+        <jxb:typesafeEnumClass name="ProfilingEntityType"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ServicesUrlName']">
+        <jxb:typesafeEnumClass name="ServicesUrlName"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='ServicesAvailabilityStatus']">
+        <jxb:typesafeEnumClass name="ServicesAvailabilityStatus"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='TransaktionsTyp']">
+        <jxb:typesafeEnumClass name="TransaktionsTyp"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataComplete.xsd" node="/xsd:schema/xsd:simpleType[@name='POBSReturnCodes']">
+        <jxb:typesafeEnumClass name="POBSReturnCodes"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataTypes.xsd" node="/xsd:schema/xsd:complexType[@name='ExchangeDataRequest']">
+        <inheritance:extends>de.marketmaker.iview.dmxml.Parameter</inheritance:extends>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="ExchangeDataTypes.xsd" node="/xsd:schema/xsd:complexType[@name='ExchangeDataResponse']">
+        <inheritance:extends>de.marketmaker.iview.dmxml.BlockType</inheritance:extends>
+    </jxb:bindings>
+</jxb:bindings>

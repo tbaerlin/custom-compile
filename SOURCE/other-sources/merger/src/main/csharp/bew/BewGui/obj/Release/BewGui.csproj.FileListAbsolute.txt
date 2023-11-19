@@ -1,0 +1,5 @@
+D:\Java\Source\sbs-net\bew\BewGui\bin\Release\BewGui.exe.config
+D:\Java\Source\sbs-net\bew\BewGui\obj\Release\ResolveAssemblyReference.cache
+D:\Java\Source\sbs-net\bew\BewGui\obj\Release\bew.Form1.resources
+D:\Java\Source\sbs-net\bew\BewGui\obj\Release\bew.Properties.Resources.resources
+D:\Java\Source\sbs-net\bew\BewGui\obj\Release\BewGui.csproj.GenerateResource.Cache

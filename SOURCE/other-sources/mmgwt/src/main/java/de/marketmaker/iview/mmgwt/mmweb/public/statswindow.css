@@ -1,0 +1,18 @@
+body {
+    background-color: #F0F4FA;
+}
+table {
+    background-color: white;
+    border-collapse: collapse;
+}
+tr:hover {
+    background-color: #F0F4FA;
+}
+td {
+    border: 1px solid #99BBEA;
+    padding: 0.2em;
+    text-align: right;
+}
+td.zero {
+    color: #CCCCCC;
+}

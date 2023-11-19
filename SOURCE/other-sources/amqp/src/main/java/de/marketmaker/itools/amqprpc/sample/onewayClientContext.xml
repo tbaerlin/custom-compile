@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="connectionManager" class="de.marketmaker.itools.amqprpc.connections.AmqpRpcConnectionManager">
+        <property name="connectionFactory">
+            <bean class="com.rabbitmq.client.ConnectionFactory">
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="proxyChecker" class="de.marketmaker.itools.amqprpc.supervising.PeriodicSupervisor">
+        <property name="checkInterval" value="10"/>
+        <property name="usingDaemonThread" value="true"/>
+    </bean>
+
+    <bean id="serviceProxy" class="de.marketmaker.itools.amqprpc.AmqpProxyFactoryBean">
+        <property name="communicationPattern" value="ONEWAY_NOTIFY_ALL"/>
+        <property name="serviceInterface" value="de.marketmaker.itools.amqprpc.sample.Service"/>
+        <property name="connectionManager" ref="connectionManager"/>
+        <property name="supervisor" ref="proxyChecker"/>
+        <property name="address">
+            <bean class="de.marketmaker.itools.amqprpc.connections.AmqpRpcAddressImpl">
+                <property name="exchange" value="tests"/>
+                <property name="requestQueue" value="pingpong"/>
+                <property name="settings.exchangeAutoDelete" value="true"/>
+                <property name="settings.queueAutoDelete" value="true"/>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="client" scope="prototype" class="de.marketmaker.itools.amqprpc.sample.OnewayClient">
+        <property name="proxy" ref="serviceProxy"/>
+    </bean>
+
+
+</beans>

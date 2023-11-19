@@ -1,0 +1,19 @@
+{
+    "dzcontent": {
+        "documentcount":"2",
+        "headline":"DZ Content",
+
+        "0": {
+            "name":"Renten",
+            "type":"pdf",
+            "date":"10.10.2009",
+            "url":"http://cms.vwd.com/mmweb/profidepot/re.pdf"
+        },
+        "1": {
+            "name":"Sicher 25",
+            "type":"pdf",
+            "date":"11.10.2009",
+            "url":"http://cms.vwd.com/mmweb/profidepot/si.pdf"
+        }
+    }
+}

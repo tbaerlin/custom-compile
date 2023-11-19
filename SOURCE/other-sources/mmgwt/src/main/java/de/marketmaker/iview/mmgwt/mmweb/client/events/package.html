@@ -1,0 +1,31 @@
+<body>
+Contains events, their handlers, and associated implementations.
+<h2>EventBus</h2>
+The EventBus is a central event dispatching mechanism that helps
+to decouple components.
+<p>
+    Example: PlaceChangeEvents are used to request that the application
+    changes from one page to another. Instead of using History.newItem(...),
+    we use eventBus.fireEvent(new PlaceChangeEvent(...)).
+    The nice thing about this is that we no longer depend on History
+    directly (which cannot appear in unit tests), a single component
+    is responsible for interacting with History (HistoryPlaceManager)
+</p>
+<p>
+    Ultimate goal is to get rid of PropertyChangeSupport and use
+    gwt's HandlerManager concept instead. The EventBus is the
+    global HandlerManager for application wide events. If you just
+    need to couple some snippets, a local HandlerManager would be
+    more appropriate.
+</p>
+<p>
+    For each type of event, we need an Event-class and an associated
+    Handler-interface. The Event-class usually
+    <tt>extends GwtEvent&lt;<em>Handler-interface</em></tt>,
+    the Handler-interface <tt>extends EventHandler</tt> and usually
+    provides a single method that will be invoked in the event's
+    dispatch method.
+</p>
+<a href="http://code.google.com/events/io/2009/sessions/GoogleWebToolkitBestPractices.html">GWT Best Practices</a>
+</body>
+        

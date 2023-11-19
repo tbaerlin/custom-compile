@@ -1,0 +1,28 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:g="urn:import:com.google.gwt.user.client.ui">
+  <ui:style type="de.marketmaker.iview.mmgwt.mmweb.client.snippets.NewsEntrySnippetView.Style">
+    .headline { padding: 3px 0 0 8px }
+    .row { display: inline-block}
+    .normal { margin: 0 0 8px 8px }
+    .hidden { display: none}
+  </ui:style>
+
+  <g:HTMLPanel>
+    <div class="mm-newsheadline {style.headline}" ui:field="headlineLabel"></div>
+    <div class="{style.normal}" ui:field="divDetails">
+      <div class="{style.row} mm-newsdetail-date">
+        <span ui:field="dateLabel"></span>&nbsp;
+        <span ui:field="timeLabel"></span>&nbsp;
+        <span ui:field="pressAgencyLabel"></span>
+      </div>
+    </div>
+    <div class="{style.normal}" ui:field="divButtons">
+      <div class="{style.row} mm-newsdetail-date">
+        <g:HorizontalPanel ui:field="buttonPanel"></g:HorizontalPanel>
+      </div>
+    </div>
+    <div class="{style.normal}" ui:field="newsTextLabel"></div>
+  </g:HTMLPanel>
+</ui:UiBinder>

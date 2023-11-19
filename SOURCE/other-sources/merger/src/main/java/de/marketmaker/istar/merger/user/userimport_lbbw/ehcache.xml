@@ -1,0 +1,23 @@
+<ehcache>
+
+    <cacheManagerEventListenerFactory class="" properties=""/>
+
+<!--    <cacheManagerPeerProviderFactory
+            class="net.sf.ehcache.distribution.RMICacheManagerPeerProviderFactory"
+            properties="peerDiscovery=automatic,
+                        multicastGroupAddress=224.0.0.0,
+                        multicastGroupPort=4446"/>
+
+
+    <cacheManagerPeerListenerFactory
+            class="net.sf.ehcache.distribution.RMICacheManagerPeerListenerFactory"
+            properties="socketTimeoutMillis=2000"/>-->
+
+    <defaultCache
+            maxElementsInMemory="1000"
+            eternal="false"
+            timeToLiveSeconds="120"
+            overflowToDisk="false"
+            statistics="true"/>
+
+</ehcache>

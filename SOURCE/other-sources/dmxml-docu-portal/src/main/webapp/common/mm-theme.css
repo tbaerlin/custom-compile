@@ -1,0 +1,215 @@
+body, table td, select {
+    font-family: Arial, sans-serif;
+    font-size: small;
+    direction: ltr;
+}
+
+body {
+    background-color: white;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: small;
+    margin: 8px;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+a, a:visited, a:hover {
+    color: #004494;
+    cursor: pointer;
+}
+
+.gwt-Hyperlink {
+    color: #004494;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline;
+}
+
+button, button.gwt-Button {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 4px;
+    background: white;
+    text-decoration: none;
+    font-size: small;
+    cursor: pointer;
+}
+
+.gwt-Button:active {
+    border: 1px inset #ccc;
+}
+
+button:hover, button.gwt-Button:hover {
+    border: 1px solid #004494;
+    box-shadow: 0 0 3px #888;
+}
+
+.gwt-Button[disabled] {
+    cursor: default;
+    color: #888;
+}
+
+.gwt-CheckBox {
+}
+
+.gwt-CheckBox-disabled {
+    color: #888;
+}
+
+.gwt-RadioButton {
+}
+
+.gwt-RadioButton-disabled {
+    color: #888;
+}
+
+.gwt-TextBox {
+    padding: 2px;
+}
+.gwt-TextBox-readonly {
+    color: #888;
+}
+
+.gwt-PasswordTextBox {
+    padding: 2px;
+}
+
+.gwt-PasswordTextBox-readonly {
+    color: #888;
+}
+
+.gwt-SuggestBox {
+    padding: 2px;
+}
+
+.gwt-SuggestBoxPopup {
+    margin-left: 3px;
+    padding: 3px;
+    background: #d0e4f6;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px #888;
+}
+
+.suggestPopupContent {
+    border-radius: 3px;
+}
+
+.gwt-SuggestBoxPopup .item {
+    padding: 2px 6px;
+    color: #424242;
+    cursor: default;
+}
+
+.gwt-SuggestBoxPopup .item-selected {
+    background: #b7d6f6;
+    border-radius: 3px;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupContent {
+    background: white;
+}
+
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelContent {
+    border: 0 none;
+    overflow: hidden;
+    padding: 0;
+}
+
+.gwt-TabLayoutPanelContentContainer {
+    border-color: #004494;
+    border-style: solid;
+    border-width: 1px 0 0;
+}
+
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs {
+    padding-top: 3px;
+}
+
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab {
+    background-color: white;
+    padding: 2px 5px;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #888;
+    border-color: #ddd;
+    cursor: pointer;
+}
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab:hover,
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab-selected {
+    color: #004494;
+    border-color: #004494;
+    box-shadow: 0 0 3px #888;
+}
+
+.gwt-SplitLayoutPanel-HDragger {
+    background: url("images/h-dragger-light.svg") repeat-y center center transparent;
+    cursor: pointer;
+}
+
+.gwt-SplitLayoutPanel-VDragger {
+    background: url("images/v-dragger-light.svg") repeat-x center center transparent;
+    cursor: pointer;
+}
+
+.gwt-SplitLayoutPanel-HDragger:hover {
+    background: url("images/h-dragger.svg") repeat-y center center transparent;
+}
+
+.gwt-SplitLayoutPanel-VDragger:hover {
+    background: url("images/v-dragger.svg") repeat-x center center transparent;
+}
+
+.gwt-PopupPanel, .gwt-DialogBox {
+    background: white;
+    padding: 1em;
+    border-radius: 3px;
+    cursor: default;
+    border: 1px solid #004494;
+    box-shadow: 2px 2px 5px #888;
+}
+
+.gwt-DecoratedPopupPanel {
+    padding: 3px;
+    background: #d0e4f6;
+    padding: 0.5em;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px #888;
+}
+
+.gwt-PopupPanelGlass {
+    background-color: #000;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+
+.messageBox-CONFIRM {
+    background-image: url("images/messagebox-question.svg");
+    background-repeat: no-repeat;
+    background-position: 1em 1em;
+}
+
+.messageBox-CONFIRM .popupContent {
+    margin-left: 64px;
+    padding-left: 1em;
+}
+
+.messageBox-CONFIRM .message-CONFIRM {
+    min-height: 64px;
+}
+
+.messageBox .gwt-Button {
+    margin-top: 1em;
+    margin-right: 8px;
+    margin-left:0px;
+}
+
+.gwt-DialogBox .gwt-Button {
+    margin-top: 1em;
+    margin-left: 8px;
+    margin-right:0px;
+}

@@ -1,0 +1,25 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+    <ui:with field="i18n" type="de.marketmaker.iview.mmgwt.mmweb.client.I18n" />
+
+    <g:HTMLPanel styleName="as-oe">
+        <g:HTMLPanel styleName="cp">
+            <table class="ft brokerLogin">
+                <tr>
+                    <td><g:Label text="{i18n.orderEntryBrokerLoginUser}"/></td>
+                    <td><g:TextBox ui:field="userField" /></td>
+                </tr>
+                <tr>
+                    <td><g:Label text="{i18n.orderEntryBrokerLoginPassword}"/></td>
+                    <td><g:PasswordTextBox ui:field="passwordField" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <g:HTML ui:field="messageLabel" addStyleNames="mm-valueError"/>
+                    </td>
+                </tr>
+            </table>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

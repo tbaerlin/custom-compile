@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.0"
+        width="144"
+        height="32">
+  <defs>
+    <style type="text/css">
+      <![CDATA[
+        .fgbg {
+          stroke: #666;
+          stroke-width: 1px;
+          fill: #eee;
+        }
+        .xfg {
+          fill: #444;
+        }
+        .dfgbg {
+          stroke: #ddd;
+          stroke-width: 1px;
+          fill: #eee;
+        }
+        .hfgbg {
+          stroke: #666;
+          stroke-width: 1px;
+          fill: #def;
+        }
+        .dxfg {
+          fill: #999;
+        }
+      ]]>
+    </style>
+    <path id="questionmark" d="m 7.8275731,13 a 0.94834661,0.94834661 0 1 1 4.35e-5,0 z M 6.96544,9.5514669 a 0.8621333,0.8621333 0 0 0 1.6811603,0.043113 C 8.8621326,7.8703103 11.233,7.5254571 11.233,5.8011906 c 0,-1.2932001 -0.862134,-2.8019333 -3.017467,-2.8019333 -1.2931997,0 -3.4485329,0.8621333 -3.4485329,2.8019333 a 0.8621333,0.8621333 0 0 0 1.6811595,0.043103 c 0.2155337,-0.8621333 0.8621334,-1.2932 1.724267,-1.2932 0.8621332,0 1.2931993,0.4310667 1.2931993,1.0776666 0,1.2931999 -2.5001859,1.8535867 -2.5001859,3.9227075 z"/>
+    <path id="checkbox" d="m1.5,3.5 c0,-2 0,-2 2,-2 h9 c2,0 2,0 2,2 v9 c0,2 0,2 -2,2 h-9 c-2,0 -2,0 -2,-2 z "/>
+    <path id="checkbox-hover" d="m1.5,3.5 c0,-2 0,-2 2,-2 h9 c2,0 2,0 2,2 v9 c0,2 0,2 -2,2 h-9 c-2,0 -2,0 -2,-2 z "/>
+    <path id="checkbox-check" d="M 14,0 C 10.9,2.4 8.6,5.5 6.8,9 4.8,7.3 4,6.6 2,5.2 L 0,7.8 C 3.1,10 5,11.3 7.4,14 9.5,9.5 12.7,6 16,2.5 L 14,0 z"/>
+    <circle id="radio" cx="8" cy="8" r="6.5"/>
+    <circle id="radio-hover" cx="8" cy="8" r="6.5"/>
+    <circle id="radio-check" cx="8" cy="8" r="3.5"/>
+  </defs>
+  
+  <use class="fgbg" x="0" y="0" xlink:href="#checkbox"/>
+  <use class="xfg" x="0" y="0" xlink:href="#questionmark"/>
+  
+  <use class="fgbg" x="16" y="0" xlink:href="#checkbox"/>
+  
+  <use class="fgbg" x="32" y="0" xlink:href="#checkbox"/>
+  <use class="xfg" x="32" y="0" xlink:href="#checkbox-check"/>
+  
+  <use class="hfgbg" x="48" y="0" xlink:href="#checkbox-hover"/>
+  <use class="xfg" x="48" y="0" xlink:href="#questionmark"/>
+
+  <use class="hfgbg" x="64" y="0" xlink:href="#checkbox-hover"/>
+
+  <use class="hfgbg" x="80" y="0" xlink:href="#checkbox-hover"/>
+  <use class="xfg" x="80" y="0" xlink:href="#checkbox-check"/>
+
+  <use class="fgbg" x="96" y="0" xlink:href="#checkbox"/>
+  <use class="dxfg" x="96" y="0" xlink:href="#questionmark"/>
+
+  <use class="dfgbg" x="112" y="0" xlink:href="#checkbox"/>
+  
+  <use class="dfgbg" x="128" y="0" xlink:href="#checkbox"/>
+  <use class="dxfg" x="128" y="0" xlink:href="#checkbox-check"/>
+  
+  <use class="fgbg" x="0" y="16" xlink:href="#radio"/>
+  <use class="xfg" x="0" y="16" xlink:href="#questionmark"/>
+  
+  <use class="fgbg" x="16" y="16" xlink:href="#radio"/>
+  
+  <use class="fgbg" x="32" y="16" xlink:href="#radio"/>
+  <use class="xfg" x="32" y="16" xlink:href="#radio-check"/>
+  
+  <use class="hfgbg" x="48" y="16" xlink:href="#radio-hover"/>
+  <use class="xfg" x="48" y="16" xlink:href="#questionmark"/>
+
+  <use class="hfgbg" x="64" y="16" xlink:href="#radio-hover"/>
+
+  <use class="hfgbg" x="80" y="16" xlink:href="#radio-hover"/>
+  <use class="xfg" x="80" y="16" xlink:href="#radio-check"/>
+
+  <use class="dfgbg" x="96" y="16" xlink:href="#radio"/>
+  <use class="dxfg" x="96" y="16" xlink:href="#questionmark"/>
+  
+  <use class="dfgbg" x="112" y="16" xlink:href="#radio"/>
+  
+  <use class="dfgbg" x="128" y="16" xlink:href="#radio"/>
+  <use class="dxfg" x="128" y="16" xlink:href="#radio-check"/>
+</svg>

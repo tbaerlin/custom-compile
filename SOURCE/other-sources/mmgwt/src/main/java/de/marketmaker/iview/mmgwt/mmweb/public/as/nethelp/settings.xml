@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- saved from url=(0016)http://localhost -->
+<settings>
+  <theme>
+    <layout>themes/vwdas/layout.html</layout>
+    <stylesheet>css/jquery-ui/as/jquery-ui.css</stylesheet>
+  </theme>
+  <references>
+    <join>themes/vwdas/settings.theme.xml</join>
+    <join>themes/vwdas/settings.en-us.xml</join>
+    <join>themes/vwdas/settings.de-de.xml</join>
+    <css>LinksExt/C1H_HTML_vwdas.css</css>
+  </references>
+  <strings>
+    <pageHeaderText>Online-Hilfe zur vwd advisory solution</pageHeaderText>
+    <emailAddress>service@vwd.com</emailAddress>
+  </strings>
+  <windows>
+    <window>
+      <name>proc</name>
+      <features>left=680,top=10,height=500,width=315,resizable=1,scrollbars=1</features>
+    </window>
+  </windows>
+</settings>

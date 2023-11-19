@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     version="1.1"
+     width="16"
+     height="16"
+     viewBox="0 0 16 16">
+    <defs>
+        <style type="text/css">
+            <![CDATA[
+                .fgbg {
+                    stroke: #666;
+                    stroke-width: 1px;
+                    fill: #eee;
+                }
+                .xfg {
+                    fill: #444;
+                }
+            ]]>
+        </style>
+    </defs>
+    <circle class="fgbg" cx="8" cy="8" r="6.5"/>
+    <circle class="xfg" cx="8" cy="8" r="3.5"/>
+</svg>

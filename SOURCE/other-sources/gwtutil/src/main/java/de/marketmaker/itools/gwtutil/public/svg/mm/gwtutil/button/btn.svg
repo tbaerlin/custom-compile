@@ -1,0 +1,115 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version="1.1"
+     width="7"
+     height="600">
+    <defs>
+        <style type="text/css">
+            <![CDATA[
+                .bg {
+                    stroke: #eee;
+                    fill: #eee;
+                }
+                .fg {
+                    stroke-width: 1px;
+                    fill: none;
+                    stroke-linecap:square;
+                }
+                .fgbg {
+                    stroke-width: 1px;
+                    fill: #eee;
+                }
+                .glow {
+                    stroke: white;
+                    stroke-width: 1px;
+                    stroke-opacity: 0.6;
+                    fill: none;
+                }
+                #default .fg, #default .fgbg {
+                    stroke: #888;
+                }
+                #active .fg, #active .fgbg {
+                    stroke: #fa0;
+                }
+                #over .fg, #over .fgbg {
+                    stroke: #222;
+                }
+                #activeover .fg, #activeover .fgbg {
+                    stroke: #af0;
+                }
+                #over .bg {
+                    stroke: #fff;
+                }
+                #over .bg, #over .fgbg {
+                    fill: #fff;
+                }
+                #clicked .fg, #clicked .fgbg {
+                    stroke: #f22;
+                }
+                #disabled .fg, #disabled .fgbg {
+                    stroke: #bbb;
+                }
+            ]]>
+        </style>
+        <path id="bg-1" d="M 0,2 c 0,-1 1,-2 2,-2 l 2,0 c 1,0 2,1 2,2 l 0,45 c 0,1 -1,2 -2,2 l -2,0 c -1,0 -2,-1 -2,-2 z"/>
+        <path id="rso-1" d="M 0,2 c 0,-1 1,-2 2,-2 l 2,0 c 1,0 2,1 2,2 l 0,45 c 0,1 -1,2 -2,2 l -2,0 c -1,0 -2,-1 -2,-2 z"/>
+        <path id="glow-1" d="M 1,2 c 0,-1 1,-1 1,-1 l 2,0 c 1,0 1,1 1,1 l 0,45 c 0,1 -1,1 -1,1 l -2,0 c -1,0 -1,-1 -1,-1 z"/>
+        <path id="fg-1" d="M 0,2 c 0,-1 1,-2 2,-2 l 2,0 c 1,0 2,1 2,2 l 0,45 c 0,1 -1,2 -2,2 l -2,0 c -1,0 -2,-1 -2,-2 z"/>
+        <path id="bg-2" d="M -5,52 c 0,-1 1,-2 2,-2 l 12,0 c 1,0 2,1 2,2 l 0,45 c 0,1 -1,2 -2,2 l -12,0 c -1,0 -2,-1 -2,-2 z"/>
+        <path id="rso-2" d="M -5,52 c 0,-1 1,-2 2,-2 l 12,0 c 1,0 2,1 2,2 l 0,45 c 0,1 -1,2 -2,2 l -12,0 c -1,0 -2,-1 -2,-2 z"/>
+        <path id="glow-2" d="M -4,52 c 0,-1 1,-1 1,-1 l 12,0 c 1,0 1,1 1,1 l 0,45 c 0,1 -1,1 -1,1 l -12,0 c -1,0 -1,-1 -1,-1 z"/>
+        <path id="fg-2" d="M -5,52 c 0,-1 1,-2 2,-2 l 12,0 c 1,0 2,1 2,2 l 0,45 c 0,1 -1,2 -2,2 l -12,0 c -1,0 -2,-1 -2,-2 z"/>
+    </defs>
+    <g transform="translate(0.5,0.5)">
+        <g id="default">
+            <use class="bg" xlink:href="#bg-1"/>
+            <use class="glow" xlink:href="#glow-1"/>
+            <use class="fg" xlink:href="#fg-1"/>
+            <use class="bg" xlink:href="#bg-2"/>
+            <use class="glow" xlink:href="#glow-2"/>
+            <use class="fg" xlink:href="#fg-2"/>
+        </g>
+        <g id="active" transform="translate(0,100)">
+            <use class="bg" xlink:href="#bg-1"/>
+            <use class="glow" xlink:href="#glow-1"/>
+            <use class="fg" xlink:href="#fg-1"/>
+            <use class="bg" xlink:href="#bg-2"/>
+            <use class="glow" xlink:href="#glow-2"/>
+            <use class="fg" xlink:href="#fg-2"/>
+        </g>
+        <g id="over" transform="translate(0,200)">
+            <use class="bg" xlink:href="#bg-1"/>
+            <use class="glow" xlink:href="#glow-1"/>
+            <use class="fg" xlink:href="#fg-1"/>
+            <use class="bg" xlink:href="#bg-2"/>
+            <use class="glow" xlink:href="#glow-2"/>
+            <use class="fg" xlink:href="#fg-2"/>
+        </g>
+        <g id="activeover" transform="translate(0,300)">
+            <use class="bg" xlink:href="#bg-1"/>
+            <use class="glow" xlink:href="#glow-1"/>
+            <use class="fg" xlink:href="#fg-1"/>
+            <use class="bg" xlink:href="#bg-2"/>
+            <use class="glow" xlink:href="#glow-2"/>
+            <use class="fg" xlink:href="#fg-2"/>
+        </g>
+        <g id="clicked" transform="translate(0,400)">
+            <use class="bg" xlink:href="#bg-1"/>
+            <use class="glow" xlink:href="#glow-1"/>
+            <use class="fg" xlink:href="#fg-1"/>
+            <use class="bg" xlink:href="#bg-2"/>
+            <use class="glow" xlink:href="#glow-2"/>
+            <use class="fg" xlink:href="#fg-2"/>
+        </g>
+        <g id="disabled" transform="translate(0,500)">
+            <use class="bg" xlink:href="#bg-1"/>
+            <use class="glow" xlink:href="#glow-1"/>
+            <use class="fg" xlink:href="#fg-1"/>
+            <use class="bg" xlink:href="#bg-2"/>
+            <use class="glow" xlink:href="#glow-2"/>
+            <use class="fg" xlink:href="#fg-2"/>
+        </g>
+    </g>
+</svg>

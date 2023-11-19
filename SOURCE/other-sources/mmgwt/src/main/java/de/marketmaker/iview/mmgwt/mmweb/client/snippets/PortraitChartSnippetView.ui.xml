@@ -1,0 +1,74 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:itwi='urn:import:de.marketmaker.itools.gwtutil.client.widgets'
+             xmlns:itme='urn:import:de.marketmaker.itools.gwtutil.client.widgets.menu'
+             xmlns:itsn='urn:import:de.marketmaker.iview.mmgwt.mmweb.client.snippets'
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+    <ui:import field="de.marketmaker.iview.mmgwt.mmweb.client.util.DateTimeUtil.*"/>
+    <ui:with field="msg" type="de.marketmaker.iview.mmgwt.mmweb.client.I18n"/>
+
+    <itwi:LeftRightToolbar ui:field="toolbar" addStyleNames="mm-viewWidget">
+        <itwi:left>
+            <g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+                <g:LazyPanel ui:field="msButtonPanel" visible="false">
+                    <g:HorizontalPanel>
+                        <itsn:MarketSelectionButton ui:field="msButton"/>
+                        <itwi:Separator/>
+                    </g:HorizontalPanel>
+                </g:LazyPanel>
+
+                <itwi:Button ui:field="idButton" data="period:P1D"/>
+
+                <itwi:Separator ui:field="idSeparator"/>
+                <itwi:Button ui:field="wButton" data="period:P5D"/>
+                <itwi:Separator ui:field="wSeparator"/>
+
+                <itme:SelectButton ui:field="hButton">
+                    <itme:menu>
+                        <itme:Menu ui:field="menu">
+                            <itme:MenuItem data="period:P1M"/>
+                            <itme:MenuItem data="period:P3M"/>
+                            <itme:MenuItem data="period:P6M"/>
+                            <itme:MenuItem ui:field="defaultItem" data="period:P1Y"/>
+                            <itme:MenuItem data="period:P2Y"/>
+                            <itme:MenuItem data="period:P3Y"/>
+                            <itme:MenuItem data="period:P5Y"/>
+                            <itme:MenuItem data="period:P10Y"/>
+                            <itme:MenuItem data="period:{PERIOD_KEY_YEAR_TO_DATE}"/>
+                            <itme:MenuItem data="period:{PERIOD_KEY_ALL}"/>
+                        </itme:Menu>
+                    </itme:menu>
+                </itme:SelectButton>
+
+                <g:LazyPanel ui:field="linkButtonPanel" visible="false">
+                    <g:HorizontalPanel>
+                        <itwi:Separator/>
+                        <itwi:Button ui:field="linkButton"/>
+                    </g:HorizontalPanel>
+                </g:LazyPanel>
+            </g:HorizontalPanel>
+        </itwi:left>
+        <itwi:right>
+            <g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+                <itwi:Button HTML="&lt;span class='mm-chartcenter-bid'&gt;&#160;&#160;&lt;/span&gt;&#160;{msg.bid}"
+                             ui:field="btnBid" toggleActive="true" visible="false"/>
+                <itwi:Button HTML="&lt;span class='mm-chartcenter-ask'&gt;&#160;&#160;&lt;/span&gt;&#160;{msg.ask}"
+                             ui:field="btnAsk" toggleActive="true" visible="false"/>
+                <itwi:Button text="U" ui:field="btnUnderlying" title="{msg.displayUnderlying}" toggleActive="true"
+                             visible="false" addStyleNames="mm-portraitChart-buttonBenchmark"/>
+                <itwi:Button text="{msg.chartOptionAbbrBenchmark}" ui:field="btnBenchmark"
+                             title="{msg.displayBenchmark}" addStyleNames="mm-portraitChart-buttonBenchmark"
+                             toggleActive="true" visible="false"/>
+                <itwi:Button text="{msg.chartOptionAbbrCorporateActions}" ui:field="btnCorporateActions"
+                             title="{msg.evaluateCorporateActions}" toggleActive="true" visible="false"/>
+                <itwi:Button text="{msg.chartOptionAbbrDividends}" ui:field="btnDividends" toggleActive="true"
+                             visible="false"/>
+                <itwi:Button text="{msg.displayPerformanceChartAbbr}" ui:field="btnPerformance"
+                             title="{msg.displayPerformanceChart}" toggleActive="true" visible="false"/>
+                <itwi:Button text="%" ui:field="btnPercent" title="{msg.displayPercent}" toggleActive="true"
+                             visible="false"/>
+            </g:HorizontalPanel>
+        </itwi:right>
+    </itwi:LeftRightToolbar>
+
+</ui:UiBinder>

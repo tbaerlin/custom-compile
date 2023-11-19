@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- saved from url=(0016)http://localhost -->
+<settings>
+  <theme>
+    <name>vwdas</name>
+    <predefined>false</predefined>
+    <baseTheme>Accordion</baseTheme>
+    <baseVersion>1.11.7</baseVersion>
+  </theme>
+  <general>
+    <favicon>images/cg-signet-16.png</favicon>
+  </general>
+</settings>

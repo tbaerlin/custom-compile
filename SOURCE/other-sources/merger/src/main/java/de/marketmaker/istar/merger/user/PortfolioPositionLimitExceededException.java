@@ -1,0 +1,24 @@
+/*
+ * WatchlistLimitExceededException.java
+ *
+ * Created on 07.08.2006 09:43:45
+ *
+ * Copyright (c) MARKET MAKER Software AG. All Rights Reserved.
+ */
+package de.marketmaker.istar.merger.user;
+
+import de.marketmaker.istar.merger.MergerException;
+
+/**
+ * @author Oliver Flege
+ * @author Thomas Kiesgen
+ */
+public class PortfolioPositionLimitExceededException extends MergerException {
+    public PortfolioPositionLimitExceededException(String message, long maxNumAllowed) {
+        super(message, maxNumAllowed);
+    }
+
+    public String getCode() {
+        return "user.portfolio.positions.limit.exceeded";
+    }
+}

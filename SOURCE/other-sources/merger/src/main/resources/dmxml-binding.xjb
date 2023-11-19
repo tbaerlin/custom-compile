@@ -1,0 +1,120 @@
+<jxb:bindings version="2.0" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+              xmlns:ai="http://jaxb.dev.java.net/plugin/if_insertion"
+              xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+              jxb:extensionBindingPrefixes="xjc">
+
+    <jxb:bindings schemaLocation="iview-xml.xsd" node="/xsd:schema">
+        <jxb:globalBindings typesafeEnumMaxMembers="0">
+            <xjc:serializable/>
+
+            <jxb:javaType name="String" xmlType="xsd:date"
+                          parseMethod="de.marketmaker.iview.dmxml.converter.DateDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.iview.dmxml.converter.DateDatatypeConverter.marshal"/>
+            <jxb:javaType name="String" xmlType="xsd:gYearMonth"
+                          parseMethod="de.marketmaker.iview.dmxml.converter.YearMonthDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.iview.dmxml.converter.YearMonthDatatypeConverter.marshal"/>
+            <jxb:javaType name="String" xmlType="xsd:decimal"
+                          parseMethod="de.marketmaker.iview.dmxml.converter.BigDecimalDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.iview.dmxml.converter.BigDecimalDatatypeConverter.marshal"/>
+            <jxb:javaType name="String" xmlType="xsd:dateTime"
+                          parseMethod="de.marketmaker.iview.dmxml.converter.DateTimeDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.iview.dmxml.converter.DateTimeDatatypeConverter.marshal"/>
+            <jxb:javaType name="String" xmlType="xsd:integer"
+                          parseMethod="de.marketmaker.iview.dmxml.converter.BigIntegerDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.iview.dmxml.converter.BigIntegerDatatypeConverter.marshal"/>
+            <jxb:javaType name="String" xmlType="xsd:duration"
+                          parseMethod="de.marketmaker.iview.dmxml.converter.DurationDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.iview.dmxml.converter.DurationDatatypeConverter.marshal"/>
+            <jxb:javaType name="String" xmlType="xsd:time"
+                          parseMethod="de.marketmaker.iview.dmxml.converter.TimeDatatypeConverter.unmarshal"
+                          printMethod="de.marketmaker.iview.dmxml.converter.TimeDatatypeConverter.marshal"/>
+        </jxb:globalBindings>
+    </jxb:bindings>
+
+    <!-- -->
+    <!-- use IdentifierData as class for underlying idref so gwt accepts it as serializable entity -->
+    <!-- -->
+    <jxb:bindings schemaLocation="iview-xml.xsd"
+                  node="/xsd:schema/xsd:complexType[@name='MSC_BasicSearchElement']/xsd:sequence/xsd:element[@name='underlying']/xsd:complexType/xsd:attribute[@name='idref']">
+        <jxb:property name="data">
+            <jxb:baseType name="IdentifierData"/>
+        </jxb:property>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd"
+                  node="/xsd:schema/xsd:complexType[@name='MSC_BasicQuoteSearchElement']/xsd:sequence/xsd:element[@name='underlying']/xsd:complexType/xsd:attribute[@name='idref']">
+        <jxb:property name="data">
+            <jxb:baseType name="IdentifierData"/>
+        </jxb:property>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd"
+                  node="/xsd:schema/xsd:complexType[@name='MSC_InstrumentPriceSearchElement']/xsd:sequence/xsd:element[@name='underlying']/xsd:complexType/xsd:attribute[@name='idref']">
+        <jxb:property name="data">
+            <jxb:baseType name="IdentifierData"/>
+        </jxb:property>
+    </jxb:bindings>
+
+    <!-- -->
+    <!-- set generateElementProperty=false so gwt accepts it as serializable entity -->
+    <!-- for details, see http://docs.oracle.com/cd/E19159-01/820-1072/ahiid/index.html -->
+    <!-- -->
+    <jxb:bindings schemaLocation="iview-xml.xsd"
+                  node="/xsd:schema/xsd:complexType[@name='TicksTimeseriesElement']/xsd:complexContent/xsd:extension[@base='TimeseriesElement']/xsd:sequence/xsd:element[@name='trade']">
+        <jxb:property name="trade" generateElementProperty="false"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd"
+                  node="/xsd:schema/xsd:complexType[@name='TicksTimeseriesElement']/xsd:complexContent/xsd:extension[@base='TimeseriesElement']/xsd:sequence/xsd:element[@name='bid']">
+        <jxb:property name="bid" generateElementProperty="false"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd"
+                  node="/xsd:schema/xsd:complexType[@name='TicksTimeseriesElement']/xsd:complexContent/xsd:extension[@base='TimeseriesElement']/xsd:sequence/xsd:element[@name='ask']">
+        <jxb:property name="ask" generateElementProperty="false"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd"
+                  node="/xsd:schema/xsd:complexType[@name='FundTimeseriesElement']/xsd:complexContent/xsd:extension[@base='TimeseriesElement']/xsd:sequence/xsd:element[@name='netAssetValue']">
+        <jxb:property name="netAssetValue" generateElementProperty="false"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd"
+                  node="/xsd:schema/xsd:complexType[@name='TicksPriceElement']/xsd:sequence/xsd:element[@name='volume']">
+        <jxb:property name="volume" generateElementProperty="false"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd"
+                  node="/xsd:schema/xsd:complexType[@name='TicksPriceElement']/xsd:sequence/xsd:element[@name='supplement']">
+        <jxb:property name="supplement" generateElementProperty="false"/>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd"
+                  node="/xsd:schema/xsd:complexType[@name='TicksPriceElement']/xsd:sequence/xsd:element[@name='tradeIdentifier']">
+        <jxb:property name="tradeIdentifier" generateElementProperty="false"/>
+    </jxb:bindings>
+
+    <!-- -->
+    <!-- add HasPricedata interface -->
+    <!-- -->
+    <jxb:bindings schemaLocation="iview-xml.xsd" node="/xsd:schema/xsd:complexType[@name='ApoInstrument']">
+      <ai:interfaces check="false">de.marketmaker.iview.dmxml.HasPricedata</ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd" node="/xsd:schema/xsd:complexType[@name='GIS_EbrokeragePrices']">
+      <ai:interfaces check="false">de.marketmaker.iview.dmxml.HasPricedata</ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd" node="/xsd:schema/xsd:complexType[@name='MSC_InstrumentPriceSearchElement']">
+      <ai:interfaces check="false">de.marketmaker.iview.dmxml.HasPricedata</ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd" node="/xsd:schema/xsd:complexType[@name='MSC_ListDetailElement']">
+      <ai:interfaces check="false">de.marketmaker.iview.dmxml.HasPricedata</ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd" node="/xsd:schema/xsd:complexType[@name='MSC_PriceData']">
+      <ai:interfaces check="false">de.marketmaker.iview.dmxml.HasPricedata</ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd" node="/xsd:schema/xsd:complexType[@name='MSC_PriceDatasElement']">
+        <ai:interfaces check="false">de.marketmaker.iview.dmxml.HasPricedata</ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd" node="/xsd:schema/xsd:complexType[@name='GISFinderElement']">
+        <ai:interfaces check="false">de.marketmaker.iview.dmxml.HasPricedata</ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd" node="/xsd:schema/xsd:complexType[@name='PortfolioPositionElement']">
+      <ai:interfaces check="false">de.marketmaker.iview.dmxml.HasPricedata</ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="iview-xml.xsd" node="/xsd:schema/xsd:complexType[@name='WatchlistPositionElement']">
+      <ai:interfaces check="false">de.marketmaker.iview.dmxml.HasPricedata</ai:interfaces>
+    </jxb:bindings>
+</jxb:bindings>

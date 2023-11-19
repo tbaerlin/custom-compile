@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>pmreport interface description</title>
+    <style>
+    code {
+      color: #666;
+    }
+    </style>
+</head>
+<body>
+  <h1>pm[web] interface description</h1>
+  <h2>Integration</h2>
+  The vwd portfolio manager [web] can be embedded into another html page by using an <code>&lt;iframe&gt;</code> (see line 111).
+
+  After the iframe is loaded, the JavaScript connection to pm[web] can be established, which is done using the parameter <code>onload="initialize()"</code>.
+
+  The iframe is embedded into a <code>&lt;div&gt;</code>  tag, so the size can be set with CSS.
+  
+  <h2>Init</h2>
+  line 21-39: the method <code>initialize()</code> defines callback methods, which are called by pm[web] in its init routine.
+  The following callback methods need to be defined:
+  
+  <h3><code>mmModuleLoadCallback()</code></h3>
+  As soon as the pm[web] code is completely loaded, <code>mmModuleLoadCallback()</code> is called.
+  Now the method <code>mmLogin(username, password)</code> can be called.
+  
+  <h3><code>mmErrorCallback(message)</code></h3>
+  In case of init errors an error message is sent to this callback method.
+  
+  <h3><code>mmInitializedCallback()</code></h3>
+  <p>
+  After a successful login the pm[web] method <code>mmShowReport(inputObject, report)</code> can be used.
+  Reports in pm[web] can only be rendered after this callback has been called.
+  The button for showing reports (line 107) is initially disabled (<code>disabled="disabled"</code>) and is enabled by the callback in line 35.
+  </p>
+  <p>
+  The callback methods are given to pm[web] in line 38 with the statement
+  <code>initializeCallbackFunctions(mmModuleLoadCallback, mmErrorCallback, mmInitializedCallback)</code>.
+  </p>
+  
+  <h2>Showing a report</h2>
+  <p>
+  A report can be shown after successful init with the method
+  <code>mmShowReport(inputObject, report)</code>.
+  <code>inputObject</code> is the input object like group, holder, portfolio, account or depot.
+  The tuple contains id, object type and name (delimited with "|").
+  The fourth parameter is optional and can describe an evaluation zone (probably not relevant for a PoC).
+  Without a zone, the default zone "PUBLIC" is used. Samples for input objects are given in line 62-94.
+  </p>
+  <p>
+  The parameter <code>report</code> specifies the report to be shown.
+  Samples are given in line 99-104.
+
+  Not every report can be used for each <code>inputObject</code> type.
+  The characters GIPDK show which report is available for each respective input object type (abbreviation in german letters; group, holder (Inhaber), portfolio, depot, account (Konto)).
+  </p>
+</body>
+</html>

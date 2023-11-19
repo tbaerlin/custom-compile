@@ -1,0 +1,125 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+    function toggleDisplay(id) {
+          if(document.getElementById(id).style.display == 'block') {
+                document.getElementById(id).style.display='none';
+          }
+          else {
+                document.getElementById(id).style.display='block';
+          }
+          return false;
+    }
+    </script>
+</head>
+<body>
+<a href="index.html">Startseite</a>&nbsp;|&nbsp;<a href="${abo}.html">Abo $abo</a>&nbsp;|&nbsp;<a href="http://gobi.market-maker.de/workbench/index.html">WebWorkbench</a>&nbsp;|&nbsp;Stand: $date
+<hr>
+<h1>Abo $abo, File $file</h1>
+<ul>
+    <li>Anzahl Quotes in File: $quotes.size()</li>
+    <li>Anzahl Quotes ohne zugeordnenten Selektor: <a href="#quotesWithoutSelector">$quotesWithoutSelector.size()</a></li>
+</ul>
+
+<h2>Selektoren</h2>
+<ul>
+#foreach ($selector in $allSelectors)
+    #if($selectorDefinitions.containsKey($selector))
+    <li>Selektor $selector
+        <ul>
+            <li>Definition: $selectorDefinitions.get($selector)</li>
+            <li>Anzahl Quotes dieses Selektors: $quotesBySelector.get($selector).size() <a href="" onClick="toggleDisplay('t$selector');return false;">nach Typ/Markt</a>/<a href="" onClick="toggleDisplay('m$selector');return false;">nach Markt/Typ</a>
+                #set ($dummy = $subscriptionQuoteTool.reset($quotesBySelector.get($selector)))
+                <blockquote id="t$selector" style="display:none">
+                    nach Typ und Markt
+                    <ul>
+                    #foreach($type in $subscriptionQuoteTool.types)
+                    <li>Typ: $type.description ($type.id / $type.name())
+                    <ul>
+                    #foreach($market in $subscriptionQuoteTool.getMarkets($type))
+                    <li><a href="" onClick="toggleDisplay('$selector$type$market');return false;">vwd-Markt $market: $subscriptionQuoteTool.getSize($type, $market)</a>
+                        <blockquote id="$selector$type$market" style="display:none">
+                    <ol>
+                    #foreach($quote in $subscriptionQuoteTool.getQuotes($type, $market))
+                    <li><a target="workbench" href="http://gobi.market-maker.de/workbench/security.wb?quoteId=$quote.qid">$quote.name ($quote.vwdsymbol)</a>, ebenfalls enthalten in $subscriptionQuoteTool.getSubscriptions($quote.qid, $file)</li>
+                    #end
+                    #if($subscriptionQuoteTool.getQuotes($type, $market).size()==100)
+                    <li>...</li>
+                    #end 
+                    </ol>
+                        </blockquote>
+                    </li>
+                    #end
+                    </ul>
+                    </li>
+                    #end
+                    </ul>
+                </blockquote>
+                <blockquote id="m$selector" style="display:none">
+                    nach Markt und Typ
+                    <ul>
+                    #foreach($market in $subscriptionQuoteTool.markets)
+                    <li>Markt: $market)
+                    <ul>
+                    #foreach($type in $subscriptionQuoteTool.getTypes($market))
+                    <li><a href="" onClick="toggleDisplay('$selector$market$type');return false;">Typ $type.description ($type.id / $type.name(): $subscriptionQuoteTool.getSize($market, $type)</a>
+                        <blockquote id="$selector$market$type" style="display:none">
+                    <ol>
+                    #foreach($quote in $subscriptionQuoteTool.getQuotes($market, $type))
+                    <li><a target="workbench" href="http://gobi.market-maker.de/workbench/security.wb?quoteId=$quote.qid">$quote.name ($quote.vwdsymbol)</a>, ebenfalls enthalten in $subscriptionQuoteTool.getSubscriptions($quote.qid, $file)</li>
+                    #end
+                    #if($subscriptionQuoteTool.getQuotes($market, $type).size()==100)
+                    <li>...</li>
+                    #end
+                    </ol>
+                        </blockquote>
+                    </li>
+                    #end
+                    </ul>
+                    </li>
+                    #end
+                    </ul>
+                </blockquote>
+            </li>
+            <li>Anzahl Instrumente in diesem Selektor, die kein Quote in $abo/$file haben: <a href="" onClick="toggleDisplay('${selector}iids');return false;">$missingIidsBySelector.get($selector).size() nach Typ/Markt</a>
+                #set ($dummy = $subscriptionQuoteTool.resetForQuoteData($missingIidsBySelector.get($selector)))
+                <blockquote id="${selector}iids" style="display:none">
+                    <ul>
+                    #foreach($type in $subscriptionQuoteTool.types)
+                    <li>Typ: $type.description ($type.id / $type.name())
+                    <ul>
+                    #foreach($market in $subscriptionQuoteTool.getMarkets($type))
+                    <li><a href=""" onClick="toggleDisplay('${selector}iids$type$market');return false;">vwd-Markt $market: $subscriptionQuoteTool.getSize($type, $market)</a>
+                        <blockquote id="${selector}iids$type$market" style="display:none">
+                    <ol>
+                    #foreach($quote in $subscriptionQuoteTool.getQuotes($type, $market))
+                    <li><a target="workbench" href="http://gobi.market-maker.de/workbench/security.wb?securityId=$quote.iid">$quote.name</a></li>
+                    #end
+                    #if($subscriptionQuoteTool.getQuotes($type, $market).size()==100)
+                    <li>...</li>
+                    #end
+                    </ol>
+                        </blockquote>
+                    </li>
+                    #end
+                    </ul>
+                    </li>
+                    #end
+                    </ul>
+                </blockquote>
+            </li>
+        </ul>
+    </li>
+    #end
+#end
+</ul>
+
+<a name="quotesWithoutSelector"><h2>Quotes ohne Selektor ($quotesWithoutSelector.size() Stück)</h2></a>
+<ol>
+#foreach ($quote in $quotesWithoutSelector)
+<li><a target="workbench" href="http://gobi.market-maker.de/workbench/security.wb?quoteId=$quote.quote.qid">$quote.quote.name ($quote.quote.type.name(), ${quote.quote.qid}.qid)</a></li>
+#end
+</ol>
+</body>
+</html>

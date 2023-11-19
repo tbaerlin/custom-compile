@@ -1,0 +1,15 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+<body>
+<a href="http://gobi.market-maker.de/workbench/index.html">WebWorkbench</a>&nbsp;|&nbsp;Stand: $date
+<hr>
+<h1>Verfügbare Auswertungen</h1>
+<ul>
+#foreach ($abo in $abos)
+    <li><a href="${abo}.html">Abo $abo</a></li>
+#end
+</ul>
+</body>
+</html>

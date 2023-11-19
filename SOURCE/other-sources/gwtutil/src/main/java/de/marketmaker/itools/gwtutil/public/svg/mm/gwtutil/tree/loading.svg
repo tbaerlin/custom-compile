@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version="1.1"
+     width="15" height="15"
+     viewBox="0 0 15 15">
+    <defs>
+        <style type="text/css">
+            <![CDATA[
+                .fgbg {
+                    stroke: #888;
+                    stroke-width: 1px;
+                    fill: #eee;
+                }
+            ]]>
+        </style>
+        <g id="circles">
+          <circle class="fgbg" cx="7" cy="3" r="2" style="opacity: 0.1"/>
+          <circle class="fgbg" cx="7" cy="3" r="2" style="opacity: 0.3" transform="rotate(45,7,7)"/>
+          <circle class="fgbg" cx="7" cy="3" r="2" style="opacity: 0.5" transform="rotate(90,7,7)"/>
+          <circle class="fgbg" cx="7" cy="3" r="2" style="opacity: 0.7" transform="rotate(135,7,7)"/>
+          <circle class="fgbg" cx="7" cy="3" r="2" style="opacity: 0.9" transform="rotate(180,7,7)"/>
+          <circle class="fgbg" cx="7" cy="3" r="2" style="opacity: 1.0" transform="rotate(215,7,7)"/>
+        </g>
+    </defs>
+    <g>
+      <use x="0" y="0" xlink:href="#circles"/>
+      <animateTransform attributeName="transform" type="rotate" from="0,7,7" to="360,7,7"
+        begin="0s" dur="3s" repeatCount="indefinite"/>
+    </g>
+</svg>

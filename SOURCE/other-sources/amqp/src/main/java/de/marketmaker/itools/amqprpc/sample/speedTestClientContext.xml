@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="connectionManager" class="de.marketmaker.itools.amqprpc.connections.AmqpRpcConnectionManager">
+        <property name="connectionFactory">
+            <bean class="com.rabbitmq.client.ConnectionFactory">
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="proxyChecker" class="de.marketmaker.itools.amqprpc.supervising.PeriodicSupervisor">
+        <property name="checkInterval" value="10"/>
+    </bean>
+
+    <bean id="speedTestProxy" class="de.marketmaker.itools.amqprpc.AmqpProxyFactoryBean">
+        <property name="supervisor" ref="proxyChecker"/>
+        <property name="serviceInterface" value="de.marketmaker.itools.amqprpc.sample.SpeedTestService"/>
+        <property name="rpcClientSettings.usingMandatoryForRequestMessages" value="true"/>
+        <property name="connectionManager" ref="connectionManager"/>
+        <property name="rpcTimeout" value="5000"/>
+        <property name="rawByteArrayReplyMethods">
+            <set value-type="java.lang.String">
+                <value>returnJunkOfSize</value>
+            </set>
+        </property>
+    </bean>
+    
+    <bean id="client" class="de.marketmaker.itools.amqprpc.sample.SpeedTestClient">
+        <property name="proxy" ref="speedTestProxy"/>
+        <property name="packetSize" value="1024000"/>
+    </bean>
+
+
+</beans>

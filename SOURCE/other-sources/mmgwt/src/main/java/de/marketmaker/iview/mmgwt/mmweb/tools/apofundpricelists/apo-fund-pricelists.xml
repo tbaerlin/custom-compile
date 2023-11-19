@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"/>
+
+    <bean class="de.marketmaker.iview.mmgwt.mmweb.tools.apofundpricelists.ApoFundPricelists">
+        <property name="listsUrl" value="http://gisweb.vwd.com/mel/api/fondsportal_isins.xml?kunde=20245ext"/>
+        <property name="fileJson" value="${apo.web.path}/guidefs-apo-lists.json"/>
+        <property name="restTemplate" ref="restTemplate"/>
+        <property name="uri" value="http://xml.market-maker.de/dmxml-1/iview/retrieve.xml"/>
+    </bean>
+
+    <bean name="restTemplate" class="de.marketmaker.istar.common.http.RestTemplateFactory">
+        <property name="connectTimeout" value="${rest.connectTimeout:5000}"/>
+        <property name="retryCount" value="${rest.retryCount:1}"/>
+        <property name="maxTotalConnections" value="${rest.maxTotalConnections:2}"/>
+        <property name="maxConnectionsPerRoute" value="${rest.maxConnectionsPerRoute:2}"/>
+        <property name="connectionRequestTimeout" value="${rest.connectionRequestTimeout:1000}"/>
+        <property name="defaultSoTimeout" value="${rest.defaultSoTimeout:5000}"/>
+    </bean>
+</beans>

@@ -1,0 +1,873 @@
+/*DropDown default*/
+.mm-dropdown img {
+    background: url("images/mm/gwtutil/trigger.gif");
+    height: 21px;
+    border: none;
+    cursor: pointer;
+    border-bottom: 1px solid darkgray;
+    vertical-align: bottom;
+}
+
+.mm-dropdown input {
+    height: 16px;
+    font-size:12px;
+    border: 1px solid darkgray;
+    padding: 1px;
+    vertical-align:middle;
+    cursor: pointer;
+}
+
+.mm-dropdown-popup {
+    background-color: white;
+    border: 1px solid transparent;
+}
+
+/*DateBox default*/
+.mm-dateBox img {
+    background: url("images/mm/gwtutil/datepicker/date-trigger.gif");
+    height: 21px;
+    border: none;
+    cursor: pointer;
+    border-bottom: 1px solid darkgray;
+    vertical-align: bottom;
+}
+
+.mm-dateBox input {
+    height: 16px;
+    font-size:12px;
+    border: 1px solid darkgray;
+    padding: 2px;
+    vertical-align:middle;
+}
+
+/*DatePicker default*/
+.mm-unselectable, .mm-unselectable * {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: ignore;
+}
+
+.mm-menu {
+    outline: none medium;
+    z-index: 15000;
+}
+
+.mm-date-menu {
+    padding: 0 !important;
+}
+
+.mm-date-inner {
+    background-color: white !important;
+}
+
+.mm-date-inner .mm-date-active {
+    color: black;
+}
+
+.mm-date-inner .mm-date-today a {
+    border: 1px solid darkred;
+    padding: 1px 4px;
+}
+
+.mm-date-picker, .mm-date-picker a {
+    font-size: 11px;
+}
+
+.mm-date-days {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.mm-date-days td {
+    width: 25px;
+    border: none;
+}
+
+.mm-date-days td span {
+    display: block;
+    padding: 2px 7px 2px 2px;
+}
+
+.mm-date-days td {
+    background: #DFECFB url(images/mm/gwtutil/datepicker/glass-bg.gif) repeat-x scroll left top;
+    border-bottom: 1px solid #A3BAD9;
+    border-collapse: separate;
+    color: #233D6D;
+    cursor: default;
+    font-family: arial, helvetica, tahoma, sans-serif;
+    font-size: 10px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: normal;
+    padding: 0;
+    text-align: right !important;
+}
+
+.mm-date-picker {
+    width: 175px;
+}
+
+.mm-date-picker .mm-date-header {
+    background: url(images/mm/gwtutil/datepicker/hd-sprite.gif) repeat-x 0 -83px;
+    height: 22px;
+    left: 10px;
+    top: 10px;
+    width: 175px;
+}
+
+.mm-date-header .mm-btn .mm-btn-text {
+    color: white;
+}
+
+.mm-date-picker-footer {
+    width: 100%;
+}
+
+.mm-date-picker-footer td {
+    text-align: center;
+}
+
+.mm-date-left {
+    background: url(images/mm/gwtutil/datepicker/hd-sprite.gif) repeat-x scroll 0 -83px;
+    color: white;
+    font-family: "sans serif", tahoma, verdana, helvetica;
+    font-size: 11px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: normal;
+    overflow: hidden;
+}
+
+.mm-date-right, .mm-date-left {
+    width: 18px;
+}
+
+.mm-date-right {
+    text-align: right;
+}
+
+.mm-date-inner .mm-date-selected a {
+    background: #DFECFB url(images/mm/gwtutil/datepicker/glass-bg.gif);
+    border-color: #8DB2E3;
+}
+
+.mm-date-middle, .mm-date-left, .mm-date-right {
+    background: url(images/mm/gwtutil/datepicker/hd-sprite.gif) repeat-x scroll 0 -83px;
+    color: white;
+    font: bold 11px "sans serif", tahoma, verdana, helvetica;
+    overflow: hidden;
+}
+
+.mm-date-middle .mm-btn .mm-btn-text {
+    color: white;
+}
+
+.mm-date-middle .mm-btn-mc em.mm-btn-arrow {
+    background-image: url(images/mm/gwtutil/datepicker/btn-arrow-light.gif);
+}
+
+.mm-date-right a, .mm-date-left a {
+    background: no-repeat center center;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    opacity: 0.6;
+    width: 16px;
+}
+
+.mm-date-right a {
+    background-image: url(images/mm/gwtutil/datepicker/right-btn.gif);
+}
+
+.mm-date-left a {
+    background-image: url(images/mm/gwtutil/datepicker/left-btn.gif);
+}
+
+.mm-date-right a:hover, .mm-date-left a:hover {
+    opacity: 1;
+}
+
+.mm-date-inner th {
+    background: #dfecfb url(images/mm/gwtutil/datepicker/glass-bg.gif);
+    border-bottom: 1px solid #a3bad9;
+    font: normal 10px arial, helvetica, tahoma, sans-serif;
+    color: #233d6d;
+    width: 25px; /*background:transparent none repeat-x scroll left top;*/
+    border-collapse: separate;
+    cursor: default;
+    padding: 0;
+    text-align: right !important;
+}
+
+.mm-date-inner th span {
+    display: block;
+    padding: 2px 7px 2px 2px;
+}
+
+.mm-date-inner td {
+    border: 1px solid white;
+    padding: 0;
+    text-align: right;
+}
+
+.mm-date-inner a {
+    font: normal 11px arial, helvetica, tahoma, sans-serif;
+    display: block;
+    text-decoration: none;
+    padding: 2px;
+    color: #000;
+}
+
+.mm-date-inner .mm-date-active {
+    color: #000;
+}
+
+.mm-date-inner .mm-date-selected a {
+    background: url(images/mm/gwtutil/datepicker/glass-bg.gif);
+    border: #8db2e3 1px solid;
+}
+
+.mm-date-inner .mm-date-today a {
+    border-color: darkred;
+}
+
+.mm-date-inner .mm-date-selected span {
+    font-weight: bold;
+}
+
+.mm-date-inner .mm-date-prevday a, .mm-date-inner .mm-date-nextday a {
+    color: #aaa;
+}
+
+.mm-date-bottom {
+    border-top-color: #a3bad9;
+    background: #dfecfb url(images/mm/gwtutil/datepicker/glass-bg.gif);
+}
+
+.mm-date-inner .mm-date-disabled a {
+    background-color: #eee;
+    color: #bbb;
+}
+
+.mm-date-mmenu {
+    background-color: #eee !important;
+}
+
+.mm-date-mmenu .mm-menu-item {
+    font-size: 10px;
+    color: #000;
+}
+
+.mm-date-mp {
+    height: 184px;
+    visibility: visible;
+    width: 175px;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.mm-date-mp {
+    background-color: white;
+}
+
+.mm-date-mp td {
+    font: normal 11px arial, helvetica, tahoma, sans-serif;
+}
+
+.mm-date-mp-btns button {
+    background-color: #083772;
+    color: white;
+    padding:1px 3px;
+    border-color: #3366cc #000055 #000055 #3366cc;
+    font: normal 11px arial, helvetica, tahoma, sans-serif;
+}
+
+.mm-date-mp-btns {
+    background: #dfecfb url(images/mm/gwtutil/datepicker/glass-bg.gif);
+}
+
+.mm-date-mp-btns td {
+    border-top-color: #c5d2df;
+}
+
+td.mm-date-mp-month, td.mm-date-mp-year, td.mm-date-mp-ybtn {
+    border: 0 none;
+    text-align: center;
+    vertical-align: middle;
+    cursor:pointer;
+    width: 25%;
+}
+
+td.mm-date-mp-month a, td.mm-date-mp-year a {
+    color: #15428B;
+}
+
+td.mm-date-mp-sep {
+    border-right: 1px solid #C5D2DF;
+}
+
+td.mm-date-mp-sel a {
+    background: #DFECFB url(images/mm/gwtutil/datepicker/glass-bg.gif);
+    border: 1px solid #8DB2E3;
+    padding: 1px 3px;
+}
+
+.mm-date-mp-ybtn a {
+    background-image: url(images/mm/gwtutil/panel/tool-sprites.gif);
+    cursor: pointer;
+    display: block;
+    height: 15px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 15px;
+}
+
+.mm-date-mp-ybtn a.mm-date-mp-prev {
+    background-position: 0 -105px;
+}
+
+.mm-date-mp-ybtn a.mm-date-mp-prev:hover {
+    background-position: -15px -105px;
+}
+
+.mm-date-mp-ybtn a.mm-date-mp-next {
+    background-position: 0 -120px;
+}
+
+.mm-date-mp-ybtn a.mm-date-mp-next:hover {
+    background-position: -15px -120px;
+}
+
+.mm-date-mp-btns td {
+    border-top: #C5D2DF 1px solid;
+    text-align: center;
+}
+
+.mm-date-picker em  {
+    font-size: 11px;
+    font-style:normal;
+    margin: 0; padding: 0;
+}
+
+.mm-date-picker .mm-btn-default, .mm-date-picker .mm-btn-over, mm-date-picker .mm-btn-clicked {
+    font: normal 11px arial, helvetica, tahoma, sans-serif;
+    vertical-align:middle;
+    height:16px;
+    color: white;
+    padding: 3px 0;
+    cursor:pointer;
+}
+
+table.mm-sliderGraph {
+    border-spacing: 0;
+}
+div.mm-sliderGraph {
+    position: relative;
+    width: 200px; height: 14px;
+}
+table.mm-sliderGraph .mm-sliderback {
+    position: absolute;
+    left: 0; top: 4px;
+    width: 200px;
+}
+div.mm-sliderGraph .mm-sliderbox {
+    position: absolute;
+    left: 0; top: 0;
+    width: 196px; height: 12px;
+}
+div.mm-sliderGraph .mm-slider {
+    position: absolute;
+}
+table.mm-sliderGraph td.mm-low {
+    text-align: left;
+    padding-right: 2px;
+}
+table.mm-sliderGraph td.mm-high {
+    text-align: right;
+    padding-left: 2px;
+}
+
+
+
+
+/* Button default */
+.mm-button, .mm-button * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.mm-button .top td div, .mm-button .bottom td div {
+    height: 3px;
+    overflow: hidden;
+}
+
+.mm-button .mid td {
+    height: 16px;
+}
+
+.mm-button .mid td img {
+    vertical-align: middle;
+}
+
+.mm-button .mid td div {
+    max-height: 16px;
+}
+
+.mm-button .mid .center div {
+    white-space: nowrap;
+}
+
+.mm-button td.left, .mm-button td.right {
+    width: 3px;
+}
+.mm-button .left div, .mm-button .right div {
+    width: 3px;
+    overflow: hidden;
+}
+
+.mm-button td {
+    color: black;
+    background-image: url(svg/mm/gwtutil/button/btn.svg);
+}
+
+.mm-button .icon {
+    float: left;
+    width: 16px;
+    height: 16px;
+}
+
+.mm-button .label {
+    float: left;
+    padding: 2px 3px 0;
+    white-space: nowrap;
+}
+.mm-button.alignCenter .label {
+    float: none;
+}
+.mm-button.alignCenter .mid .center div {
+    text-align: center;
+}
+
+.mm-button .top .center, .mm-button .mid .center, .mm-button .bottom .center { background-repeat: repeat-x; }
+
+.mm-button.default .top .left { background-position: 0 0; }
+.mm-button.default .top .center { background-position: 0 -50px; }
+.mm-button.default .top .right { background-position: -4px 0; }
+.mm-button.default .mid .left { background-position: 0 -3px; }
+.mm-button.default .mid .center { background-position: 0 -53px; }
+.mm-button.default .mid .right { background-position: -4px -3px; }
+.mm-button.default .bottom .left { background-position: 0 -47px; }
+.mm-button.default .bottom .center { background-position: 0 -97px; }
+.mm-button.default .bottom .right { background-position: -4px -47px; }
+
+.mm-button.active .top .left { background-position: 0 -100px; }
+.mm-button.active .top .center { background-position: 0 -150px; }
+.mm-button.active .top .right { background-position: -4px -100px; }
+.mm-button.active .mid .left { background-position: 0 -103px; }
+.mm-button.active .mid .center { background-position: 0 -153px; }
+.mm-button.active .mid .right { background-position: -4px -103px; }
+.mm-button.active .bottom .left { background-position: 0 -147px; }
+.mm-button.active .bottom .center { background-position: 0 -197px; }
+.mm-button.active .bottom .right { background-position: -4px -147px; }
+
+.mm-button:hover .top .left { background-position: 0 -200px; }
+.mm-button:hover .top .center { background-position: 0 -250px; }
+.mm-button:hover .top .right { background-position: -4px -200px; }
+.mm-button:hover .mid .left { background-position: 0 -203px; }
+.mm-button:hover .mid .center { background-position: 0 -253px; }
+.mm-button:hover .mid .right { background-position: -4px -203px; }
+.mm-button:hover .bottom .left { background-position: 0 -247px; }
+.mm-button:hover .bottom .center { background-position: 0 -297px; }
+.mm-button:hover .bottom .right { background-position: -4px -247px; }
+
+.mm-button.active:hover .top .left { background-position: 0 -300px; }
+.mm-button.active:hover .top .center { background-position: 0 -350px; }
+.mm-button.active:hover .top .right { background-position: -4px -300px; }
+.mm-button.active:hover .mid .left { background-position: 0 -303px; }
+.mm-button.active:hover .mid .center { background-position: 0 -353px; }
+.mm-button.active:hover .mid .right { background-position: -4px -303px; }
+.mm-button.active:hover .bottom .left { background-position: 0 -347px; }
+.mm-button.active:hover .bottom .center { background-position: 0 -397px; }
+.mm-button.active:hover .bottom .right { background-position: -4px -347px; }
+
+.mm-button.clicked .top .left { background-position: 0 -400px; }
+.mm-button.clicked .top .center { background-position: 0 -450px; }
+.mm-button.clicked .top .right { background-position: -4px -400px; }
+.mm-button.clicked .mid .left { background-position: 0 -403px; }
+.mm-button.clicked .mid .center { background-position: 0 -453px; }
+.mm-button.clicked .mid .right { background-position: -4px -403px; }
+.mm-button.clicked .bottom .left { background-position: 0 -447px; }
+.mm-button.clicked .bottom .center { background-position: 0 -497px; }
+.mm-button.clicked .bottom .right { background-position: -4px -447px; }
+
+.mm-button.disabled .top .left { background-position: 0 -500px; }
+.mm-button.disabled .top .center { background-position: 0 -550px; }
+.mm-button.disabled .top .right { background-position: -4px -500px; }
+.mm-button.disabled .mid .left { background-position: 0 -503px; }
+.mm-button.disabled .mid .center { background-position: 0 -553px; }
+.mm-button.disabled .mid .right { background-position: -4px -503px; }
+.mm-button.disabled .bottom .left { background-position: 0 -547px; }
+.mm-button.disabled .bottom .center { background-position: 0 -597px; }
+.mm-button.disabled .bottom .right { background-position: -4px -547px; }
+
+.mm-button.form.default .top .left { background-position: 0 -600px; }
+.mm-button.form.default .top .center { background-position: 0 -650px; }
+.mm-button.form.default .top .right { background-position: -4px -600px; }
+.mm-button.form.default .mid .left { background-position: 0 -603px; }
+.mm-button.form.default .mid .center { background-position: 0 -653px; }
+.mm-button.form.default .mid .right { background-position: -4px -603px; }
+.mm-button.form.default .bottom .left { background-position: 0 -647px; }
+.mm-button.form.default .bottom .center { background-position: 0 -697px; }
+.mm-button.form.default .bottom .right { background-position: -4px -647px; }
+
+.mm-button.form.disabled .top .left { background-position: 0 -600px; }
+.mm-button.form.disabled .top .center { background-position: 0 -650px; }
+.mm-button.form.disabled .top .right { background-position: -4px -600px; }
+.mm-button.form.disabled .mid .left { background-position: 0 -603px; }
+.mm-button.form.disabled .mid .center { background-position: 0 -653px; }
+.mm-button.form.disabled .mid .right { background-position: -4px -603px; }
+.mm-button.form.disabled .bottom .left { background-position: 0 -647px; }
+.mm-button.form.disabled .bottom .center { background-position: 0 -697px; }
+.mm-button.form.disabled .bottom .right { background-position: -4px -647px; }
+
+.mm-button .menu-trigger { width: 15px; height: 16px; background-image: url(svg/mm/gwtutil/menu/menu-trigger.svg); }
+
+.mm-button.active .menu-trigger { background-position: 0 -19px }
+.mm-button:hover .menu-trigger { background-position: 0 -38px }
+.mm-button.clicked .menu-trigger { background-position: 0 -57px }
+.mm-button.disabled .menu-trigger, .mm-button .menu-trigger.disabled { background-position: 0 -76px }
+
+.as-button { cursor: pointer; -webkit-user-select: none; -moz-user-select: none; padding: 1px; margin: 1px; }
+.as-button.as-button-inline { display: inline-block; height: 16px; }
+.as-button div { white-space: nowrap; text-align: center; }
+.as-button .icon { vertical-align: middle; }
+.as-button .label { padding: 2px 3px 0; vertical-align: middle; }
+.as-button.default {}
+.as-button.active { background: url(svg/mm/gwtutil/button/as-btn-active.svg) repeat-x bottom; }
+.as-button:hover{ background-color: #e4f8d1; }
+.as-button.clicked { background: url(svg/mm/gwtutil/button/as-btn-active.svg) repeat-x bottom; }
+.as-button.disabled { opacity: 0.4; cursor: default; }
+.as-button.disabled:hover { background: transparent; }
+.as-button .menu-trigger { width: 15px; height: 16px; background-image: url(svg/mm/gwtutil/menu/menu-trigger.svg); vertical-align: middle; }
+.mm-button .menu-trigger.disabled { background-position: 0 -76px }
+
+.mm-menu {
+    background: #f0f0f0 url(svg/mm/gwtutil/menu/menu-background.svg) repeat-y left;
+    box-shadow: 0 0 5px rgba(100, 100, 100, 0.7);
+}
+.popupContent {
+    position: relative;
+}
+.mm-menu .popupContent {
+    border: 1px solid #718BB7;
+    border-radius: 2px;
+    padding: 1px;
+}
+.mm-date-menu .popupContent {
+    padding: 0;
+}
+.mm-menuItem {
+    height: 21px;
+    margin: 1px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 0 3px;
+    position: relative;
+}
+.mm-menuItem img {
+    position: absolute;
+    left: 0; top: 1px;
+    width: 19px;
+    height: 19px;
+    background: transparent no-repeat left center;
+}
+.mm-menuItem .label {
+    padding: 2px 20px 2px 28px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    white-space: nowrap;
+}
+.mm-menuItem .label.disabled {
+    opacity: 0.5;
+}
+.mm-menuItem.keySelect {
+    background-color: #eee;
+    border: 1px solid #888;
+    border-radius: 2px;
+}
+.mm-menuSeparator {
+    height: 2px;
+    background: transparent url(svg/mm/gwtutil/menu/menu-separator.svg) repeat-x top;
+    margin: 0 3px;
+}
+.mm-menuItem.selected .label {
+    background-image: url(svg/mm/gwtutil/menu/menu-item-selected.svg);
+}
+
+
+table.mm-spaceTable > tbody > tr > td { padding-top: 7px; padding-left: 7px; }
+table.mm-spaceTable > tbody > tr > td:first-child { padding-left: 0; }
+table.mm-spaceTable > tbody > tr:first-child > td { padding-top: 0; }
+
+table.mm-hSpaceTable > tbody > tr > td { padding-left: 7px; }
+table.mm-hSpaceTable > tbody > tr > td:first-child { padding-left: 0; }
+
+/* ************************** Toolbar **************************** */
+.mm-toolbar {
+    width: 100%;
+}
+.mm-toolbar-cell {
+    padding: 0;
+}
+
+.mm-tbsep {
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 0 none;
+    cursor: default;
+    display: block;
+    font-size: 1px;
+    height: 16px;
+    margin: 0 2px;
+    overflow: hidden;
+    width: 4px;
+}
+.mm-toolbar-cell .mm-tbsep {
+    background-image: url( svg/mm/gwtutil/button/toolbar-separator.svg );
+    width: 2px;
+}
+
+.mm-floatPanel .outer, .mm-floatPanel.outer { position: relative; overflow: hidden; }
+.mm-floatPanel .inner { position: absolute; top: 0; left: 0; }
+.mm-floatPanel .floatButton { position: absolute; }
+.mm-floatPanel .floatButton img { width: 100%; height: 100%; }
+/*.mm-floatPanel .floatButton:hover { background-color: #aaa; opacity: 1; }*/
+.mm-floatPanel .up, .mm-floatPanel .down { height: 20px; width: 100%; top: auto; bottom: auto; }
+.mm-floatPanel .up { top: 0; }
+.mm-floatPanel .down { bottom: 0; }
+.mm-floatPanel .left, .mm-floatPanel .right { width: 30px; height: 100%; left: auto; right: auto; }
+.mm-floatPanel .left { left: 0; }
+.mm-floatPanel .right { right: 0; }
+
+.mm-floatPanel .up { background: linear-gradient(to bottom, rgba(51,124,202,0.3) 20%,rgba(51,124,202,0) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44337cca', endColorstr='#00337cca',GradientType=0 ); }
+.mm-floatPanel .down { background: linear-gradient(to top, rgba(51,124,202,0.3) 20%,rgba(51,124,202,0) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00337cca', endColorstr='#44337cca',GradientType=0 ); }
+.mm-floatPanel .left { background: linear-gradient(to right, rgba(51,124,202,0.3) 20%,rgba(51,124,202,0) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44337cca', endColorstr='#00337cca',GradientType=1 ); }
+.mm-floatPanel .right { background: linear-gradient(to left, rgba(51,124,202,0.3) 20%,rgba(51,124,202,0) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00337cca', endColorstr='#44337cca',GradientType=1 ); }
+.mm-floatPanel .up img  { background: url(svg/mm/gwtutil/panel/float-icon-up.svg) center 30% no-repeat; }
+.mm-floatPanel .down img  { background: url(svg/mm/gwtutil/panel/float-icon-down.svg) center 70% no-repeat; }
+.mm-floatPanel .left img  { background: url(svg/mm/gwtutil/panel/float-icon-left.svg) 20% center no-repeat; }
+.mm-floatPanel .right img  { background: url(svg/mm/gwtutil/panel/float-icon-right.svg) 80% center no-repeat; }
+
+.mm-scrollPanel { position: absolute; top: 0; right: 0; bottom: 0; width: 10px; }
+.mm-scrollPanel .mm-scrollbar { position: absolute; width: 5px; right: 2px; border-right: 3px solid rgba(0,0,0,0.5); opacity: 0; }
+.mm-scrollPanel .mm-scrollbar:hover { border-right-color: rgb(0,0,0); }
+
+/* ************************** CellTree styling **************************** */
+
+.cellTreeEmptyMessage { padding-left: 16px; font-style: italic; }
+.cellTreeItem { padding-top: 2px; padding-bottom: 2px; zoom: 1; }
+.cellTreeItemImage { cursor: hand; cursor: pointer; }
+.cellTreeItemImageValue { zoom: 1; }
+.cellTreeItemValue { padding-left: 3px; padding-right: 3px; outline: none; cursor: hand; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cellTreeItemValue > img { vertical-align: middle; }
+.cellTreeOpenItem { }
+.cellTreeTopItem { }
+.cellTreeTopItemImage { }
+.cellTreeTopItemImageValue { }
+.cellTreeKeyboardSelectedItem { background-color: #ffc; outline: none; }
+.cellTreeSelectedItem { background: #628cd5 url(svg/mm/gwtutil/tree/selectedBackground.svg) repeat-x; color: white; height: auto; overflow: visible; }
+.cellTreeSelectedItem .cellTreeItemValue { color: white; }
+.cellTreeShowMoreButton { padding-left: 16px; outline: none; }
+
+/* ************************** Input Widgets ********************************* */
+table.mm-inputForm { border-spacing: 8px; }
+td.mm-inputForm { vertical-align: top; }
+.mm-clickWidget { width: 16px; height: 16px; vertical-align: middle; background: url(svg/mm/gwtutil/input/click-widget-all.svg) no-repeat 0 0; cursor: pointer; }
+.mm-clickWidget-label { cursor: pointer; }
+.mm-radio { background-position: 0 -16px; }
+.mm-radio.unchecked { background-position: -16px -16px; }
+.mm-radio.checked { background-position: -32px -16px; }
+.mm-checkbox { background-position: 0 0; }
+.mm-checkbox.unchecked { background-position: -16px 0; }
+.mm-checkbox.checked { background-position: -32px 0; }
+.mm-radio.hover { background-position: -48px -16px; }
+.mm-radio.unchecked.hover{ background-position: -64px -16px; }
+.mm-radio.checked.hover { background-position: -80px -16px; }
+.mm-checkbox.hover { background-position: -48px 0; }
+.mm-checkbox.unchecked.hover { background-position: -64px 0; }
+.mm-checkbox.checked.hover { background-position: -80px 0; }
+.mm-radio.disabled { background-position: -96px -16px; }
+.mm-radio.unchecked.disabled { background-position: -112px -16px; }
+.mm-radio.checked.disabled { background-position: -128px -16px; }
+.mm-checkbox.disabled { background-position: -96px 0; }
+.mm-checkbox.unchecked.disabled { background-position: -112px 0; }
+.mm-checkbox.checked.disabled { background-position: -128px 0; }
+
+/* **************************** ProgressBar ********************************** */
+.mm-progressBar {
+    background-color: orange;
+    position: relative;
+    height: 6px;
+}
+.mm-progressBar .bar {
+    background-color: maroon;
+    position: absolute;
+    top: 0; right: auto; bottom: 0; left: 0;
+    width: 0; height: auto;
+}
+
+/* **************************** Notifications ********************************** */
+.mm-noteBox { cursor: pointer; text-align: center; }
+.mm-noteBox:hover { background-color: lightgreen; }
+.mm-noteBox-popup { color: white; position: absolute; top: auto; right: 0; bottom: 0; left: auto; background-color: #505050; background-color: rgba(80,80,80,0.7); z-index: 100; }
+.mm-noteBox-popup .close-popup { width: 16px; height: 16px; margin: 4px; cursor: pointer; float: right; background: url(svg/mm/gwtutil/notification/notifications-hide.svg) no-repeat center; }
+.mm-noteBox-popup .close-popup:hover { background-color: lightgreen; }
+.mm-noteBox-popup .delete-all { width: 16px; height: 16px; margin: 4px 10px 4px 4px; cursor: pointer; float: right; background: url(svg/mm/gwtutil/notification/notification-close-hover.svg) no-repeat; }
+.mm-noteBox-popup .delete-all:hover { background-color: lightgreen; }
+.mm-noteBox-message { font-size: 120%; width: 600px; margin: 4px; padding: 6px; background-color: #3c3c3c; background-color: rgba(60,60,60,0.7); clear: both; }
+.mm-noteBox-message .close { background: url(svg/mm/gwtutil/notification/notification-close.svg) no-repeat; width: 16px; height: 16px; cursor: pointer; float: right; }
+.mm-noteBox-message .close:hover { background-color: lightgreen; background-image: url(svg/mm/gwtutil/notification/notification-close-hover.svg); }
+.mm-noteBox-message .header { background-color: #505050; background-color: rgba(80,80,80,0.7); font-weight: 600; }
+.mm-noteBox-message .header.collapsible:hover { background-color: lightgreen; }
+.mm-noteBox-timer { position: relative; height: 2px; margin-top: 0; margin-right: 20px; }
+.mm-noteBox-timer .bar { position: absolute; top: 0; right: 0; bottom: 0; left: auto; width: 100%; height: 2px; background-color: #6e6e6e; }
+
+/* **************************** Tooltip ********************************** */
+.mm-tooltip {
+    background-color: #eaeaea;
+    border: 1px solid #6e6e6e;
+    -webkit-box-shadow: 0 0 3px #333;
+    -moz-box-shadow: 0 0 3px #333;
+    box-shadow: 0 0 3px #333;
+    padding: 1px;
+}
+.mm-tooltipContent {
+    white-space: nowrap;
+    padding-right: 3px;
+}
+.mm-tooltipWrapped {
+    white-space: normal;
+    max-width: 500px;
+}
+
+.mm-tooltipMultiline {
+    white-space: pre-wrap;
+}
+
+/* **************************** ContentResizePanel ********************************** */
+.mm-crp-resizeTriggers {
+    visibility: hidden;
+}
+.mm-crp-resizeTriggers, .mm-crp-resizeTriggers > div  {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0; top: 0; width: 100%; height: 100%;
+    overflow: hidden;
+}
+.mm-crp-resizeTriggers > div {
+    background: #eee;
+    overflow: auto;
+}
+.mm-crp-contractTrigger > div {
+    width: 200%; height: 200%;
+}
+
+/* **************************** WipePanel ********************************** */
+.mm-wipeLabel {
+    background-color: white;
+}
+
+/* **************************** BarChart ********************************** */
+.mm-barChart {
+    position: relative;
+}
+.mm-barChart .mm-lines {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: auto; height: auto;
+}
+.mm-barChart .mm-lines .mm-line {
+    position: absolute;
+}
+.mm-barChart .mm-lines.mm-vertical .mm-line {
+    left: 0; right: 0;
+    width: auto; height: 1px;
+    border-bottom: 1px solid #aaa;
+}
+.mm-barChart .mm-lines.mm-horizontal .mm-line {
+    top: 0; bottom: 0;
+    width: 1px; height: auto;
+    border-left: 1px solid #aaa;
+}
+.mm-barChart .mm-lines .mm-label {
+    position: absolute;
+    width: auto; height: auto;
+    white-space: nowrap;
+}
+.mm-barChart .mm-bars {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: auto; height: auto;
+}
+.mm-barChart .mm-entry {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: auto; height: auto;
+}
+.mm-barChart .mm-bars .mm-bar {
+    position: absolute;
+    box-sizing: border-box;
+}
+.mm-barChart .mm-bars .mm-bar-0 {
+    width: 1px; height: 1px;
+}
+.mm-barChart .mm-entryLabels { position: absolute; white-space: nowrap; overflow-y: hidden; }
+.mm-barChart .mm-entryLabels.mm-vertical {
+    -ms-transform-origin: 0 0; -webkit-transform-origin: 0 0; transform-origin: 0 0;
+    -ms-transform: rotate(270deg); -webkit-transform: rotate(270deg); transform: rotate(270deg);
+}
+.mm-barChart .mm-entryLabels td { vertical-align: middle; text-align: right; }
+
+/* **************************** MiniBar ********************************** */
+.mm-miniBar { position: relative; height: 11px; }
+.mm-miniBar div { position: absolute; right: auto; left: auto; height: auto; }
+.mm-miniBar .bar { top: 2px; bottom: 2px; width: 100%; }
+.mm-miniBar .zero { background-color: black; opacity: 0.5; top: 0; bottom: 0; width: 1px; }
+.mm-miniBar .positive { background-color: green; }
+.mm-miniBar .negative { background-color: red; }
+
+/* **************************** MessageBox ********************************** */
+.mm-dlg-popup { box-shadow: yellow 0 0 3px 2px; }
+.mm-dlg { background-color: silver; }
+.mm-dlg-h { background-color: darkgray; color: white; font-weight: bold; padding: 4px 7px; cursor: pointer; }
+.mm-dlg-hb { float: right; }
+.mm-dlg-c { min-width: 200px; max-width: 500px; overflow: auto; padding: 14px 14px 0; }
+.mm-dlg-c-bottomPadding { padding-bottom: 14px; }
+.mm-noPadding .mm-dlg-c { padding: 0; }
+.mm-noMaxWidth .mm-dlg-c { max-width: none; }
+.mm-dlg-i { float: left; margin: 0 14px 7px 0; }
+.mm-dlg-bb { margin-left: auto; clear: both; padding: 14px; }
+.mm-dlg-bb > tbody > tr > td { padding-left: 14px; }
+.mm-dlg-bb > tbody > tr > td:first-child { padding-left: 0; }
+
+/* **************************** Gauge ********************************** */
+body.mm-svgHtmlBody { background: transparent; }
+.mm-gauge-hand-glow { stroke: white; stroke-width: 8px; fill: none; }
+.mm-gauge-hand { fill: #666; }
+.mm-gauge-overflow-group { visibility: hidden; }
+.mm-gauge-overflow { fill: #e64; }
+.mm-gauge-dial-back-glow { stroke: #bbb; stroke-width: 4px; }
+.mm-gauge-dial-back { fill: #ccc; }
+.mm-gauge-tick path { fill: white; stroke: #bbb; stroke-width: 2px; }
